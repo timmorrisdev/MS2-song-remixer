@@ -1,0 +1,10 @@
+body {
+    background-color: aqua;
+    min-height: 100vh;
+}
+
+footer {
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+}
