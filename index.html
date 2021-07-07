@@ -12,6 +12,8 @@
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <title>Song Remixer</title>
 </head>
@@ -51,9 +53,9 @@
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown button
                 </button>
-                <div class="dropdown-menu" aria-labelledby="songSelectorButton">
-                    <a class="dropdown-item" id="song1Secector" onclick="buildPadsArea()">Song 1</a>
-                    <a class="dropdown-item" id="song2Secector">Song 2</a>
+                <div class="dropdown-menu" aria-labelledby="songSelectorButton" id="songSelectorDropdown">
+                    <a class="dropdown-item" id="song1Selector">Song 1</a>
+                    <a class="dropdown-item" id="song2Selector">Song 2</a>
 
                 </div>
 
