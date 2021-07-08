@@ -1,39 +1,71 @@
-let stems1 = ['drums', 'percussion', 'bass', 'guitar', 'synths', 'lead guitar', 'fx', 'lead vocal', 'backing']
+//class and constructor to create Song objects
 
-let stems2 = ['drums', 'percussion', 'bass', 'guitar']
-
-
-
-function createPads() {
-    const padContainer = document.getElementById('pads-container');
-    const pad = document.createElement('div');
-    pad.classList.add('pad');
-
-    padContainer.appendChild(pad);
-}
-
-function buildPadsAreaOne() {
-    let padReset = document.getElementById('pads-container');
-    padReset.innerText = '';
-
-    for (let i = 0; i < stems1.length; i++) {
-        createPads();
-    };
+class Song {
+    constructor(name, tempo, stems = []) {
+        this.name = name;
+        this.tempo = tempo;
+        this.stems = stems;
+    }
 };
 
-function buildPadsAreaTwo() {
-    let padReset = document.getElementById('pads-container');
-    padReset.innerText = '';
+//supply song information to Song class
 
-    for (let i = 0; i < stems2.length; i++) {
-        createPads();
-    };
-};
+const aloosh = new Song('aloosh', '91', [{
+    name: 'Drums',
+    url: 'assets/songs/aloosh/Drums.mp3'
+}, {
+    name: 'Percussion',
+    url: 'assets/songs/aloosh/Perc.mp3'
+}, {
+    name: 'Bass',
+    url: 'assets/songs/aloosh/Bass.mp3'
+}, {
+    name: 'Main Guitar',
+    url: 'assets/songs/aloosh/GtrRhythm.mp3'
+}, {
+    name: 'Synths',
+    url: 'assets/songs/aloosh/Synths.mp3'
+}, {
+    name: 'Lead Guitar',
+    url: 'assets/songs/aloosh/GtrLead.mp3'
+}, {
+    name: 'FX',
+    url: 'assets/songs/aloosh/FX.mp3'
+}, {
+    name: 'Lead Vocal',
+    url: 'assets/songs/aloosh/VocalsLead.mp3'
+}, {
+    name: 'Backing Vocals',
+    url: 'assets/songs/aloosh/VocalsBVS.mp3'
+}, ]);
 
+const escape = new Song('escape', '97', [{
+    name: 'Drums',
+    url: 'assets/songs/escape/Drums.mp3'
+}, {
+    name: 'Percussion',
+    url: 'assets/songs/escape/Perc.mp3'
+}, {
+    name: 'Bass',
+    url: 'assets/songs/escape/Bass.mp3'
+}, {
+    name: 'Main Guitar',
+    url: 'assets/songs/escape/GtrRhythm.mp3'
+}, {
+    name: 'Synths',
+    url: 'assets/songs/escape/Synths.mp3'
+}, {
+    name: 'Lead Guitar',
+    url: 'assets/songs/escape/GtrLead.mp3'
+}, {
+    name: 'FX',
+    url: 'assets/songs/escape/FX.mp3'
+}, {
+    name: 'Lead Vocal',
+    url: 'assets/songs/escape/VocalsLead.mp3'
+}, {
+    name: 'Backing Vocals',
+    url: 'assets/songs/escape/VocalsBVS.mp3'
+}, ]);
 
-//jQuery Functions
-
-$(document).ready(function () {
-    $('#song1Selector').on('click', buildPadsAreaOne);
-    $('#song2Selector').on('click', buildPadsAreaTwo);
-});
+const songs = [aloosh, escape];
