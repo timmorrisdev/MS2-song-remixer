@@ -16,6 +16,7 @@ footer {
     max-width: 500px;
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
 }
 .pad {
     position: relative;
@@ -30,4 +31,12 @@ footer {
     content: '';
     display: block;
     padding-top: 100%;
+  }
+
+  .pad.aloosh-theme{
+      background-color: chartreuse;
+  }
+
+  .pad.escape-theme{
+      background-color: coral;
   }

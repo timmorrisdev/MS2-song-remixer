@@ -69,3 +69,46 @@ const escape = new Song('escape', '97', [{
 }, ]);
 
 const songs = [aloosh, escape];
+
+
+
+
+
+
+
+
+function buildPadsArea(song) {
+    let padReset = document.getElementById('pads-container');
+    padReset.innerText = '';
+
+    const songName = song.name;
+
+    for (let i = 0; i < song.stems.length; i++) {
+        const padContainer = document.getElementById('pads-container');
+        const pad = document.createElement('div');
+        pad.classList.add('pad');
+        pad.classList.add(`${songName}-theme`);
+        pad.id = `pad${i}`;
+
+        padContainer.appendChild(pad);
+
+    };
+};
+
+
+
+// buildPadsArea(aloosh);
+
+//jQuery Functions
+
+//jQuery Functions
+
+
+$(document).ready(function () {
+    $('#select-aloosh').click(function () {
+        buildPadsArea(aloosh);
+    });
+    $('#select-escape').click(function () {
+        buildPadsArea(escape);
+    });
+});
