@@ -1,5 +1,5 @@
-body {
-    background-color: aqua;
+body {    
+    background: radial-gradient(circle, rgba(224,141,222,1) 22%, rgba(87,226,229,1) 61%, rgba(69,203,133,1) 100%);
     min-height: 100vh;
 }
 
@@ -39,4 +39,15 @@ footer {
 
   .pad.escape-theme{
       background-color: coral;
+  }
+
+  .pad-content {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+  
+    display: flex;               
+    justify-content: center;     
+    align-items: center;  
   }

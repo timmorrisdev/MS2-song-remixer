@@ -70,39 +70,71 @@ const escape = new Song('escape', '97', [{
 
 const songs = [aloosh, escape];
 
-
-
-
-
-
-
+//build pad grid 
 
 function buildPadsArea(song) {
     let padReset = document.getElementById('pads-container');
     padReset.innerText = '';
 
-    const songName = song.name;
+    let songName = song.name;
+    let stemUrl = song.stems;
+
 
     for (let i = 0; i < song.stems.length; i++) {
-        const padContainer = document.getElementById('pads-container');
-        const pad = document.createElement('div');
-        pad.classList.add('pad');
-        pad.classList.add(`${songName}-theme`);
-        pad.id = `pad${i}`;
 
-        padContainer.appendChild(pad);
+        //create pad grid function
+        function createPad() {
+            let padContainer = document.getElementById('pads-container');
+            let pad = document.createElement('div');
+            pad.classList.add('pad');
+            pad.classList.add(`${songName}-theme`);
+            pad.id = `pad${i}`;
+            pad.innerHTML = `<span class="pad-content">${stemUrl[i].name}</span>`;
+
+            padContainer.appendChild(pad);
+
+        }
+
+        //add audio element and set source
+        function addAudioElem() {
+            let getPad = document.getElementById(`pad${i}`);
+            let audioElem = document.createElement('audio');
+            audioElem.src = `${stemUrl[i].url}`;
+            audioElem.classList.add('audioPad');
+            audioElem.id = `audio${i}`;
+
+            getPad.appendChild(audioElem);
+        }
+
+        createPad();
+        addAudioElem();
+
 
     };
 };
 
+//pad toggle function
 
+function padToggle(pad) {
+    console.log(`${pad}`);
+}
 
-// buildPadsArea(aloosh);
+//play function
+function playAudio() {
+    const padLength = document.getElementById('pads-container').children;
+
+    for (let i = 0; i < padLength.length; i++) {
+
+        let audioUrl = document.getElementById(`audio${i}`).src;
+        let audio = new Audio(audioUrl);
+        audio.play();
+
+    }
+
+}
+
 
 //jQuery Functions
-
-//jQuery Functions
-
 
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
@@ -110,5 +142,12 @@ $(document).ready(function () {
     });
     $('#select-escape').click(function () {
         buildPadsArea(escape);
+    });
+    $("#pads-container").delegate(".pad", "click", function () {
+        let padID = this.id;
+        padToggle(padID);
+    });
+    $('#playBtn').click(function () {
+        playAudio();
     });
 });
