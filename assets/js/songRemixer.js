@@ -70,6 +70,46 @@ const escape = new Song('escape', '97', [{
 
 const songs = [aloosh, escape];
 
+
+//create howls for each song
+
+const alooshDrums = new Howl({
+    src: ['assets/songs/aloosh/Drums.mp3']
+});
+const alooshBass = new Howl({
+    src: ['assets/songs/aloosh/Bass.mp3']
+});
+const alooshGtrRhythym = new Howl({
+    src: ['assets/songs/aloosh/GtrRhythym.mp3']
+});
+const alooshSynths = new Howl({
+    src: ['assets/songs/aloosh/Synths.mp3']
+});
+const alooshGtrLead = new Howl({
+    src: ['assets/songs/aloosh/GtrLead.mp3']
+});
+const alooshFX = new Howl({
+    src: ['assets/songs/aloosh/FX.mp3']
+});
+const alooshLeadVocal = new Howl({
+    src: ['assets/songs/aloosh/VocalsLead.mp3']
+});
+const alooshBackingVocals = new Howl({
+    src: ['assets/songs/aloosh/VocalsBVS.mp3']
+});
+
+function playAudio() {
+    alooshDrums.play();
+    alooshBass.play();
+    alooshGtrRhythym.play();
+    alooshSynths.play();
+    alooshGtrLead.play();
+    alooshFX.play();
+    alooshLeadVocal.play();
+    alooshBackingVocals.play();
+};
+
+
 //build pad grid 
 
 function buildPadsArea(song) {
@@ -96,7 +136,7 @@ function buildPadsArea(song) {
         }
 
         //add audio element and set source
-        function addAudioElem() {
+        /*function addAudioElem() {
             let getPad = document.getElementById(`pad${i}`);
             let audioElem = document.createElement('audio');
             audioElem.src = `${stemUrl[i].url}`;
@@ -104,7 +144,7 @@ function buildPadsArea(song) {
             audioElem.id = `audio${i}`;
 
             getPad.appendChild(audioElem);
-        }
+        }*/
 
         createPad();
         addAudioElem();
@@ -119,19 +159,7 @@ function padToggle(pad) {
     console.log(`${pad}`);
 }
 
-//play function
-function playAudio() {
-    const padLength = document.getElementById('pads-container').children;
 
-    for (let i = 0; i < padLength.length; i++) {
-
-        let audioUrl = document.getElementById(`audio${i}`).src;
-        let audio = new Audio(audioUrl);
-        audio.play();
-
-    }
-
-}
 
 
 //jQuery Functions
@@ -151,3 +179,20 @@ $(document).ready(function () {
         playAudio();
     });
 });
+
+
+
+
+//play function
+/*function playAudio() {
+    const padLength = document.getElementById('pads-container').children;
+
+    for (let i = 0; i < padLength.length; i++) {
+
+        let audioUrl = document.getElementById(`audio${i}`).src;
+        let audio = new Audio(audioUrl);
+        audio.play();
+
+    }
+
+}*/
