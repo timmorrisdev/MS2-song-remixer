@@ -178,7 +178,7 @@ function buildPadsArea(song) {
             let pad = document.createElement('div');
             pad.classList.add('pad');
             pad.classList.add(`${songName}-theme`);
-            pad.id = `pad${i}`;
+            pad.id = `${i}`;
             pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
             padContainer.appendChild(pad);
@@ -194,7 +194,7 @@ function buildPadsArea(song) {
 //pad toggle function
 
 function padToggle(pad) {
-    console.log(`${pad}`);
+    alooshAudio.mute(true, allPads[`${pad}`]);
 }
 
 
@@ -221,7 +221,7 @@ $(document).ready(function () {
         stopAudio();
     });
     $('#pads-container').delegate("#pad0", "click", function () {
-        console.log(pad0);
+
     });
 });
 
