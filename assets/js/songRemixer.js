@@ -100,6 +100,50 @@ const alooshAudio = new Howl({
     }
 });
 
+/*const escapeAudio = new Howl({
+    "src": [
+        "assets/songs/escape/escapeSprite.webm",
+        "assets/songs/escape/escapeSprite.mp3"
+    ],
+    "sprite": {
+        "bass": [
+            0,
+            188040
+        ],
+        "drums": [
+            190000,
+            188039.99999999997
+        ],
+        "fx": [
+            380000,
+            188039.99999999997
+        ],
+        "gtrLead": [
+            570000,
+            188039.99999999997
+        ],
+        "gtrRhythm": [
+            760000,
+            188039.99999999997
+        ],
+        "perc": [
+            950000,
+            188039.99999999997
+        ],
+        "synths": [
+            1140000,
+            188039.99999999997
+        ],
+        "vocalBacking": [
+            1330000,
+            188039.99999999997
+        ],
+        "vocalLead": [
+            1520000,
+            188039.99999999997
+        ]
+    }
+})*/
 
 
 let pad0 = "";
@@ -159,8 +203,11 @@ function playAudio() {
 
 };
 
+
 function stopAudio() {
-    alooshAudio.stop();
+
+    console.log(currentSongAudio);
+
 };
 
 
@@ -198,12 +245,17 @@ function buildPadsArea(song) {
     };
 };
 
-function changeTheme(song) {
+function changeTheme(newSong) {
 
     //replaces the class at index 0 with the new song theme
 
-    let removeTheme = document.body.classList[0];
-    document.body.classList.replace(removeTheme, `${song}-theme`);
+    let bodyTheme = document.body.classList[0];
+    document.body.classList.replace(bodyTheme, `${newSong}-theme`);
+
+    playBtn = document.getElementById('playBtn');
+    let playID = playBtn.classList[0];
+    playBtn.classList.replace(playID, `${newSong}`);
+
 }
 
 //pad toggle function
@@ -229,17 +281,25 @@ function padToggle(pad) {
 
 //jQuery Functions
 
+let currentSongId = "";
+let currentSongAudio = "";
+
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
 
+        currentSongId = "aloosh"
+        currentSongAudio = "alooshAudio"
         buildPadsArea(alooshInfo);
-        changeTheme("aloosh");
+        changeTheme(currentSongId);
+
 
     });
     $('#select-escape').click(function () {
 
+        currentSongID = "escape"
         buildPadsArea(escapeInfo);
-        changeTheme("escape");
+        changeTheme(currentSongId);
+
 
     });
     $("#pads-container").delegate(".pad", "click", function () {
@@ -250,7 +310,7 @@ $(document).ready(function () {
         playAudio();
     });
     $('#stopBtn').click(function () {
-        stopAudio();
+        stopAudio(currentSongId);
     });
     $('#pads-container').delegate("#pad0", "click", function () {
 
