@@ -37,6 +37,10 @@ footer {
     
 }
 
+#pads-container .pad-muted {
+    background: grey;
+}
+
 .pad::before {
     content: '';
     display: block;

@@ -194,7 +194,19 @@ function buildPadsArea(song) {
 //pad toggle function
 
 function padToggle(pad) {
-    alooshAudio.mute(true, allPads[`${pad}`]);
+    let padMute = document.getElementById(`${pad}`);
+
+
+    if (padMute.classList.contains('pad-muted')) {
+
+        alooshAudio.mute(false, allPads[`${pad}`]);
+        padMute.classList.remove('pad-muted')
+
+    } else {
+
+        alooshAudio.mute(true, allPads[`${pad}`]);
+        padMute.classList.add('pad-muted');
+    }
 }
 
 
