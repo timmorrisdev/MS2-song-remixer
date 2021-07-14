@@ -73,40 +73,93 @@ const songs = [aloosh, escape];
 
 //create howls for each song
 
-const alooshDrums = new Howl({
-    src: ['assets/songs/aloosh/Drums.mp3']
-});
-const alooshBass = new Howl({
-    src: ['assets/songs/aloosh/Bass.mp3']
-});
-const alooshGtrRhythym = new Howl({
-    src: ['assets/songs/aloosh/GtrRhythym.mp3']
-});
-const alooshSynths = new Howl({
-    src: ['assets/songs/aloosh/Synths.mp3']
-});
-const alooshGtrLead = new Howl({
-    src: ['assets/songs/aloosh/GtrLead.mp3']
-});
-const alooshFX = new Howl({
-    src: ['assets/songs/aloosh/FX.mp3']
-});
-const alooshLeadVocal = new Howl({
-    src: ['assets/songs/aloosh/VocalsLead.mp3']
-});
-const alooshBackingVocals = new Howl({
-    src: ['assets/songs/aloosh/VocalsBVS.mp3']
-});
+const alooshAudio = new Howl({
+        "src": [
+            "assets/songs/aloosh/aloosh.webm",
+            "assets/songs/aloosh/aloosh.mp3"
+        ],
+        "sprite": {
+            "bass": [
+                0,
+                187272.0181405896
+            ],
+            "drums": [
+                189000,
+                187272.0181405896
+            ],
+            "fx": [
+                378000,
+                187272.0181405896
+            ],
+            "gtrLead": [
+                567000,
+                187272.0181405896
+            ],
+            "gtrRhythm": [
+                756000,
+                187272.0181405896
+            ],
+            "perc": [
+                945000,
+                187272.0181405896
+            ],
+            "synths": [
+                1134000,
+                187272.0181405896
+            ],
+            "vocalBacking": [
+                1323000,
+                187272.0181405896
+            ],
+            "vocalLead": [
+                1512000,
+                187272.0181405896
+            ]
+        },
+        "stems": ['Drums', 'Bass', 'Perc', 'Rythym Guitar', 'Synths', 'Lead Guitar', 'FX', 'Lead Vocal', 'Backing Vocal']
+    }
+
+);
+
+// const alooshDrums = new Howl({
+//     src: ['assets/songs/aloosh/Drums.mp3']
+// });
+// const alooshBass = new Howl({
+//     src: ['assets/songs/aloosh/Bass.mp3']
+// });
+// const alooshGtrRhythym = new Howl({
+//     src: ['assets/songs/aloosh/GtrRhythym.mp3']
+// });
+// const alooshSynths = new Howl({
+//     src: ['assets/songs/aloosh/Synths.mp3']
+// });
+// const alooshGtrLead = new Howl({
+//     src: ['assets/songs/aloosh/GtrLead.mp3']
+// });
+// const alooshFX = new Howl({
+//     src: ['assets/songs/aloosh/FX.mp3']
+// });
+// const alooshLeadVocal = new Howl({
+//     src: ['assets/songs/aloosh/VocalsLead.mp3']
+// });
+// const alooshBackingVocals = new Howl({
+//     src: ['assets/songs/aloosh/VocalsBVS.mp3']
+// });
 
 function playAudio() {
-    alooshDrums.play();
-    alooshBass.play();
-    alooshGtrRhythym.play();
-    alooshSynths.play();
-    alooshGtrLead.play();
-    alooshFX.play();
-    alooshLeadVocal.play();
-    alooshBackingVocals.play();
+    alooshAudio.play('drums');
+    alooshAudio.play('bass');
+    alooshAudio.play('perc');
+    alooshAudio.play('gtrRythym');
+    alooshAudio.play('gtrLead');
+    alooshAudio.play('synths');
+    alooshAudio.play('vocalBacking');
+    alooshAudio.play('vocalLead');
+    alooshAudio.play('fx');
+};
+
+function stopAudio() {
+    alooshAudio.stop();
 };
 
 
@@ -147,7 +200,7 @@ function buildPadsArea(song) {
         }*/
 
         createPad();
-        addAudioElem();
+        //addAudioElem();
 
 
     };
@@ -167,6 +220,7 @@ function padToggle(pad) {
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
         buildPadsArea(aloosh);
+        $('body').addClass('aloosh-theme');
     });
     $('#select-escape').click(function () {
         buildPadsArea(escape);
@@ -177,6 +231,9 @@ $(document).ready(function () {
     });
     $('#playBtn').click(function () {
         playAudio();
+    });
+    $('#stopBtn').click(function () {
+        stopAudio();
     });
 });
 
