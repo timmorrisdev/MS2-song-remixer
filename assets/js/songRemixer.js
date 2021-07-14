@@ -10,152 +10,149 @@ class Song {
 
 //supply song information to Song class
 
-const aloosh = new Song('aloosh', '91', [{
-    name: 'Drums',
-    url: 'assets/songs/aloosh/Drums.mp3'
+const alooshInfo = new Song('aloosh', '91', [{
+    name: 'Drums'
 }, {
-    name: 'Percussion',
-    url: 'assets/songs/aloosh/Perc.mp3'
+    name: 'Percussion'
 }, {
-    name: 'Bass',
-    url: 'assets/songs/aloosh/Bass.mp3'
+    name: 'Bass'
 }, {
-    name: 'Main Guitar',
-    url: 'assets/songs/aloosh/GtrRhythm.mp3'
+    name: 'Main Guitar'
 }, {
-    name: 'Synths',
-    url: 'assets/songs/aloosh/Synths.mp3'
+    name: 'Synths'
 }, {
-    name: 'Lead Guitar',
-    url: 'assets/songs/aloosh/GtrLead.mp3'
+    name: 'Lead Guitar'
 }, {
-    name: 'FX',
-    url: 'assets/songs/aloosh/FX.mp3'
+    name: 'FX'
 }, {
-    name: 'Lead Vocal',
-    url: 'assets/songs/aloosh/VocalsLead.mp3'
+    name: 'Lead Vocal'
 }, {
-    name: 'Backing Vocals',
-    url: 'assets/songs/aloosh/VocalsBVS.mp3'
+    name: 'Backing Vocals'
 }, ]);
 
-const escape = new Song('escape', '97', [{
-    name: 'Drums',
-    url: 'assets/songs/escape/Drums.mp3'
+const escapeInfo = new Song('escape', '97', [{
+    name: 'Drums'
 }, {
-    name: 'Percussion',
-    url: 'assets/songs/escape/Perc.mp3'
+    name: 'Percussion'
 }, {
-    name: 'Bass',
-    url: 'assets/songs/escape/Bass.mp3'
+    name: 'Bass'
 }, {
-    name: 'Main Guitar',
-    url: 'assets/songs/escape/GtrRhythm.mp3'
+    name: 'Main Guitar'
 }, {
-    name: 'Synths',
-    url: 'assets/songs/escape/Synths.mp3'
+    name: 'Synths'
 }, {
-    name: 'Lead Guitar',
-    url: 'assets/songs/escape/GtrLead.mp3'
+    name: 'Lead Guitar'
 }, {
-    name: 'FX',
-    url: 'assets/songs/escape/FX.mp3'
+    name: 'FX'
 }, {
-    name: 'Lead Vocal',
-    url: 'assets/songs/escape/VocalsLead.mp3'
+    name: 'Lead Vocal'
 }, {
-    name: 'Backing Vocals',
-    url: 'assets/songs/escape/VocalsBVS.mp3'
+    name: 'Backing Vocals'
 }, ]);
 
-const songs = [aloosh, escape];
+const songs = [alooshInfo, escapeInfo];
 
 
 //create howls for each song
 
 const alooshAudio = new Howl({
-        "src": [
-            "assets/songs/aloosh/aloosh.webm",
-            "assets/songs/aloosh/aloosh.mp3"
+    "src": [
+        "assets/songs/aloosh/aloosh.webm",
+        "assets/songs/aloosh/aloosh.mp3"
+    ],
+    "sprite": {
+        "bass": [
+            0,
+            187272.0181405896
         ],
-        "sprite": {
-            "bass": [
-                0,
-                187272.0181405896
-            ],
-            "drums": [
-                189000,
-                187272.0181405896
-            ],
-            "fx": [
-                378000,
-                187272.0181405896
-            ],
-            "gtrLead": [
-                567000,
-                187272.0181405896
-            ],
-            "gtrRhythm": [
-                756000,
-                187272.0181405896
-            ],
-            "perc": [
-                945000,
-                187272.0181405896
-            ],
-            "synths": [
-                1134000,
-                187272.0181405896
-            ],
-            "vocalBacking": [
-                1323000,
-                187272.0181405896
-            ],
-            "vocalLead": [
-                1512000,
-                187272.0181405896
-            ]
-        },
-        "stems": ['Drums', 'Bass', 'Perc', 'Rythym Guitar', 'Synths', 'Lead Guitar', 'FX', 'Lead Vocal', 'Backing Vocal']
+        "drums": [
+            189000,
+            187272.0181405896
+        ],
+        "fx": [
+            378000,
+            187272.0181405896
+        ],
+        "gtrLead": [
+            567000,
+            187272.0181405896
+        ],
+        "gtrRhythm": [
+            756000,
+            187272.0181405896
+        ],
+        "perc": [
+            945000,
+            187272.0181405896
+        ],
+        "synths": [
+            1134000,
+            187272.0181405896
+        ],
+        "vocalBacking": [
+            1323000,
+            187272.0181405896
+        ],
+        "vocalLead": [
+            1512000,
+            187272.0181405896
+        ]
     }
+});
 
-);
+let pad0 = "";
+let pad1 = "";
+let pad2 = "";
+let pad3 = "";
+let pad4 = "";
+let pad5 = "";
+let pad6 = "";
+let pad7 = "";
+let pad8 = "";
+let pad9 = "";
 
-// const alooshDrums = new Howl({
-//     src: ['assets/songs/aloosh/Drums.mp3']
-// });
-// const alooshBass = new Howl({
-//     src: ['assets/songs/aloosh/Bass.mp3']
-// });
-// const alooshGtrRhythym = new Howl({
-//     src: ['assets/songs/aloosh/GtrRhythym.mp3']
-// });
-// const alooshSynths = new Howl({
-//     src: ['assets/songs/aloosh/Synths.mp3']
-// });
-// const alooshGtrLead = new Howl({
-//     src: ['assets/songs/aloosh/GtrLead.mp3']
-// });
-// const alooshFX = new Howl({
-//     src: ['assets/songs/aloosh/FX.mp3']
-// });
-// const alooshLeadVocal = new Howl({
-//     src: ['assets/songs/aloosh/VocalsLead.mp3']
-// });
-// const alooshBackingVocals = new Howl({
-//     src: ['assets/songs/aloosh/VocalsBVS.mp3']
-// });
+let allPads = [];
 
 function playAudio() {
-    alooshAudio.play('drums');
-    alooshAudio.play('bass');
-    alooshAudio.play('perc');
-    alooshAudio.play('gtrRythym');
-    alooshAudio.play('gtrLead');
-    alooshAudio.play('synths');
-    alooshAudio.play('vocalBacking');
-    alooshAudio.play('vocalLead');
-    alooshAudio.play('fx');
+
+    allPads = [];
+
+    let drums = Object.keys(alooshAudio._sprite)[1];
+    pad0 = alooshAudio.play(drums);
+    allPads.push(pad0);
+
+    let perc = Object.keys(alooshAudio._sprite)[5];
+    pad1 = alooshAudio.play(perc);
+    allPads.push(pad1);
+
+    let bass = Object.keys(alooshAudio._sprite)[0];
+    pad2 = alooshAudio.play(bass);
+    allPads.push(pad2);
+
+    let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
+    pad3 = alooshAudio.play(gtrRhythm);
+    allPads.push(pad3);
+
+    let gtrLead = Object.keys(alooshAudio._sprite)[3];
+    pad4 = alooshAudio.play(gtrLead);
+    allPads.push(pad4);
+
+    let synths = Object.keys(alooshAudio._sprite)[6];
+    pad5 = alooshAudio.play(synths);
+    allPads.push(pad5);
+
+    let fx = Object.keys(alooshAudio._sprite)[2];
+    pad6 = alooshAudio.play(fx);
+    allPads.push(pad6);
+
+    let vocalLead = Object.keys(alooshAudio._sprite)[8];
+    pad7 = alooshAudio.play(vocalLead);
+    allPads.push(pad7);
+
+    let vocalBacking = Object.keys(alooshAudio._sprite)[7];
+    pad8 = alooshAudio.play(vocalBacking);
+    allPads.push(pad8);
+
 };
 
 function stopAudio() {
@@ -170,7 +167,7 @@ function buildPadsArea(song) {
     padReset.innerText = '';
 
     let songName = song.name;
-    let stemUrl = song.stems;
+    let stemName = song.stems;
 
 
     for (let i = 0; i < song.stems.length; i++) {
@@ -182,25 +179,13 @@ function buildPadsArea(song) {
             pad.classList.add('pad');
             pad.classList.add(`${songName}-theme`);
             pad.id = `pad${i}`;
-            pad.innerHTML = `<span class="pad-content">${stemUrl[i].name}</span>`;
+            pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
             padContainer.appendChild(pad);
 
         }
 
-        //add audio element and set source
-        /*function addAudioElem() {
-            let getPad = document.getElementById(`pad${i}`);
-            let audioElem = document.createElement('audio');
-            audioElem.src = `${stemUrl[i].url}`;
-            audioElem.classList.add('audioPad');
-            audioElem.id = `audio${i}`;
-
-            getPad.appendChild(audioElem);
-        }*/
-
         createPad();
-        //addAudioElem();
 
 
     };
@@ -219,11 +204,11 @@ function padToggle(pad) {
 
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
-        buildPadsArea(aloosh);
+        buildPadsArea(alooshInfo);
         $('body').addClass('aloosh-theme');
     });
     $('#select-escape').click(function () {
-        buildPadsArea(escape);
+        buildPadsArea(escapeInfo);
     });
     $("#pads-container").delegate(".pad", "click", function () {
         let padID = this.id;
@@ -234,6 +219,9 @@ $(document).ready(function () {
     });
     $('#stopBtn').click(function () {
         stopAudio();
+    });
+    $('#pads-container').delegate("#pad0", "click", function () {
+        console.log(pad0);
     });
 });
 
