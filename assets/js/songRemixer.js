@@ -100,6 +100,8 @@ const alooshAudio = new Howl({
     }
 });
 
+
+
 let pad0 = "";
 let pad1 = "";
 let pad2 = "";
@@ -198,7 +200,10 @@ function buildPadsArea(song) {
 
 function changeTheme(song) {
 
-    document.body.classList.add(`${song}-theme`);
+    //replaces the class at index 0 with the new song theme
+
+    let removeTheme = document.body.classList[0];
+    document.body.classList.replace(removeTheme, `${song}-theme`);
 }
 
 //pad toggle function
