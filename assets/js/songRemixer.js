@@ -206,7 +206,7 @@ function playAudio() {
 
 function stopAudio() {
 
-    console.log(currentSongAudio);
+    alooshAudio.stop();
 
 };
 
@@ -252,9 +252,9 @@ function changeTheme(newSong) {
     let bodyTheme = document.body.classList[0];
     document.body.classList.replace(bodyTheme, `${newSong}-theme`);
 
-    playBtn = document.getElementById('playBtn');
+    /*playBtn = document.getElementById('playBtn');
     let playID = playBtn.classList[0];
-    playBtn.classList.replace(playID, `${newSong}`);
+    playBtn.classList.replace(playID, `${newSong}`);*/
 
 }
 
@@ -282,23 +282,20 @@ function padToggle(pad) {
 //jQuery Functions
 
 let currentSongId = "";
-let currentSongAudio = "";
 
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
 
-        currentSongId = "aloosh"
-        currentSongAudio = "alooshAudio"
+        currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
-        changeTheme(currentSongId);
-
+        changeTheme("aloosh");
 
     });
     $('#select-escape').click(function () {
 
-        currentSongID = "escape"
+        currentSongId = "escape";
         buildPadsArea(escapeInfo);
-        changeTheme(currentSongId);
+        changeTheme("escape");
 
 
     });
