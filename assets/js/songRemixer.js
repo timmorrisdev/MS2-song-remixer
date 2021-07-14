@@ -133,12 +133,12 @@ function playAudio() {
     pad3 = alooshAudio.play(gtrRhythm);
     allPads.push(pad3);
 
-    let gtrLead = Object.keys(alooshAudio._sprite)[3];
-    pad4 = alooshAudio.play(gtrLead);
+    let synths = Object.keys(alooshAudio._sprite)[6];
+    pad4 = alooshAudio.play(synths);
     allPads.push(pad4);
 
-    let synths = Object.keys(alooshAudio._sprite)[6];
-    pad5 = alooshAudio.play(synths);
+    let gtrLead = Object.keys(alooshAudio._sprite)[3];
+    pad5 = alooshAudio.play(gtrLead);
     allPads.push(pad5);
 
     let fx = Object.keys(alooshAudio._sprite)[2];
@@ -153,6 +153,8 @@ function playAudio() {
     pad8 = alooshAudio.play(vocalBacking);
     allPads.push(pad8);
 
+    console.log(allPads);
+
 };
 
 function stopAudio() {
@@ -163,6 +165,9 @@ function stopAudio() {
 //build pad grid 
 
 function buildPadsArea(song) {
+
+
+
     let padReset = document.getElementById('pads-container');
     padReset.innerText = '';
 
@@ -191,6 +196,11 @@ function buildPadsArea(song) {
     };
 };
 
+function changeTheme(song) {
+
+    document.body.classList.add(`${song}-theme`);
+}
+
 //pad toggle function
 
 function padToggle(pad) {
@@ -216,11 +226,16 @@ function padToggle(pad) {
 
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
+
         buildPadsArea(alooshInfo);
-        $('body').addClass('aloosh-theme');
+        changeTheme("aloosh");
+
     });
     $('#select-escape').click(function () {
+
         buildPadsArea(escapeInfo);
+        changeTheme("escape");
+
     });
     $("#pads-container").delegate(".pad", "click", function () {
         let padID = this.id;

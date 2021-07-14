@@ -6,6 +6,10 @@ body.aloosh-theme{
     background: radial-gradient(circle, rgba(240,230,239,1) 0%, rgba(184,190,221,1) 31%, rgba(195,162,183,1) 74%);
 }
 
+body.escape-theme{
+    background: radial-gradient(circle, rgba(22,186,197,1) 21%, rgba(95,191,249,1) 41%, rgba(154,193,39,1) 96%);
+}
+
 footer {
     position: fixed;
     bottom: 0; 
@@ -52,7 +56,7 @@ footer {
   }
 
   .pad.escape-theme{
-      background-color: coral;
+      background: radial-gradient(circle, rgba(226,220,5,1) 0%, rgba(254,176,34,1) 56%);
   }
 
   .pad-content {
