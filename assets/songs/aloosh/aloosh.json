@@ -1,7 +1,7 @@
 {
   "src": [
-    "aloosh.webm",
-    "aloosh.mp3"
+    "assets/songs/aloosh/aloosh.webm",
+    "assets/songs/aloosh/aloosh.mp3"
   ],
   "sprite": {
     "bass": [

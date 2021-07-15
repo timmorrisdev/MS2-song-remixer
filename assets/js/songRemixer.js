@@ -152,7 +152,8 @@ const alooshAudio = new Howl({
     }
 });
 
-/*const escapeAudio = new Howl({
+
+const escapeAudio = new Howl({
     "src": [
         "assets/songs/escape/escapeSprite.webm",
         "assets/songs/escape/escapeSprite.mp3"
@@ -195,8 +196,9 @@ const alooshAudio = new Howl({
             188039.99999999997
         ]
     }
-})*/
+})
 
+//initial variable declarations to store sprite IDs upon playing
 
 let pad0 = "";
 let pad1 = "";
@@ -213,45 +215,90 @@ let allPads = [];
 
 function playAudio() {
 
+    //clears existing sprite IDs from allPads variable
     allPads = [];
 
-    let drums = Object.keys(alooshAudio._sprite)[1];
-    pad0 = alooshAudio.play(drums);
-    allPads.push(pad0);
+    if (currentSongId === 'aloosh') {
 
-    let perc = Object.keys(alooshAudio._sprite)[5];
-    pad1 = alooshAudio.play(perc);
-    allPads.push(pad1);
+        let drums = Object.keys(alooshAudio._sprite)[1];
+        pad0 = alooshAudio.play(drums);
+        allPads.push(pad0);
 
-    let bass = Object.keys(alooshAudio._sprite)[0];
-    pad2 = alooshAudio.play(bass);
-    allPads.push(pad2);
+        let perc = Object.keys(alooshAudio._sprite)[5];
+        pad1 = alooshAudio.play(perc);
+        allPads.push(pad1);
 
-    let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
-    pad3 = alooshAudio.play(gtrRhythm);
-    allPads.push(pad3);
+        let bass = Object.keys(alooshAudio._sprite)[0];
+        pad2 = alooshAudio.play(bass);
+        allPads.push(pad2);
 
-    let synths = Object.keys(alooshAudio._sprite)[6];
-    pad4 = alooshAudio.play(synths);
-    allPads.push(pad4);
+        let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
+        pad3 = alooshAudio.play(gtrRhythm);
+        allPads.push(pad3);
 
-    let gtrLead = Object.keys(alooshAudio._sprite)[3];
-    pad5 = alooshAudio.play(gtrLead);
-    allPads.push(pad5);
+        let synths = Object.keys(alooshAudio._sprite)[6];
+        pad4 = alooshAudio.play(synths);
+        allPads.push(pad4);
 
-    let fx = Object.keys(alooshAudio._sprite)[2];
-    pad6 = alooshAudio.play(fx);
-    allPads.push(pad6);
+        let gtrLead = Object.keys(alooshAudio._sprite)[3];
+        pad5 = alooshAudio.play(gtrLead);
+        allPads.push(pad5);
 
-    let vocalLead = Object.keys(alooshAudio._sprite)[8];
-    pad7 = alooshAudio.play(vocalLead);
-    allPads.push(pad7);
+        let fx = Object.keys(alooshAudio._sprite)[2];
+        pad6 = alooshAudio.play(fx);
+        allPads.push(pad6);
 
-    let vocalBacking = Object.keys(alooshAudio._sprite)[7];
-    pad8 = alooshAudio.play(vocalBacking);
-    allPads.push(pad8);
+        let vocalLead = Object.keys(alooshAudio._sprite)[8];
+        pad7 = alooshAudio.play(vocalLead);
+        allPads.push(pad7);
 
-    console.log(allPads);
+        let vocalBacking = Object.keys(alooshAudio._sprite)[7];
+        pad8 = alooshAudio.play(vocalBacking);
+        allPads.push(pad8);
+
+    } else if (currentSongId === 'escape') {
+
+        let drums = Object.keys(escapeAudio._sprite)[1];
+        pad0 = escapeAudio.play(drums);
+        allPads.push(pad0);
+
+        let perc = Object.keys(escapeAudio._sprite)[5];
+        pad1 = escapeAudio.play(perc);
+        allPads.push(pad1);
+
+        let bass = Object.keys(escapeAudio._sprite)[0];
+        pad2 = escapeAudio.play(bass);
+        allPads.push(pad2);
+
+        let gtrRhythm = Object.keys(escapeAudio._sprite)[4];
+        pad3 = escapeAudio.play(gtrRhythm);
+        allPads.push(pad3);
+
+        let synths = Object.keys(escapeAudio._sprite)[6];
+        pad4 = escapeAudio.play(synths);
+        allPads.push(pad4);
+
+        let gtrLead = Object.keys(escapeAudio._sprite)[3];
+        pad5 = escapeAudio.play(gtrLead);
+        allPads.push(pad5);
+
+        let fx = Object.keys(escapeAudio._sprite)[2];
+        pad6 = escapeAudio.play(fx);
+        allPads.push(pad6);
+
+        let vocalLead = Object.keys(escapeAudio._sprite)[8];
+        pad7 = escapeAudio.play(vocalLead);
+        allPads.push(pad7);
+
+        let vocalBacking = Object.keys(escapeAudio._sprite)[7];
+        pad8 = escapeAudio.play(vocalBacking);
+        allPads.push(pad8);
+
+    } else {
+        alert('no song selected');
+    };
+
+
 
 };
 
@@ -268,36 +315,37 @@ function stopAudio() {
     } else {
         alert('no song playing');
     };
-
-    //let songAudio = `${currentSongId}Audio`; //compiles the name of the variable I want to use
-
-    //console.log(songAudio); // correctly logs alooshAudio to the console
-
-    //songAudio.stop(); //throws an error
-    //alooshAudio.stop(); // works correctly hard coding the call to stop
-
 };
-
-
-
-
-
 
 //pad toggle function
 
 function padToggle(pad) {
-    let padMute = document.getElementById(`${pad}`);
 
-    if (padMute.classList.contains('pad-muted')) {
+    if (currentSongId === 'aloosh') {
 
-        alooshAudio.mute(false, allPads[`${pad}`]);
-        padMute.classList.remove('pad-muted')
+        let padMute = document.getElementById(`${pad}`);
+        if (padMute.classList.contains('pad-muted')) {
+            alooshAudio.mute(false, allPads[`${pad}`]);
+            padMute.classList.remove('pad-muted')
+        } else {
+            alooshAudio.mute(true, allPads[`${pad}`]);
+            padMute.classList.add('pad-muted');
+        }
+
+    } else if (currentSongId === 'escape') {
+
+        let padMute = document.getElementById(`${pad}`);
+        if (padMute.classList.contains('pad-muted')) {
+            escapeAudio.mute(false, allPads[`${pad}`]);
+            padMute.classList.remove('pad-muted')
+        } else {
+            escapeAudio.mute(true, allPads[`${pad}`]);
+            padMute.classList.add('pad-muted');
+        }
 
     } else {
-
-        alooshAudio.mute(true, allPads[`${pad}`]);
-        padMute.classList.add('pad-muted');
-    }
+        alert('select a song a get mixing!');
+    };
 }
 
 
@@ -310,6 +358,7 @@ let currentSongId = "";
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
 
+        stopAudio();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
         changeTheme("aloosh");
@@ -317,6 +366,7 @@ $(document).ready(function () {
     });
     $('#select-escape').click(function () {
 
+        stopAudio();
         currentSongId = "escape";
         buildPadsArea(escapeInfo);
         changeTheme("escape");
