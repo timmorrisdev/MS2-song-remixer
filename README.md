@@ -1,102 +1,151 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Volleyball Song Remixer
+___
 
-Welcome TimMorrisDev,
+## Project Synopsis
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+Song remixer game using music by the band Volleyball. The user can choose from several songs and mute or hear a variety of instruments to create unique arrangements of the tracks.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[See the live site here!](https://timmorrisdev.github.io/MS2-song-remixer/)
 
-`python3 -m http.server`
+___
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+### User Stories
 
-Another blue button should appear to click: _Open Browser_.
+- I want to easily understand the game and how to play.
+- I want to remix different songs by bringing elements of the track in and out.
+- The site should be visually appealing and well laid out, with different colour themes for each song.
+- I should be able to customise my experience by turning music on or off.
+- I want to be able to connect with the band featured on their social media and own website.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Business Goals
 
-A blue button should appear to click: _Make Public_,
+- To allow fans the opportunity to create their own versions of the bands songs.
+- To drive traffic to the band's social media and website to increase fan engagement.
 
-Another blue button should appear to click: _Open Browser_.
+### Design
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Colour Scheme
 
-To log into the Heroku toolbelt CLI:
+- Fonts
+    - Montserrat / Lato / Quicksand
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Wireframes
+    - [Landing Page](https://github.com/TimMorrisDev/south-coast-sup/blob/master/assets/wireframes/Landing%20Page.png)
+   
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Design Decisions Made During Development
+- Landing Page 'Call-To-Action' section
+    - I chose to further develop the club ethos section on the home/landing page to include buttons directing the user to key areas of the site. This is to improve the user experience and also to prevent any first time user from navigating away from the page before finding what they require.
 
-------
+ - 'Where to SUP' page
+    - After arranging the page into three cards, as per the wireframe, I found the content too much to show while trying to keep a streamlined and clutter-free user experience. I made the decision to utilise a nav instead of the cards, allowing me to display more detailed information for each location while maintaining a clear layout. This design also leaves room for future development as adding more locations as the club grows will not take up more real-estate on the page.
 
-## Release History
+- Event Registration Modals
+    - Having built the events page, I needed a way of the user registering their interest in a particular event without directing them to a further page and interrupting their journey through the site. I settled on using a modal containing the registration form to achieve this. The information entered will be delivered to the Code Institute form-dump server.     
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- Colour Scheme
+    - I found a couple of my suggested colours a little too bold for my vision for the site. While keeping fairly close to the colour scheme detailed in the previous section, I was able to use the colour picker in Google dev tools to adjust the shades being used to achieve a more relaxed colour theme across the site. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Future Development Opportunities
+- Recording of arrangements
+___
+## Features
+- Responsive across all devices and screen sizes.
+- Adaptive to modify content shown to be appropriate for user device or screen size.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+___
+## Technologies Used
+### Languages Used
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://www.javascript.com/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+### Frameworks, Libraries & Programs Used
+- [HowlerJS](https://howlerjs.com/)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+    - Bootstrap was used for the responsive 'grid'. Code snippets from the Bootstrap documentation were used in various places and modified to suit the purpose and design of the site.
+- [jQuery](https://jquery.com/)
+    - jQuery came as part of Bootstrap and was used for Javascript plugins such as the responsive nav bar and modals.
+- [Google Fonts](https://fonts.google.com/)
+    - Google Fonts was used to import the 'Montserrat', 'Lato' and 'Quicksand' fonts, which were used throughout the site.
+- [Font Awesome](https://fontawesome.com/)
+    - Used to source images for the transport section of the remixer.
+- [Hover.css](https://ianlunn.github.io/Hover/)
+    - 
+- [Git](https://git-scm.com/)
+    - Git was used for version control using the terminal in Gitpod to 'add' and 'commit' to Git and to push changes to the GitHub repository using 'git push'.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- [Gitpod](https://gitpod.io/)
+    - Gitpod.io was used as the primary development environment when coding for the site. It's terminal was used to preview the site via temporary server, and for version control using Git commands.
+- [Github](https://github.com/)
+    - GitHub was used to store the code pushed from Gitpod and as deployment for the [published site.](https://timmorrisdev.github.io/south-coast-sup/)
+- [Balsamiq](https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes for the site while in the 'skeleton' stage of my UX process.
+- [Autoprefixer](http://autoprefixer.github.io/)
+    - Autoprefixer was used in the final stage of development to parse CSS code and add vendor prefixes.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+___
+## Testing
+### W3C Markup and CSS Validation
+I used the W3C Markup and CSS Validator Services to check and validate each page throughout the site to check for errors. 
+#### [Markup Validation Service](https://validator.w3.org/)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+#### [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Lighthouse Testing
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Testing UX user stories
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Peer Code Review
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Cross-Browser/Device Testing
+I tested the site across multiple devices using different browsers.
+- Browsers tested
+    - Chrome
+    - Safari
+    - Firefox
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- Devices tested
+    - Mac Pro w/ Dell 24 inch monitor
+    - Macbook Pro 15 inch
+    - iPhone 12
+    - iPad air 2
+___
+## Deployment
+### GitHub Pages
+The project was deployed to GitHub pages using the following method. 
+1. Log in to [GitHub.com](https://github.com/) and locate the south-coast-sup repository in my account.
+2. Select the repo 'settings' menu and navigate to the 'pages' tab on the left hand side.
+3. In the 'source' section, select the master branch as the source for the site deployment. 
+4. Hit 'save' and wait a few mins for GitHub to process. The 'pages' settings tab will now show a message to confirm the repository is being published to the address https://timmorrisdev.github.io/south-coast-sup/.
 
-------
+### Forking the repository in GitHub
+Forking the repository creates a copy of the original repository in your own account to allow changes to be made without affecting the original repository.
+1. Log in to GitHub and navigate to the GitHub repository page.
+2. In the top-right of the page, below the user avatar, locate the "fork" button.
+3. Click the "fork" button and you should now have a copy of the repository in your own account. 
 
-## FAQ about the uptime script
+### Making a Local Clone
+Details of how to make a local copy of the GutHub repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). To clone using HTTPS follow these steps.
+1. Navigate to the GitHub repository.
+2. Click the "Code" drop-down menu above the list of files.
+3. Copy the HTTPS address to the clipboard using the button provided.
+4. Open Terminal.
+5. Change the current directory to the location you wish to copy the directory.
+6. Type 'git clone' and then paste the HTTPS url you copied earlier. 
+7. Press enter and your local clone will be created. 
 
-**Why have you added this script?**
+___
+## Credits
+### Code
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+### Content
+- All content written by the developer.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Media
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
