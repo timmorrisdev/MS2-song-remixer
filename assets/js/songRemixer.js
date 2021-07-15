@@ -8,6 +8,8 @@ class Song {
     }
 };
 
+
+
 //supply song information to Song class
 
 const alooshInfo = new Song('aloosh', '91', [{
@@ -51,6 +53,56 @@ const escapeInfo = new Song('escape', '97', [{
 }, ]);
 
 const songs = [alooshInfo, escapeInfo];
+
+
+// function to change the theme of various elements of the site when selecting a new song
+
+function changeTheme(newSong) {
+
+    //replaces the class at index 0 with the new song theme
+
+    let bodyTheme = document.body.classList[0];
+    document.body.classList.replace(bodyTheme, `${newSong}-theme`);
+
+    playBtn = document.getElementById('playBtn');
+    let playID = playBtn.classList[0];
+    playBtn.classList.replace(playID, `${newSong}`);
+
+}
+
+//build pad grid 
+
+function buildPadsArea(song) {
+
+
+
+    let padReset = document.getElementById('pads-container');
+    padReset.innerText = '';
+
+    let songName = song.name;
+    let stemName = song.stems;
+
+
+    for (let i = 0; i < song.stems.length; i++) {
+
+        //create pad grid function
+        function createPad() {
+            let padContainer = document.getElementById('pads-container');
+            let pad = document.createElement('div');
+            pad.classList.add('pad');
+            pad.classList.add(`${songName}-theme`);
+            pad.id = `${i}`;
+            pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
+
+            padContainer.appendChild(pad);
+
+        }
+
+        createPad();
+
+
+    };
+};
 
 
 //create howls for each song
@@ -203,66 +255,38 @@ function playAudio() {
 
 };
 
+// stop playback fucntion 
 
 function stopAudio() {
 
-    alooshAudio.stop();
+    //if statement to stop audio based on current song selected
 
-};
-
-
-//build pad grid 
-
-function buildPadsArea(song) {
-
-
-
-    let padReset = document.getElementById('pads-container');
-    padReset.innerText = '';
-
-    let songName = song.name;
-    let stemName = song.stems;
-
-
-    for (let i = 0; i < song.stems.length; i++) {
-
-        //create pad grid function
-        function createPad() {
-            let padContainer = document.getElementById('pads-container');
-            let pad = document.createElement('div');
-            pad.classList.add('pad');
-            pad.classList.add(`${songName}-theme`);
-            pad.id = `${i}`;
-            pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
-
-            padContainer.appendChild(pad);
-
-        }
-
-        createPad();
-
-
+    if (currentSongId === 'aloosh') {
+        alooshAudio.stop();
+    } else if (currentSongId === 'escape') {
+        escapeAudio.stop();
+    } else {
+        alert('no song playing');
     };
+
+    //let songAudio = `${currentSongId}Audio`; //compiles the name of the variable I want to use
+
+    //console.log(songAudio); // correctly logs alooshAudio to the console
+
+    //songAudio.stop(); //throws an error
+    //alooshAudio.stop(); // works correctly hard coding the call to stop
+
 };
 
-function changeTheme(newSong) {
 
-    //replaces the class at index 0 with the new song theme
 
-    let bodyTheme = document.body.classList[0];
-    document.body.classList.replace(bodyTheme, `${newSong}-theme`);
 
-    /*playBtn = document.getElementById('playBtn');
-    let playID = playBtn.classList[0];
-    playBtn.classList.replace(playID, `${newSong}`);*/
 
-}
 
 //pad toggle function
 
 function padToggle(pad) {
     let padMute = document.getElementById(`${pad}`);
-
 
     if (padMute.classList.contains('pad-muted')) {
 
