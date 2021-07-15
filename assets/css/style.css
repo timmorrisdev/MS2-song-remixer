@@ -19,7 +19,10 @@ footer {
 .song-nav-container {
     
 }
-
+.transport {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 .pads-container {

@@ -358,7 +358,7 @@ let currentSongId = "";
 $(document).ready(function () {
     $('#select-aloosh').click(function () {
 
-        stopAudio();
+        escapeAudio.stop();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
         changeTheme("aloosh");
@@ -366,7 +366,7 @@ $(document).ready(function () {
     });
     $('#select-escape').click(function () {
 
-        stopAudio();
+        alooshAudio.stop();
         currentSongId = "escape";
         buildPadsArea(escapeInfo);
         changeTheme("escape");
