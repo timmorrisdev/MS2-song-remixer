@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
 }
 body.aloosh-theme{
-    background: radial-gradient(circle, rgba(240,230,239,1) 0%, rgba(184,190,221,1) 31%, rgba(195,162,183,1) 74%);
+    background: radial-gradient(circle, rgba(240,230,239,1) 0%, rgba(184,190,221,1) 14%, rgba(195,162,183,1) 78%);
 }
 
 body.escape-theme{

@@ -99,8 +99,6 @@ function buildPadsArea(song) {
         }
 
         createPad();
-
-
     };
 };
 
@@ -112,6 +110,7 @@ const alooshAudio = new Howl({
         "assets/songs/aloosh/aloosh.webm",
         "assets/songs/aloosh/aloosh.mp3"
     ],
+    preload: true,
     "sprite": {
         "bass": [
             0,
@@ -149,7 +148,7 @@ const alooshAudio = new Howl({
             1512000,
             187272.0181405896
         ]
-    }
+    },
 });
 
 
@@ -219,83 +218,91 @@ function playAudio() {
     allPads = [];
 
     if (currentSongId === 'aloosh') {
+        if (alooshAudio.state() === 'loaded') {
+            console.log(alooshAudio.state());
 
-        let drums = Object.keys(alooshAudio._sprite)[1];
-        pad0 = alooshAudio.play(drums);
-        allPads.push(pad0);
+            let drums = Object.keys(alooshAudio._sprite)[1];
+            pad0 = alooshAudio.play(drums);
+            allPads.push(pad0);
 
-        let perc = Object.keys(alooshAudio._sprite)[5];
-        pad1 = alooshAudio.play(perc);
-        allPads.push(pad1);
+            let perc = Object.keys(alooshAudio._sprite)[5];
+            pad1 = alooshAudio.play(perc);
+            allPads.push(pad1);
 
-        let bass = Object.keys(alooshAudio._sprite)[0];
-        pad2 = alooshAudio.play(bass);
-        allPads.push(pad2);
+            let bass = Object.keys(alooshAudio._sprite)[0];
+            pad2 = alooshAudio.play(bass);
+            allPads.push(pad2);
 
-        let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
-        pad3 = alooshAudio.play(gtrRhythm);
-        allPads.push(pad3);
+            let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
+            pad3 = alooshAudio.play(gtrRhythm);
+            allPads.push(pad3);
 
-        let synths = Object.keys(alooshAudio._sprite)[6];
-        pad4 = alooshAudio.play(synths);
-        allPads.push(pad4);
+            let synths = Object.keys(alooshAudio._sprite)[6];
+            pad4 = alooshAudio.play(synths);
+            allPads.push(pad4);
 
-        let gtrLead = Object.keys(alooshAudio._sprite)[3];
-        pad5 = alooshAudio.play(gtrLead);
-        allPads.push(pad5);
+            let gtrLead = Object.keys(alooshAudio._sprite)[3];
+            pad5 = alooshAudio.play(gtrLead);
+            allPads.push(pad5);
 
-        let fx = Object.keys(alooshAudio._sprite)[2];
-        pad6 = alooshAudio.play(fx);
-        allPads.push(pad6);
+            let fx = Object.keys(alooshAudio._sprite)[2];
+            pad6 = alooshAudio.play(fx);
+            allPads.push(pad6);
 
-        let vocalLead = Object.keys(alooshAudio._sprite)[8];
-        pad7 = alooshAudio.play(vocalLead);
-        allPads.push(pad7);
+            let vocalLead = Object.keys(alooshAudio._sprite)[8];
+            pad7 = alooshAudio.play(vocalLead);
+            allPads.push(pad7);
 
-        let vocalBacking = Object.keys(alooshAudio._sprite)[7];
-        pad8 = alooshAudio.play(vocalBacking);
-        allPads.push(pad8);
+            let vocalBacking = Object.keys(alooshAudio._sprite)[7];
+            pad8 = alooshAudio.play(vocalBacking);
+            allPads.push(pad8);
+        } else {
+            alert('song loading, please try again!')
+        }
 
     } else if (currentSongId === 'escape') {
 
-        let drums = Object.keys(escapeAudio._sprite)[1];
-        pad0 = escapeAudio.play(drums);
-        allPads.push(pad0);
+        if (alooshAudio.state() === 'loaded') {
+            let drums = Object.keys(escapeAudio._sprite)[1];
+            pad0 = escapeAudio.play(drums);
+            allPads.push(pad0);
 
-        let perc = Object.keys(escapeAudio._sprite)[5];
-        pad1 = escapeAudio.play(perc);
-        allPads.push(pad1);
+            let perc = Object.keys(escapeAudio._sprite)[5];
+            pad1 = escapeAudio.play(perc);
+            allPads.push(pad1);
 
-        let bass = Object.keys(escapeAudio._sprite)[0];
-        pad2 = escapeAudio.play(bass);
-        allPads.push(pad2);
+            let bass = Object.keys(escapeAudio._sprite)[0];
+            pad2 = escapeAudio.play(bass);
+            allPads.push(pad2);
 
-        let gtrRhythm = Object.keys(escapeAudio._sprite)[4];
-        pad3 = escapeAudio.play(gtrRhythm);
-        allPads.push(pad3);
+            let gtrRhythm = Object.keys(escapeAudio._sprite)[4];
+            pad3 = escapeAudio.play(gtrRhythm);
+            allPads.push(pad3);
 
-        let synths = Object.keys(escapeAudio._sprite)[6];
-        pad4 = escapeAudio.play(synths);
-        allPads.push(pad4);
+            let synths = Object.keys(escapeAudio._sprite)[6];
+            pad4 = escapeAudio.play(synths);
+            allPads.push(pad4);
 
-        let gtrLead = Object.keys(escapeAudio._sprite)[3];
-        pad5 = escapeAudio.play(gtrLead);
-        allPads.push(pad5);
+            let gtrLead = Object.keys(escapeAudio._sprite)[3];
+            pad5 = escapeAudio.play(gtrLead);
+            allPads.push(pad5);
 
-        let fx = Object.keys(escapeAudio._sprite)[2];
-        pad6 = escapeAudio.play(fx);
-        allPads.push(pad6);
+            let fx = Object.keys(escapeAudio._sprite)[2];
+            pad6 = escapeAudio.play(fx);
+            allPads.push(pad6);
 
-        let vocalLead = Object.keys(escapeAudio._sprite)[8];
-        pad7 = escapeAudio.play(vocalLead);
-        allPads.push(pad7);
+            let vocalLead = Object.keys(escapeAudio._sprite)[8];
+            pad7 = escapeAudio.play(vocalLead);
+            allPads.push(pad7);
 
-        let vocalBacking = Object.keys(escapeAudio._sprite)[7];
-        pad8 = escapeAudio.play(vocalBacking);
-        allPads.push(pad8);
-
+            let vocalBacking = Object.keys(escapeAudio._sprite)[7];
+            pad8 = escapeAudio.play(vocalBacking);
+            allPads.push(pad8);
+        } else {
+            alert('song loading, please try again!')
+        };
     } else {
-        alert('no song selected');
+        alert('select a song from the menu and get mixing!');
     };
 
 
@@ -348,8 +355,34 @@ function padToggle(pad) {
     };
 }
 
+/*function allUnMute() {
 
+    let allPads = document.getElementsByClassName('pad');
 
+    if (currentSongId === 'aloosh') {
+
+        for (let i = 0; i < allPads.length; i++) {
+            if (allPads[i].classList.contains('pad-muted')) {
+                alooshAudio.mute(false, allPads[i]);
+            } else {
+                alert('no pads are muted');
+            }
+        };
+    } else if (currentSongId === 'escape') {
+
+        for (let i = 0; i < allPads.length; i++) {
+            if (allPads[i].classList.contains('pad-muted')) {
+                escapeAudio.mute(false, allPads[i]);
+            } else {
+                alert('no pads are muted');
+            }
+        };
+    };
+};*/
+
+function allUnMute() {
+    alooshAudio.mute(false);
+}
 
 //jQuery Functions
 
@@ -382,9 +415,13 @@ $(document).ready(function () {
     });
     $('#stopBtn').click(function () {
         stopAudio(currentSongId);
+
     });
     $('#pads-container').delegate("#pad0", "click", function () {
 
+    });
+    $('#allUnmute').click(function () {
+        allUnMute();
     });
 });
 
