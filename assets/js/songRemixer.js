@@ -109,8 +109,8 @@ function buildPadsArea(song) {
 
 const alooshAudio = new Howl({
     "src": [
-        "assets/songs/aloosh/aloosh.webm",
-        "assets/songs/aloosh/aloosh.mp3"
+        "assets/songs/aloosh/aloosh.mp3",
+        "assets/songs/aloosh/aloosh.webm"
     ],
     preload: true,
     // html5: true,
@@ -156,8 +156,9 @@ const alooshAudio = new Howl({
 
 const escapeAudio = new Howl({
     "src": [
-        "assets/songs/escape/escapeSprite.webm",
-        "assets/songs/escape/escapeSprite.mp3"
+        "assets/songs/escape/escapeSprite.mp3",
+        "assets/songs/escape/escapeSprite.webm"
+
     ],
     preload: true,
     //html5: true,

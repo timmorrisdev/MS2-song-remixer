@@ -36,17 +36,7 @@ ___
    
 
 ### Design Decisions Made During Development
-- Landing Page 'Call-To-Action' section
-    - I chose to further develop the club ethos section on the home/landing page to include buttons directing the user to key areas of the site. This is to improve the user experience and also to prevent any first time user from navigating away from the page before finding what they require.
 
- - 'Where to SUP' page
-    - After arranging the page into three cards, as per the wireframe, I found the content too much to show while trying to keep a streamlined and clutter-free user experience. I made the decision to utilise a nav instead of the cards, allowing me to display more detailed information for each location while maintaining a clear layout. This design also leaves room for future development as adding more locations as the club grows will not take up more real-estate on the page.
-
-- Event Registration Modals
-    - Having built the events page, I needed a way of the user registering their interest in a particular event without directing them to a further page and interrupting their journey through the site. I settled on using a modal containing the registration form to achieve this. The information entered will be delivered to the Code Institute form-dump server.     
-
-- Colour Scheme
-    - I found a couple of my suggested colours a little too bold for my vision for the site. While keeping fairly close to the colour scheme detailed in the previous section, I was able to use the colour picker in Google dev tools to adjust the shades being used to achieve a more relaxed colour theme across the site. 
 
 ### Future Development Opportunities
 - Recording of arrangements
