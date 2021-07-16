@@ -451,3 +451,20 @@ $(document).ready(function () {
     }
 
 }*/
+
+fetch("/assets/songs/escape/escapeSprite.json")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    });
+
+
+fetch("/assets/songs/aloosh/aloosh.json")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    });
