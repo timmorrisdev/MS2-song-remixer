@@ -10,7 +10,7 @@ class Song {
 
 
 
-//supply song information to Song class
+//supply song information to Song class (name, tempo, stems[])
 
 const alooshInfo = new Song('aloosh', '91', [{
     name: 'Drums'
@@ -59,13 +59,13 @@ const songs = [alooshInfo, escapeInfo];
 
 function changeTheme(newSong) {
 
-    //replaces the class at index 0 with the new song theme
-
-    let bodyTheme = document.body.classList[0];
+    //replaces the body class at index 0 with the new song theme
+    const bodyTheme = document.body.classList[0];
     document.body.classList.replace(bodyTheme, `${newSong}-theme`);
 
+    //replaces the playBtn Id with the selected song
     playBtn = document.getElementById('playBtn');
-    let playID = playBtn.classList[0];
+    const playID = playBtn.classList[0];
     playBtn.classList.replace(playID, `${newSong}`);
 
 }
@@ -74,24 +74,27 @@ function changeTheme(newSong) {
 
 function buildPadsArea(song) {
 
-
-
-    let padReset = document.getElementById('pads-container');
+    //clears the pad container of the existing song grid
+    const padReset = document.getElementById('pads-container');
     padReset.innerText = '';
 
-    let songName = song.name;
-    let stemName = song.stems;
-
+    //assign current song stems information to variable
+    const stemName = song.stems;
 
     for (let i = 0; i < song.stems.length; i++) {
 
         //create pad grid function
         function createPad() {
-            let padContainer = document.getElementById('pads-container');
-            let pad = document.createElement('div');
+
+            //gets pad-container element and adds div element
+            const padContainer = document.getElementById('pads-container');
+            const pad = document.createElement('div');
+
+            //add class and ID information to each pad
             pad.classList.add('pad');
-            pad.classList.add(`${songName}-theme`);
+            pad.classList.add(`${currentSongId}-theme`);
             pad.id = `${i}`;
+
             pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
             padContainer.appendChild(pad);
@@ -101,7 +104,6 @@ function buildPadsArea(song) {
         createPad();
     };
 };
-
 
 //create howls for each song
 
@@ -152,7 +154,6 @@ const alooshAudio = new Howl({
     },
 });
 
-
 const escapeAudio = new Howl({
     "src": [
         "assets/songs/escape/escapeSprite.webm",
@@ -200,19 +201,7 @@ const escapeAudio = new Howl({
     }
 })
 
-//initial variable declarations to store sprite IDs upon playing
-
-let pad0 = "";
-let pad1 = "";
-let pad2 = "";
-let pad3 = "";
-let pad4 = "";
-let pad5 = "";
-let pad6 = "";
-let pad7 = "";
-let pad8 = "";
-let pad9 = "";
-
+//Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
 let allPads = [];
 
 function playAudio() {
@@ -220,87 +209,95 @@ function playAudio() {
     //clears existing sprite IDs from allPads variable
     allPads = [];
 
+    //check current song
     if (currentSongId === 'aloosh') {
-        if (alooshAudio.state() === 'loaded') {
-            console.log(alooshAudio.state());
 
-            let drums = Object.keys(alooshAudio._sprite)[1];
-            pad0 = alooshAudio.play(drums);
+        //checks if audio is loaded and ready
+        if (alooshAudio.state() === 'loaded') {
+
+            //retrieve current sprite ID(changes with each playback), create pad variable and push to allPads array
+            const drums = Object.keys(alooshAudio._sprite)[1];
+            const pad0 = alooshAudio.play(drums);
             allPads.push(pad0);
 
-            let perc = Object.keys(alooshAudio._sprite)[5];
-            pad1 = alooshAudio.play(perc);
+            const perc = Object.keys(alooshAudio._sprite)[5];
+            const pad1 = alooshAudio.play(perc);
             allPads.push(pad1);
 
-            let bass = Object.keys(alooshAudio._sprite)[0];
-            pad2 = alooshAudio.play(bass);
+            const bass = Object.keys(alooshAudio._sprite)[0];
+            const pad2 = alooshAudio.play(bass);
             allPads.push(pad2);
 
-            let gtrRhythm = Object.keys(alooshAudio._sprite)[4];
-            pad3 = alooshAudio.play(gtrRhythm);
+            const gtrRhythm = Object.keys(alooshAudio._sprite)[4];
+            const pad3 = alooshAudio.play(gtrRhythm);
             allPads.push(pad3);
 
-            let synths = Object.keys(alooshAudio._sprite)[6];
-            pad4 = alooshAudio.play(synths);
+            const synths = Object.keys(alooshAudio._sprite)[6];
+            const pad4 = alooshAudio.play(synths);
             allPads.push(pad4);
 
-            let gtrLead = Object.keys(alooshAudio._sprite)[3];
-            pad5 = alooshAudio.play(gtrLead);
+            const gtrLead = Object.keys(alooshAudio._sprite)[3];
+            const pad5 = alooshAudio.play(gtrLead);
             allPads.push(pad5);
 
-            let fx = Object.keys(alooshAudio._sprite)[2];
-            pad6 = alooshAudio.play(fx);
+            const fx = Object.keys(alooshAudio._sprite)[2];
+            const pad6 = alooshAudio.play(fx);
             allPads.push(pad6);
 
-            let vocalLead = Object.keys(alooshAudio._sprite)[8];
-            pad7 = alooshAudio.play(vocalLead);
+            const vocalLead = Object.keys(alooshAudio._sprite)[8];
+            const pad7 = alooshAudio.play(vocalLead);
             allPads.push(pad7);
 
-            let vocalBacking = Object.keys(alooshAudio._sprite)[7];
-            pad8 = alooshAudio.play(vocalBacking);
+            const vocalBacking = Object.keys(alooshAudio._sprite)[7];
+            const pad8 = alooshAudio.play(vocalBacking);
             allPads.push(pad8);
+
         } else {
             alert('song loading, please try again!')
         }
 
     } else if (currentSongId === 'escape') {
 
+        //checks if audio is loaded and ready
         if (alooshAudio.state() === 'loaded') {
-            let drums = Object.keys(escapeAudio._sprite)[1];
-            pad0 = escapeAudio.play(drums);
+
+            //retrieve current sprite ID(changes with each playback), create pad variable and push to allPads array
+            const drums = Object.keys(escapeAudio._sprite)[1];
+            const pad0 = escapeAudio.play(drums);
             allPads.push(pad0);
 
-            let perc = Object.keys(escapeAudio._sprite)[5];
-            pad1 = escapeAudio.play(perc);
+            const perc = Object.keys(escapeAudio._sprite)[5];
+            const pad1 = escapeAudio.play(perc);
             allPads.push(pad1);
 
-            let bass = Object.keys(escapeAudio._sprite)[0];
-            pad2 = escapeAudio.play(bass);
+            const bass = Object.keys(escapeAudio._sprite)[0];
+            const pad2 = escapeAudio.play(bass);
             allPads.push(pad2);
 
-            let gtrRhythm = Object.keys(escapeAudio._sprite)[4];
-            pad3 = escapeAudio.play(gtrRhythm);
+            const gtrRhythm = Object.keys(escapeAudio._sprite)[4];
+            const pad3 = escapeAudio.play(gtrRhythm);
             allPads.push(pad3);
 
-            let synths = Object.keys(escapeAudio._sprite)[6];
-            pad4 = escapeAudio.play(synths);
+            const synths = Object.keys(escapeAudio._sprite)[6];
+            const pad4 = escapeAudio.play(synths);
             allPads.push(pad4);
 
-            let gtrLead = Object.keys(escapeAudio._sprite)[3];
-            pad5 = escapeAudio.play(gtrLead);
+            const gtrLead = Object.keys(escapeAudio._sprite)[3];
+            const pad5 = escapeAudio.play(gtrLead);
             allPads.push(pad5);
 
-            let fx = Object.keys(escapeAudio._sprite)[2];
-            pad6 = escapeAudio.play(fx);
+            const fx = Object.keys(escapeAudio._sprite)[2];
+            const pad6 = escapeAudio.play(fx);
             allPads.push(pad6);
 
-            let vocalLead = Object.keys(escapeAudio._sprite)[8];
-            pad7 = escapeAudio.play(vocalLead);
+            const vocalLead = Object.keys(escapeAudio._sprite)[8];
+            const pad7 = escapeAudio.play(vocalLead);
             allPads.push(pad7);
 
-            let vocalBacking = Object.keys(escapeAudio._sprite)[7];
-            pad8 = escapeAudio.play(vocalBacking);
+            const vocalBacking = Object.keys(escapeAudio._sprite)[7];
+            const pad8 = escapeAudio.play(vocalBacking);
             allPads.push(pad8);
+
         } else {
             alert('song loading, please try again!')
         };
@@ -327,29 +324,29 @@ function stopAudio() {
     };
 };
 
-//pad toggle function
+//pad mute toggle function
 
-function padToggle(pad) {
+function padMute(padId) {
+
+    const padMute = document.getElementById(`${padId}`);
 
     if (currentSongId === 'aloosh') {
 
-        let padMute = document.getElementById(`${pad}`);
         if (padMute.classList.contains('pad-muted')) {
-            alooshAudio.mute(false, allPads[`${pad}`]);
+            alooshAudio.mute(false, allPads[`${padId}`]);
             padMute.classList.remove('pad-muted')
         } else {
-            alooshAudio.mute(true, allPads[`${pad}`]);
+            alooshAudio.mute(true, allPads[`${padId}`]);
             padMute.classList.add('pad-muted');
         }
 
     } else if (currentSongId === 'escape') {
 
-        let padMute = document.getElementById(`${pad}`);
         if (padMute.classList.contains('pad-muted')) {
-            escapeAudio.mute(false, allPads[`${pad}`]);
+            escapeAudio.mute(false, allPads[`${padId}`]);
             padMute.classList.remove('pad-muted')
         } else {
-            escapeAudio.mute(true, allPads[`${pad}`]);
+            escapeAudio.mute(true, allPads[`${padId}`]);
             padMute.classList.add('pad-muted');
         }
 
@@ -358,40 +355,48 @@ function padToggle(pad) {
     };
 }
 
-/*function allUnMute() {
+//clear all mutes function
 
-    let allPads = document.getElementsByClassName('pad');
+function clearMutes() {
 
     if (currentSongId === 'aloosh') {
 
-        for (let i = 0; i < allPads.length; i++) {
-            if (allPads[i].classList.contains('pad-muted')) {
-                alooshAudio.mute(false, allPads[i]);
-            } else {
-                alert('no pads are muted');
-            }
-        };
+        //remove mute from all sprites
+        alooshAudio.mute(false);
+
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
+
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            getPads[i].classList.contains('pad-muted');
+            getPads[i].classList.remove('pad-muted');
+        }
     } else if (currentSongId === 'escape') {
 
-        for (let i = 0; i < allPads.length; i++) {
-            if (allPads[i].classList.contains('pad-muted')) {
-                escapeAudio.mute(false, allPads[i]);
-            } else {
-                alert('no pads are muted');
-            }
-        };
-    };
-};*/
+        //remove mute from all sprites
+        escapeAudio.mute(false);
 
-function allUnMute() {
-    alooshAudio.mute(false);
-}
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
 
-//jQuery Functions
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            getPads[i].classList.contains('pad-muted');
+            getPads[i].classList.remove('pad-muted');
+        }
+    } else {
+        alert('No song loaded');
+    }
+};
 
+//Sets current song variable for use within various functions across the site.
 let currentSongId = "";
 
+//jQuery Event Handlers
+
 $(document).ready(function () {
+    //select 'Aloosh'
     $('#select-aloosh').click(function () {
 
         escapeAudio.stop();
@@ -400,6 +405,7 @@ $(document).ready(function () {
         changeTheme("aloosh");
 
     });
+    //select 'Escape'
     $('#select-escape').click(function () {
 
         alooshAudio.stop();
@@ -407,24 +413,24 @@ $(document).ready(function () {
         buildPadsArea(escapeInfo);
         changeTheme("escape");
 
-
     });
-    $("#pads-container").delegate(".pad", "click", function () {
-        let padID = this.id;
-        padToggle(padID);
-    });
+    //Play button
     $('#playBtn').click(function () {
         playAudio();
     });
+    //Stop button
     $('#stopBtn').click(function () {
         stopAudio(currentSongId);
 
     });
-    $('#pads-container').delegate("#pad0", "click", function () {
-
+    //Individual pad clicked
+    $("#pads-container").delegate(".pad", "click", function () {
+        const padID = this.id;
+        padMute(padID);
     });
-    $('#allUnmute').click(function () {
-        allUnMute();
+    //Clear mutes button
+    $('#clearMutes').click(function () {
+        clearMutes();
     });
 });
 
