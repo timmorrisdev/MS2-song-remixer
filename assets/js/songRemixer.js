@@ -111,6 +111,7 @@ const alooshAudio = new Howl({
         "assets/songs/aloosh/aloosh.mp3"
     ],
     preload: true,
+    html5: true,
     "sprite": {
         "bass": [
             0,
@@ -157,6 +158,8 @@ const escapeAudio = new Howl({
         "assets/songs/escape/escapeSprite.webm",
         "assets/songs/escape/escapeSprite.mp3"
     ],
+    preload: true,
+    html5: true,
     "sprite": {
         "bass": [
             0,
