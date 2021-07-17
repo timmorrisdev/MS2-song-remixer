@@ -109,10 +109,10 @@ function buildPadsArea(song) {
 
 const alooshAudio = new Howl({
     "src": [
-        "assets/songs/aloosh/aloosh.mp3",
-        "assets/songs/aloosh/aloosh.webm"
+        "assets/songs/aloosh/aloosh.webm",
+        "assets/songs/aloosh/aloosh.mp3"
     ],
-    preload: true,
+    //preload: true,
     // html5: true,
     "sprite": {
         "bass": [
@@ -156,11 +156,10 @@ const alooshAudio = new Howl({
 
 const escapeAudio = new Howl({
     "src": [
-        "assets/songs/escape/escapeSprite.mp3",
-        "assets/songs/escape/escapeSprite.webm"
-
+        "assets/songs/escape/escapeSprite.webm",
+        "assets/songs/escape/escapeSprite.mp3"
     ],
-    preload: true,
+    //preload: true,
     //html5: true,
     "sprite": {
         "bass": [
@@ -452,7 +451,7 @@ $(document).ready(function () {
 
 }*/
 
-fetch("/assets/songs/escape/escapeSprite.json")
+fetch("/assets/songs/escape/escape.json")
     .then(function (response) {
         return response.json();
     })
