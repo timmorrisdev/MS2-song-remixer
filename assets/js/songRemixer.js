@@ -1,3 +1,93 @@
+const alooshSprite = {
+    "src": [
+        "assets/songs/aloosh/aloosh.webm",
+        "assets/songs/aloosh/aloosh.mp3"
+    ],
+    "sprite": {
+        "bass": [
+            0,
+            187272.0181405896
+        ],
+        "drums": [
+            189000,
+            187272.0181405896
+        ],
+        "fx": [
+            378000,
+            187272.0181405896
+        ],
+        "gtrLead": [
+            567000,
+            187272.0181405896
+        ],
+        "gtrRhythm": [
+            756000,
+            187272.0181405896
+        ],
+        "perc": [
+            945000,
+            187272.0181405896
+        ],
+        "synths": [
+            1134000,
+            187272.0181405896
+        ],
+        "vocalBacking": [
+            1323000,
+            187272.0181405896
+        ],
+        "vocalLead": [
+            1512000,
+            187272.0181405896
+        ]
+    }
+};
+
+const escapeSprite = {
+    "src": [
+        "assets/songs/escape/escapeSprite.webm",
+        "assets/songs/escape/escapeSprite.mp3"
+    ],
+    "sprite": {
+        "bass": [
+            0,
+            188040
+        ],
+        "drums": [
+            190000,
+            188039.99999999997
+        ],
+        "fx": [
+            380000,
+            188039.99999999997
+        ],
+        "gtrLead": [
+            570000,
+            188039.99999999997
+        ],
+        "gtrRhythm": [
+            760000,
+            188039.99999999997
+        ],
+        "perc": [
+            950000,
+            188039.99999999997
+        ],
+        "synths": [
+            1140000,
+            188039.99999999997
+        ],
+        "vocalBacking": [
+            1330000,
+            188039.99999999997
+        ],
+        "vocalLead": [
+            1520000,
+            188039.99999999997
+        ]
+    }
+}
+
 //class and constructor to create Song objects
 
 class Song {
@@ -107,114 +197,19 @@ function buildPadsArea(song) {
 
 //create howls for each song
 
-const alooshAudio = new Howl({
-    "src": [
-        "assets/songs/aloosh/aloosh.webm",
-        "assets/songs/aloosh/aloosh.mp3"
-    ],
-    //preload: true,
-    // html5: true,
-    "sprite": {
-        "bass": [
-            0,
-            187272.0181405896
-        ],
-        "drums": [
-            189000,
-            187272.0181405896
-        ],
-        "fx": [
-            378000,
-            187272.0181405896
-        ],
-        "gtrLead": [
-            567000,
-            187272.0181405896
-        ],
-        "gtrRhythm": [
-            756000,
-            187272.0181405896
-        ],
-        "perc": [
-            945000,
-            187272.0181405896
-        ],
-        "synths": [
-            1134000,
-            187272.0181405896
-        ],
-        "vocalBacking": [
-            1323000,
-            187272.0181405896
-        ],
-        "vocalLead": [
-            1512000,
-            187272.0181405896
-        ]
-    },
-});
-
-const escapeAudio = new Howl({
-    "src": [
-        "assets/songs/escape/escapeSprite.webm",
-        "assets/songs/escape/escapeSprite.mp3"
-    ],
-    //preload: true,
-    //html5: true,
-    "sprite": {
-        "bass": [
-            0,
-            188040
-        ],
-        "drums": [
-            190000,
-            188039.99999999997
-        ],
-        "fx": [
-            380000,
-            188039.99999999997
-        ],
-        "gtrLead": [
-            570000,
-            188039.99999999997
-        ],
-        "gtrRhythm": [
-            760000,
-            188039.99999999997
-        ],
-        "perc": [
-            950000,
-            188039.99999999997
-        ],
-        "synths": [
-            1140000,
-            188039.99999999997
-        ],
-        "vocalBacking": [
-            1330000,
-            188039.99999999997
-        ],
-        "vocalLead": [
-            1520000,
-            188039.99999999997
-        ]
-    }
-})
+const alooshAudio = new Howl(alooshSprite);
+const escapeAudio = new Howl(escapeSprite);
 
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
 let allPads = [];
 
 function playAudio() {
-
     //clears existing sprite IDs from allPads variable
     allPads = [];
-
     //check current song
     if (currentSongId === 'aloosh') {
-
         //checks if audio is loaded and ready
         if (alooshAudio.state() === 'loaded') {
-
             //retrieve current sprite ID(changes with each playback), create pad variable and push to allPads array
             const drums = Object.keys(alooshAudio._sprite)[1];
             const pad0 = alooshAudio.play(drums);
@@ -257,10 +252,8 @@ function playAudio() {
         }
 
     } else if (currentSongId === 'escape') {
-
         //checks if audio is loaded and ready
         if (alooshAudio.state() === 'loaded') {
-
             //retrieve current sprite ID(changes with each playback), create pad variable and push to allPads array
             const drums = Object.keys(escapeAudio._sprite)[1];
             const pad0 = escapeAudio.play(drums);
@@ -451,19 +444,28 @@ $(document).ready(function () {
 
 }*/
 
-fetch("/assets/songs/escape/escape.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
 
 
-fetch("/assets/songs/aloosh/aloosh.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-    });
+/* function setSprite() {
+    if (currentSongId === 'aloosh') {
+        fetch("/assets/songs/escape/escape.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                let currentSprite = data;
+                sprite = currentSprite;
+            });
+    } else if (currentSongId === 'escape') {
+        fetch("/assets/songs/aloosh/aloosh.json")
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+                let currentSprite = data;
+                sprite = currentSprite;
+            });
+    }
+}; */
