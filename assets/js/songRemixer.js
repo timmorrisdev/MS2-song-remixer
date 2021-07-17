@@ -192,13 +192,20 @@ function buildPadsArea(song) {
         }
 
         createPad();
+
+        /*function padNames() {
+            const getPad = document.getElementById(`${i}`)
+            getPad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
+        }*/
+
+        //padNames();
     };
 };
 
 //create howls for each song
 
-//const alooshAudio = new Howl(alooshSprite);
-//const escapeAudio = new Howl(escapeSprite);
+const alooshAudio = new Howl(alooshSprite);
+const escapeAudio = new Howl(escapeSprite);
 
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
 let allPads = [];

@@ -1,39 +1,78 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
-body {    
-    background: -o-radial-gradient(circle, rgba(224,141,222,1) 22%, rgba(87,226,229,1) 61%, rgba(69,203,133,1) 100%);    
-    background: radial-gradient(circle, rgba(224,141,222,1) 22%, rgba(87,226,229,1) 61%, rgba(69,203,133,1) 100%);
+/*---------------------------------Body and song theme changes */
+
+body {
+    font-family: "Otomanopee-One";
+    font-weight: 400;
+    background: -o-radial-gradient(circle, rgba(224, 141, 222, 1) 22%, rgba(87, 226, 229, 1) 61%, rgba(69, 203, 133, 1) 100%);
+    background: radial-gradient(circle, rgba(224, 141, 222, 1) 22%, rgba(87, 226, 229, 1) 61%, rgba(69, 203, 133, 1) 100%);
     min-height: 100vh;
-}
-body.aloosh-theme{
-    background: -o-radial-gradient(circle, rgba(240,230,239,1) 0%, rgba(184,190,221,1) 14%, rgba(195,162,183,1) 78%);
-    background: radial-gradient(circle, rgba(240,230,239,1) 0%, rgba(184,190,221,1) 14%, rgba(195,162,183,1) 78%);
+
 }
 
-body.escape-theme{
-    background: -o-radial-gradient(circle, rgba(22,186,197,1) 21%, rgba(95,191,249,1) 41%, rgba(154,193,39,1) 96%);
-    background: radial-gradient(circle, rgba(22,186,197,1) 21%, rgba(95,191,249,1) 41%, rgba(154,193,39,1) 96%);
+body.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 0%, rgba(184, 190, 221, 1) 14%, rgba(195, 162, 183, 1) 78%);
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 0%, rgba(184, 190, 221, 1) 14%, rgba(195, 162, 183, 1) 78%);
 }
 
-footer {
-    position: fixed;
-    bottom: 0; 
-    left: 0;
+body.escape-theme {
+    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 21%, rgba(95, 191, 249, 1) 41%, rgba(154, 193, 39, 1) 96%);
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 21%, rgba(95, 191, 249, 1) 41%, rgba(154, 193, 39, 1) 96%);
 }
+
+/*---------------------------------Navbar */
+
+.navbar {}
+
+.navbar .navbar-brand {
+    text-align: center;
+    padding-left: 30px;
+    color: #ffe0fe;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.navbar .navbar-nav {
+    padding-right: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/*---------------------------------Page title and song nav section */
 
 .song-nav-container {
-    
-}
-.transport {
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 20px;
 }
 
+.song-nav-container h1 {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.dropdown {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.dropdown .dropdown-menu {
+    text-align: center;
+}
+
+#songSelectorButton .dropdown-menu .dropdown-menu-left .show {
+    left: -21px !important;
+}
 
 .pads-container {
     height: 50%;
@@ -42,61 +81,73 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
+
 .pad {
     position: relative;
-    -ms-flex-preferred-size: calc(33.333% - 10px);
-        flex-basis: calc(33.333% - 10px);
+    flex-basis: calc(33.333% - 10px);
     margin: 5px;
     border: 1px solid;
     border-radius: 10px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    
-}
-
-#pads-container .pad-muted {
-    background: grey;
+    box-sizing: border-box;
+    background: burlywood;
 }
 
 .pad::before {
     content: '';
     display: block;
     padding-top: 100%;
-  }
+}
 
-  .pad.aloosh-theme{
-      background: -o-radial-gradient(circle, rgba(232,152,134,1) 30%, rgba(208,86,58,1) 91%);
-      background: radial-gradient(circle, rgba(232,152,134,1) 30%, rgba(208,86,58,1) 91%);
-  }
-
-  .pad.escape-theme{
-      background: -o-radial-gradient(circle, rgba(226,220,5,1) 0%, rgba(254,176,34,1) 56%);
-      background: radial-gradient(circle, rgba(226,220,5,1) 0%, rgba(254,176,34,1) 56%);
-  }
-
-  .pad-content {
+.pad-content {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     pointer-events: none;
-  
-    display: -webkit-box;
-  
-    display: -ms-flexbox;
-  
-    display: flex;               
-    -webkit-box-pack: center;               
-        -ms-flex-pack: center;               
-            justify-content: center;     
-    -webkit-box-align: center;     
-        -ms-flex-align: center;     
-            align-items: center;  
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+}
+
+.pad.escape-theme {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+}
+
+#pads-container .pad-muted {
+    background: grey;
+}
+
+.transport {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    border: black solid 2px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #e2e2e2;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: solid 3px rgba(12, 28, 49, 1);
+    height: 85px;
+}
+
 ;
