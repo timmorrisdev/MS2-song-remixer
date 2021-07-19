@@ -63,7 +63,8 @@ body.contact-theme {
 /*---------------------------------Page title and song nav section */
 
 .song-nav-container {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+
 }
 
 .song-nav-container h1 {
@@ -161,7 +162,11 @@ body.contact-theme {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+
+    border: solid black 2px;
+    background: #888888;
+    padding: 10px;
+    border-radius: 31px;
 
 }
 
@@ -170,26 +175,50 @@ body.contact-theme {
 .transport button {
     border: none;
     background: none;
+    height: 60px;
+    width: 60px;
+    position: relative;
+    margin: 0 30px 0 30px;
+
+}
+
+.transport button i {
+
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.transport span {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
 }
 
 #playBtn {
-    font-size: 4rem;
+
     color: #30d430;
 }
 
+#playBtn:hover {
+    color: rgb(0, 255, 0);
+}
+
 #stopBtn {
-    font-size: 4rem;
+
     color: #4d4d80;
 }
 
-#clearMutes {
-    font-size: 4rem;
-    border: 1px solid black;
-
+#stopBtn:hover {
+    color: rgb(0, 0, 255);
 }
 
-#clearMutes span {
-    font-size: 16px;
+#clearMutes {
+    border: 1px solid black;
+    border-radius: 15px;
+    background: lightgrey;
 }
 
 

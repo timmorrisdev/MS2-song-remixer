@@ -213,6 +213,7 @@ let allPads = [];
 function playAudio() {
     //clears existing sprite IDs from allPads variable
     allPads = [];
+
     //check current song
     if (currentSongId === 'aloosh') {
         //checks if audio is loaded and ready
@@ -422,9 +423,15 @@ $(document).ready(function () {
         changeTheme("paradisco");
 
     });
-    //Play button
+    //Play button click
     $('#playBtn').click(function () {
+
+        const playing = $('.pads-container');
+        if (playing.classList.contains('playing')) {
+            console.log(`it's playing`)
+        };
         playAudio();
+
     });
     //Stop button
     $('#stopBtn').click(function () {
@@ -440,6 +447,7 @@ $(document).ready(function () {
     $('#clearMutes').click(function () {
         clearMutes();
     });
+    //transport section
 });
 
 
