@@ -414,6 +414,14 @@ $(document).ready(function () {
         changeTheme("escape");
 
     });
+    $('#select-paradisco').click(function () {
+
+        //alooshAudio.stop();
+        currentSongId = "paradisco";
+        buildPadsArea(escapeInfo);
+        changeTheme("paradisco");
+
+    });
     //Play button
     $('#playBtn').click(function () {
         playAudio();
