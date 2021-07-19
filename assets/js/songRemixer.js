@@ -399,7 +399,7 @@ let currentSongId = "";
 $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
-
+        $('.game-instructions').addClass('hidden')
         escapeAudio.stop();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);

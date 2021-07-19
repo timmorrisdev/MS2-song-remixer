@@ -21,7 +21,7 @@
     <!-- navbar -->
     <!-- navbar copied from bootstrap documentation and modified -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Volleyball <br>Song Remixer</a>
+        <a class="navbar-brand" href="index.html">VSR</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,51 +42,73 @@
 
     <!-- main page body -->
     <div class="container">
+
+        <div class="game-instructions">
+            <h2>Instructions</h2>
+            <ol>
+                <li><i class="fas fa-music"></i> Selct a song from the menu.<i class="fas fa-music"></i></li>
+                <li><i class="fas fa-play"></i> Hit play! <i class="fas fa-play"></i></li>
+                <li><i class="fas fa-record-vinyl"></i> Use the pads to explore the mix. <i
+                        class="fas fa-record-vinyl"></i></li>
+
+            </ol>
+            <!-- dropdown button from bootstrap documentaiton and modified -->
+
+        </div>
+
         <!-- song nav section -->
-        <div class="song-nav-container text-center">
+        <div class="song-nav-container">
             <h1>Select song and get mixing!</h1>
 
-            <!-- dropdown button from bootstrap documentaiton and modified -->
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="songSelectorButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn dropdown-toggle" type="button" id="songSelectorButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     Select Song
                 </button>
                 <div class="dropdown-menu dropdown-menu-left" aria-labelledby="songSelectorButton"
                     id="songSelectorDropdown">
-                    <a class="dropdown-item" id="select-aloosh">Aloosh</a>
-                    <a class="dropdown-item" id="select-escape">Escape</a>
-                    <a class="dropdown-item" id="select-paradisco">Paradisco</a>
+                    <a class="dropdown-item" id="select-aloosh">
+                        <h3>Aloosh</h3>
+                    </a>
+                    <a class="dropdown-item" id="select-escape">
+                        <h3>Escape</h3>
+                    </a>
+                    <a class="dropdown-item" id="select-paradisco">
+                        <h3>Paradisco</h3>
+                    </a>
 
                 </div>
 
             </div>
+        </div>
 
+        <div class="pads-container row" id="pads-container">
 
-            <div class="pads-container row" id="pads-container">
-                <div class="pad" id="0"><span class="pad-content">Select Song</span></div>
+            <!-- <div class="pad" id="0"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="1"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="2"><span class="pad-content">Select Song</span></div>
-                <!-- <div class="pad" id="3"><span class="pad-content">Select Song</span></div>
+                <div class="pad" id="3"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="4"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="5"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="6"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="7"><span class="pad-content">Select Song</span></div>
                 <div class="pad" id="8"><span class="pad-content">Select Song</span></div> -->
-            </div>
 
-
-            <div class="transport-container row">
-                <div class="transport col-10 offset-1 col-lg-4 offset-lg-2">
-                    <button id="playBtn" class=""><i class="fas fa-play"></i></button>
-
-                    <button id="stopBtn" class=""><i class="fas fa-stop"></i></button>
-
-                    <button id="clearMutes" class=""><span>Clear<br>Mutes</span></button>
-                </div>
-            </div>
 
         </div>
+
+
+        <div class="transport-container row">
+            <div class="transport col-10 offset-1 col-lg-4 offset-lg-2">
+                <button id="playBtn" class=""><i class="fas fa-play"></i></button>
+
+                <button id="stopBtn" class=""><i class="fas fa-stop"></i></button>
+
+                <button id="clearMutes" class=""><span>Clear<br>Mutes</span></button>
+            </div>
+        </div>
+
+
 
     </div>
     <footer class="footer fixed-bottom mt-auto py-3">

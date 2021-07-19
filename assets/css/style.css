@@ -60,35 +60,96 @@ body.contact-theme {
     margin-right: 10px;
 }
 
-/*---------------------------------Page title and song nav section */
+/*--------------------------------- Game instructions */
+
+.game-instructions {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    width: 400px;
+    height: 50vh;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: rgb(237, 231, 227);
+    background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+}
+
+.game-instructions.hidden {
+    display: none;
+}
+
+.game-instructions h2 {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+    text-decoration: underline;
+}
+
+.game-instructions ol {
+    color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
+    font-size: 1.25rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.game-instructions li {
+    margin-bottom: 40px;
+}
+
+/*--------------------------------- song nav section */
 
 .song-nav-container {
-    /* padding-top: 20px; */
+    text-align: center;
 
 }
 
-.song-nav-container h1 {
+.song-nav-container>h1 {
     color: #ffacfc;
     text-shadow: 2px 2px 4px #000;
+    display: none;
 }
 
 .dropdown {
     margin-top: 16px;
     margin-bottom: 10px;
+
 }
 
 .dropdown .dropdown-menu {
     text-align: center;
 }
 
-#songSelectorButton .dropdown-menu .dropdown-menu-left .show {
-    left: -21px !important;
+.dropdown button {
+    border: 2px solid black;
+    border-radius: 20px;
+    background: rgb(237, 231, 227);
+    background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+
+    color: #000;
+
 }
+
+.dropdown-menu.show {
+    border: 2px solid black;
+    border-radius: 20px;
+    background: rgb(237, 231, 227);
+    background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+
+    color: #000;
+}
+
+.dropdown-menu {
+    left: -20px !important;
+}
+
 
 /*---------------------------------Pads section with different song themes */
 
+
+
 .pads-container {
-    height: 50%;
+    height: 50vh;
     max-width: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -102,11 +163,14 @@ body.contact-theme {
     margin-bottom: 20px;
 }
 
+
+
+
 .pad {
     position: relative;
     flex-basis: calc(33.333% - 10px);
     margin: 5px;
-    border: 2px solid;
+    border: 2px solid black;
     border-radius: 20px;
     box-sizing: border-box;
     background: rgb(237, 231, 227);
@@ -178,7 +242,6 @@ body.contact-theme {
     height: 60px;
     width: 60px;
     position: relative;
-    margin: 0 30px 0 30px;
 
 }
 
@@ -187,7 +250,7 @@ body.contact-theme {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 50px;
+    font-size: 70px;
 }
 
 .transport span {
@@ -198,8 +261,8 @@ body.contact-theme {
 }
 
 #playBtn {
-
     color: #30d430;
+    margin-right: 40px;
 }
 
 #playBtn:hover {
@@ -207,8 +270,8 @@ body.contact-theme {
 }
 
 #stopBtn {
-
     color: #4d4d80;
+    margin-right: 40px;
 }
 
 #stopBtn:hover {
@@ -236,6 +299,6 @@ body.contact-theme {
     height: 85px;
 }
 
-.dropdown-menu {
-    left: -20px !important;
+button:focus {
+    outline: none;
 }
