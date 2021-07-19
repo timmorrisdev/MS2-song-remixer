@@ -156,30 +156,42 @@ body.contact-theme {
 .transport {
     margin-left: auto;
     margin-right: auto;
-    display: inline-block;
-}
-
-.transport button {
     background: none;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
 
 }
 
+.transport {}
 
-#playBtn i {
+.transport button {
+    border: none;
+    background: none;
+}
+
+#playBtn {
     font-size: 4rem;
     color: #30d430;
 }
 
-#stopBtn i {
+#stopBtn {
     font-size: 4rem;
     color: #4d4d80;
 }
 
 #clearMutes {
+    font-size: 4rem;
     border: 1px solid black;
 
 }
+
+#clearMutes span {
+    font-size: 16px;
+}
+
 
 .footer {
     border: black solid 2px;
