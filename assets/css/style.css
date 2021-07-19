@@ -26,6 +26,11 @@ body.paradisco-theme {
     background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 48%, rgba(244, 253, 175, 1) 88%);
 }
 
+body.contact-theme {
+    background: rgb(237, 229, 166);
+    background: radial-gradient(circle, rgba(237, 229, 166, 1) 2%, rgba(82, 183, 136, 1) 23%, rgba(89, 41, 65, 1) 55%, rgba(178, 211, 168, 1) 78%, rgba(73, 132, 103, 1) 100%);
+}
+
 /*---------------------------------Navbar */
 
 .navbar {}
@@ -78,6 +83,8 @@ body.paradisco-theme {
 #songSelectorButton .dropdown-menu .dropdown-menu-left .show {
     left: -21px !important;
 }
+
+/*---------------------------------Pads section with different song themes */
 
 .pads-container {
     height: 50%;
@@ -144,9 +151,34 @@ body.paradisco-theme {
     background: grey;
 }
 
+/*---------------------------------Transport section */
+
 .transport {
     margin-left: auto;
     margin-right: auto;
+    display: inline-block;
+}
+
+.transport button {
+    background: none;
+    border: none;
+
+}
+
+
+#playBtn i {
+    font-size: 4rem;
+    color: #30d430;
+}
+
+#stopBtn i {
+    font-size: 4rem;
+    color: #4d4d80;
+}
+
+#clearMutes {
+    border: 1px solid black;
+
 }
 
 .footer {
