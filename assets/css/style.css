@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Tourney&display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Tourney&family=Roboto&display&display=swap');
 
 /*---------------------------------Body and song theme changes */
 
 body {
-    font-family: "Tourney";
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background: rgb(130, 192, 204);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
@@ -31,14 +31,21 @@ body.contact-theme {
     background: radial-gradient(circle, rgba(237, 229, 166, 1) 2%, rgba(82, 183, 136, 1) 23%, rgba(89, 41, 65, 1) 55%, rgba(178, 211, 168, 1) 78%, rgba(73, 132, 103, 1) 100%);
 }
 
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Tourney';
+}
+
 /*---------------------------------Navbar */
 
 .navbar {}
 
 .navbar .navbar-brand {
     text-align: center;
-    padding-left: 30px;
-    color: #ffe0fe;
+    /* padding-left: 30px; */
+    color: #ffc5fd;
     text-shadow: 2px 2px 4px #000;
 }
 
@@ -101,7 +108,7 @@ body.contact-theme {
 }
 
 .game-instructions li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 /*--------------------------------- song nav section */
@@ -130,18 +137,56 @@ body.contact-theme {
     font-size: 1.5rem;
 }
 
+.dropdown button.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+}
+
+.dropdown button.escape-theme {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+}
+
+.dropdown button.paradisco-theme {
+    background: rgb(101, 116, 58);
+    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
+    border-color: #fff;
+    color: #fff;
+}
+
 .dropdown-menu.show {
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+}
 
+.dropdown-menu.show.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+}
+
+.dropdown-menu.show.escape-theme {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+}
+
+.dropdown-menu.show.paradisco-theme {
+    background: rgb(101, 116, 58);
+    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
+    border-color: #fff;
+    color: #fff;
+}
+
+.dropdown-item {
     color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
     font-size: 2rem;
+    font-family: 'Tourney', sans-serif;
 }
 
 .dropdown-menu {
-    left: -5px !important;
+    left: -20px !important;
 }
 
 
@@ -161,9 +206,6 @@ body.contact-theme {
     margin-right: auto;
     margin-bottom: 20px;
 }
-
-
-
 
 .pad {
     position: relative;

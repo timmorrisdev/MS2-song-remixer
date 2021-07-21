@@ -158,6 +158,15 @@ function changeTheme(newSong) {
     const playID = playBtn.classList[0];
     playBtn.classList.replace(playID, `${newSong}`);
 
+    //replaces song select button classes
+    const button = document.getElementById('songSelectorButton');
+    const buttonTheme = button.classList[0];
+    button.classList.replace(buttonTheme, `${newSong}-theme`);
+
+    const dropdown = document.getElementById('songSelectorDropdown');
+    const dropdownTheme = dropdown.classList[0];
+    dropdown.classList.replace(dropdownTheme, `${newSong}-theme`);
+
 }
 
 //build pad grid 
