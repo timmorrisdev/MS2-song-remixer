@@ -20,15 +20,15 @@
 <body class="landing-theme">
     <!-- navbar -->
     <!-- navbar copied from bootstrap documentation and modified -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">Volleyball<br>Song-Remixer</a>
+    <nav class="navbar navbar-expand-lg">
+        <a class="landing-theme navbar-brand" id="navbarBrand" href="index.html">Volleyball<br>Song-Remixer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
+            <ul class="landing-theme navbar-nav ml-auto" id=navbarNav>
                 <li class="nav-item">
                     <a class="nav-link" href="#">How to Play<span class="sr-only"></span></a>
                 </li>
@@ -44,7 +44,9 @@
     <div class="container">
         <div id="spacer"></div>
 
-        <h1 class="font-pink underline text-center landing-header">Volleyball <br>Song-Remixer</h1>
+        <h1 class="landing-header" id="pageHeader">Volleyball
+            <br>Song-Remixer
+        </h1>
 
         <div class="container instructions-container">
             <div class="row">
@@ -104,7 +106,7 @@
 
 
         <div class="transport-container row hidden" id="transportContainer">
-            <div class="transport col-10 offset-1 col-lg-4 offset-lg-2">
+            <div class="transport">
                 <button id="playBtn" class=""><i class="fas fa-play"></i></button>
 
                 <button id="stopBtn" class=""><i class="fas fa-stop"></i></button>

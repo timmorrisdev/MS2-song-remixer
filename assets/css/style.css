@@ -41,35 +41,76 @@ h3,
 
 /*---------------------------------Navbar */
 
-.navbar {}
-
 .navbar .navbar-brand {
     text-align: center;
-    /* padding-left: 30px; */
     color: #ffc5fd;
     text-shadow: 2px 2px 4px #000;
 }
 
-.navbar .navbar-nav {
+#navbarNav {
     padding-right: 15px;
 }
 
-.navbar-light .navbar-nav .nav-link {
+#navbarNav .nav-link {
     color: #ffacfc;
     text-shadow: 2px 2px 4px #000;
     font-size: 1.5rem;
     margin-right: 10px;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-    color: #ffacfc;
+#navbarNav .nav-link.active {
+    color: #3c6eaf;
     text-shadow: 2px 2px 4px #000;
     font-size: 1.5rem;
     margin-right: 10px;
 }
+
+#navbarBrand.aloosh-theme,
+#navbarNav.aloosh-theme .nav-link {
+    color: #000;
+    text-shadow: 2px 2px 4px #e89886;
+}
+
+#navbarBrand.escape-theme,
+#navbarNav.escape-theme .nav-link {
+    color: #000;
+    text-shadow: 2px 2px 4px #FEB022;
+}
+
+#navbarBrand.paradisco-theme,
+#navbarNav.paradisco-theme .nav-link {
+    color: #330f0a;
+    text-shadow: 2px 2px 4px #efdd8d;
+}
+
+/*--------------------------------- Spacer div */
 
 #spacer {
     height: 0px;
+}
+
+/*--------------------------------- Page Header */
+
+#pageHeader {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#pageHeader.aloosh-theme {
+    color: #000;
+    text-shadow: 5px 3px 4px #e89886;
+}
+
+#pageHeader.escape-theme {
+    color: #000;
+    text-shadow: 5px 3px 4px #FEB022;
+}
+
+#pageHeader.paradisco-theme {
+    color: #fff;
+    text-shadow: 5px 3px 4px #330F0A;
 }
 
 /*--------------------------------- Game instructions */
@@ -145,6 +186,8 @@ h3,
 .dropdown button.aloosh-theme {
     background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+
+
 }
 
 .dropdown button.escape-theme {
@@ -188,6 +231,21 @@ h3,
     text-shadow: 2px 2px 4px #ffacfc;
     font-size: 2rem;
     font-family: 'Tourney', sans-serif;
+}
+
+.aloosh-theme .dropdown-item {
+    color: #000;
+    text-shadow: 2px 2px 4px #e89886;
+}
+
+.escape-theme .dropdown-item {
+    color: #000;
+    text-shadow: 2px 2px 4px #FEB022;
+}
+
+.paradisco-theme .dropdown-item {
+    color: #fff;
+    text-shadow: 2px 2px 4px #330F0A;
 }
 
 .dropdown-menu {
@@ -283,8 +341,6 @@ h3,
 
 }
 
-.transport {}
-
 .transport button {
     border: none;
     background: none;
@@ -311,7 +367,9 @@ h3,
 
 #playBtn {
     color: #30d430;
+    margin-left: 20px;
     margin-right: 40px;
+
 }
 
 #playBtn:hover {
@@ -331,6 +389,7 @@ h3,
     border: 1px solid black;
     border-radius: 15px;
     background: lightgrey;
+    margin-right: 20px;
 }
 
 
@@ -354,19 +413,6 @@ button:focus {
 
 /*---------------------------------Utility classes */
 
-.font-pink {
-    color: #ffacfc;
-    text-shadow: 2px 2px 4px #000;
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.text-center {
-    text-align: center;
-}
-
 .hidden {
     display: none;
 }
@@ -382,6 +428,11 @@ button:focus {
 
     .instructions-container {
         padding-top: 20px;
+    }
+
+    #pageHeader {
+        font-size: 3.5rem;
+
     }
 }
 

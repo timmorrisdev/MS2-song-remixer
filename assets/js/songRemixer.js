@@ -98,8 +98,6 @@ class Song {
     }
 };
 
-
-
 //supply song information to Song class (name, tempo, stems[])
 
 const alooshInfo = new Song('aloosh', '91', [{
@@ -158,6 +156,20 @@ function changeTheme(newSong) {
     const playID = playBtn.classList[0];
     playBtn.classList.replace(playID, `${newSong}`);
 
+    // update nav theme
+    const navBrand = document.getElementById('navbarBrand');
+    const navBrandTheme = navBrand.classList[0];
+    navBrand.classList.replace(navBrandTheme, `${newSong}-theme`)
+
+    const navLink = document.getElementById('navbarNav');
+    const navLinkTheme = navLink.classList[0];
+    navLink.classList.replace(navLinkTheme, `${newSong}-theme`)
+
+    // update page header theme
+    const pageHeader = document.getElementById('pageHeader');
+    pageHeaderTheme = pageHeader.classList[0];
+    pageHeader.classList.replace(pageHeaderTheme, `${newSong}-theme`)
+
     //replaces song select button classes
     const button = document.getElementById('songSelectorButton');
     const buttonTheme = button.classList[0];
@@ -184,8 +196,10 @@ function buildPadsArea(song) {
     const transport = document.getElementById('transportContainer');
     transport.classList.remove('hidden');
 
-
-
+    //replace page heading content and capitalise first letter of song ID
+    const pageHeader = document.getElementById('pageHeader');
+    const newHeader = currentSongId[0].toUpperCase() + currentSongId.slice(1).toLowerCase();
+    pageHeader.innerHTML = newHeader;
 
     //assign current song stems information to variable
     const stemName = song.stems;
