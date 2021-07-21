@@ -103,43 +103,43 @@ class Song {
 //supply song information to Song class (name, tempo, stems[])
 
 const alooshInfo = new Song('aloosh', '91', [{
-    name: 'Drums'
+    name: 'DRUMS'
 }, {
-    name: 'Percussion'
+    name: 'PERCUSSION'
 }, {
-    name: 'Bass'
+    name: 'BASS'
 }, {
-    name: 'Main Guitar'
+    name: 'MAIN GUITAR'
 }, {
-    name: 'Synths'
+    name: 'SYNTHS'
 }, {
-    name: 'Lead Guitar'
+    name: 'LEAD GUITAR'
 }, {
     name: 'FX'
 }, {
-    name: 'Lead Vocal'
+    name: 'LEAD VOCAL'
 }, {
-    name: 'Backing Vocals'
+    name: 'BACKING VOCALS'
 }, ]);
 
 const escapeInfo = new Song('escape', '97', [{
-    name: 'Drums'
+    name: 'DRUMS'
 }, {
-    name: 'Percussion'
+    name: 'PERCUSSION'
 }, {
-    name: 'Bass'
+    name: 'BASS'
 }, {
-    name: 'Main Guitar'
+    name: 'MAIN GUITAR'
 }, {
-    name: 'Synths'
+    name: 'SYNTHS'
 }, {
-    name: 'Lead Guitar'
+    name: 'LEAD GUITAR'
 }, {
     name: 'FX'
 }, {
-    name: 'Lead Vocal'
+    name: 'LEAD VOCAL'
 }, {
-    name: 'Backing Vocals'
+    name: 'BACKING VOCALS'
 }, ]);
 
 const songs = [alooshInfo, escapeInfo];
@@ -183,6 +183,8 @@ function buildPadsArea(song) {
     // remove hidden class from transport section
     const transport = document.getElementById('transportContainer');
     transport.classList.remove('hidden');
+
+
 
 
     //assign current song stems information to variable
@@ -417,7 +419,8 @@ $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
         //remove instructions section
-        $('.instructions-container, .landing-header').remove();
+        $('.instructions-container, #spacer').remove();
+
 
         escapeAudio.stop();
         currentSongId = "aloosh";
@@ -427,7 +430,7 @@ $(document).ready(function () {
     //select 'Escape'
     $('#select-escape').click(function () {
         //remove instructions section
-        $('.instructions-container, .landing-header').remove();
+        $('.instructions-container, #spacer').remove();
 
         alooshAudio.stop();
         currentSongId = "escape";
@@ -437,7 +440,7 @@ $(document).ready(function () {
     });
     $('#select-paradisco').click(function () {
         //remove instructions section
-        $('.instructions-container, .landing-header').remove();
+        $('.instructions-container, #spacer').remove();
 
         //alooshAudio.stop();
         currentSongId = "paradisco";

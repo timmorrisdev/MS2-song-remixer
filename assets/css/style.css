@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Tourney&family=Roboto&display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Tourney:wght@300;400;500;600;700&family=Roboto&display&display=swap');
 
 /*---------------------------------Body and song theme changes */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     background: rgb(130, 192, 204);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
-    /* min-height: 100vh; */
+    min-height: 100vh;
 
 }
 
@@ -34,6 +34,7 @@ body.contact-theme {
 h1,
 h2,
 h3,
+.pad,
 .navbar {
     font-family: 'Tourney';
 }
@@ -67,11 +68,15 @@ h3,
     margin-right: 10px;
 }
 
+#spacer {
+    height: 0px;
+}
+
 /*--------------------------------- Game instructions */
 
 
 .instructions-container {
-    padding-top: 20px;
+    padding-top: 8px;
 }
 
 .game-instructions {
@@ -236,6 +241,7 @@ h3,
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
 }
 
 .pad.aloosh-theme {
@@ -364,3 +370,21 @@ button:focus {
 .hidden {
     display: none;
 }
+
+/*---------------------------------Media queries */
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 768px) {
+    #spacer {
+        height: 85px;
+    }
+
+    .instructions-container {
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {}
