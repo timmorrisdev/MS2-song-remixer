@@ -399,12 +399,12 @@ let currentSongId = "";
 $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
-        $('.game-instructions').addClass('hidden')
+        $('.instructions-container, .landing-header').remove();
+
         escapeAudio.stop();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
         changeTheme("aloosh");
-
     });
     //select 'Escape'
     $('#select-escape').click(function () {

@@ -21,7 +21,7 @@
     <!-- navbar -->
     <!-- navbar copied from bootstrap documentation and modified -->
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">VSR</a>
+        <a class="navbar-brand" href="index.html">Volleyball<br>Song-Remixer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,22 +43,26 @@
     <!-- main page body -->
     <div class="container">
 
-        <div class="game-instructions">
-            <h2>Instructions</h2>
-            <ol>
-                <li><i class="fas fa-music"></i> Selct a song from the menu.<i class="fas fa-music"></i></li>
-                <li><i class="fas fa-play"></i> Hit play! <i class="fas fa-play"></i></li>
-                <li><i class="fas fa-record-vinyl"></i> Use the pads to explore the mix. <i
-                        class="fas fa-record-vinyl"></i></li>
+        <h1 class="font-pink underline text-center landing-header">Volleyball <br>Song-Remixer</h1>
 
-            </ol>
-            <!-- dropdown button from bootstrap documentaiton and modified -->
+        <div class="container instructions-container">
+            <div class="row">
+                <div class="game-instructions col-12 col-md-4 offset-md-4">
+                    <h2>Instructions</h2>
+                    <ol>
+                        <li>1. Selct a song from the menu.<i class="fas fa-music"></i></li>
+                        <li>2. Hit play! <i class="fas fa-play"></i></li>
+                        <li>3. Use the pads to explore the mix. <i class="fas fa-record-vinyl"></i></li>
 
+                    </ol>
+                    <!-- dropdown button from bootstrap documentaiton and modified -->
+
+                </div>
+            </div>
         </div>
 
         <!-- song nav section -->
         <div class="song-nav-container">
-            <h1>Select song and get mixing!</h1>
 
             <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="songSelectorButton" data-toggle="dropdown"
@@ -68,13 +72,13 @@
                 <div class="dropdown-menu dropdown-menu-left" aria-labelledby="songSelectorButton"
                     id="songSelectorDropdown">
                     <a class="dropdown-item" id="select-aloosh">
-                        <h3>Aloosh</h3>
+                        Aloosh
                     </a>
                     <a class="dropdown-item" id="select-escape">
-                        <h3>Escape</h3>
+                        Escape
                     </a>
                     <a class="dropdown-item" id="select-paradisco">
-                        <h3>Paradisco</h3>
+                        Paradisco
                     </a>
 
                 </div>

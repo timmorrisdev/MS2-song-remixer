@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Tourney&display&display=swap');
 
 /*---------------------------------Body and song theme changes */
 
 body {
-    font-family: "Otomanopee-One";
+    font-family: "Tourney";
     font-weight: 400;
     background: rgb(130, 192, 204);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
-    min-height: 100vh;
+    /* min-height: 100vh; */
 
 }
 
@@ -62,17 +62,23 @@ body.contact-theme {
 
 /*--------------------------------- Game instructions */
 
+
+.instructions-container {
+    padding-top: 20px;
+}
+
 .game-instructions {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 15px;
     width: 400px;
-    height: 50vh;
+    height: fit-content;
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+    padding-top: 20px;
+    margin-bottom: 16px;
 }
 
 .game-instructions.hidden {
@@ -83,6 +89,7 @@ body.contact-theme {
     color: #ffacfc;
     text-shadow: 2px 2px 4px #000;
     text-decoration: underline;
+    margin-bottom: 25px;
 }
 
 .game-instructions ol {
@@ -104,14 +111,7 @@ body.contact-theme {
 
 }
 
-.song-nav-container>h1 {
-    color: #ffacfc;
-    text-shadow: 2px 2px 4px #000;
-    display: none;
-}
-
 .dropdown {
-    margin-top: 16px;
     margin-bottom: 10px;
 
 }
@@ -127,7 +127,7 @@ body.contact-theme {
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 
     color: #000;
-
+    font-size: 1.5rem;
 }
 
 .dropdown-menu.show {
@@ -137,16 +137,15 @@ body.contact-theme {
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 
     color: #000;
+    font-size: 2rem;
 }
 
 .dropdown-menu {
-    left: -20px !important;
+    left: -5px !important;
 }
 
 
 /*---------------------------------Pads section with different song themes */
-
-
 
 .pads-container {
     height: 50vh;
@@ -301,4 +300,17 @@ body.contact-theme {
 
 button:focus {
     outline: none;
+}
+
+.font-pink {
+    color: #ffacfc;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
 }
