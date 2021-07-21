@@ -174,8 +174,16 @@ function changeTheme(newSong) {
 function buildPadsArea(song) {
 
     //clears the pad container of the existing song grid
-    const padReset = document.getElementById('pads-container');
-    padReset.innerText = '';
+    const padContainer = document.getElementById('pads-container');
+    padContainer.innerText = '';
+
+    //add pad-container style class
+    padContainer.classList.add('pads-container')
+
+    // remove hidden class from transport section
+    const transport = document.getElementById('transportContainer');
+    transport.classList.remove('hidden');
+
 
     //assign current song stems information to variable
     const stemName = song.stems;
@@ -408,6 +416,7 @@ let currentSongId = "";
 $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
+        //remove instructions section
         $('.instructions-container, .landing-header').remove();
 
         escapeAudio.stop();
@@ -417,6 +426,8 @@ $(document).ready(function () {
     });
     //select 'Escape'
     $('#select-escape').click(function () {
+        //remove instructions section
+        $('.instructions-container, .landing-header').remove();
 
         alooshAudio.stop();
         currentSongId = "escape";
@@ -425,6 +436,8 @@ $(document).ready(function () {
 
     });
     $('#select-paradisco').click(function () {
+        //remove instructions section
+        $('.instructions-container, .landing-header').remove();
 
         //alooshAudio.stop();
         currentSongId = "paradisco";
@@ -435,10 +448,6 @@ $(document).ready(function () {
     //Play button click
     $('#playBtn').click(function () {
 
-        const playing = $('.pads-container');
-        if (playing.classList.contains('playing')) {
-            console.log(`it's playing`)
-        };
         playAudio();
 
     });

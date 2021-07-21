@@ -3,7 +3,7 @@
 /*---------------------------------Body and song theme changes */
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     background: rgb(130, 192, 204);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
@@ -34,7 +34,7 @@ body.contact-theme {
 h1,
 h2,
 h3,
-.navbar-brand {
+.navbar {
     font-family: 'Tourney';
 }
 
@@ -204,7 +204,9 @@ h3,
     align-content: center;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
 .pad {
@@ -344,6 +346,8 @@ button:focus {
     outline: none;
 }
 
+/*---------------------------------Utility classes */
+
 .font-pink {
     color: #ffacfc;
     text-shadow: 2px 2px 4px #000;
@@ -355,4 +359,8 @@ button:focus {
 
 .text-center {
     text-align: center;
+}
+
+.hidden {
+    display: none;
 }
