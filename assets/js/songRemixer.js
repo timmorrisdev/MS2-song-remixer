@@ -214,19 +214,20 @@ function buildPadsArea(song) {
         //create pad grid function
         function createPad() {
 
-            //gets pad-container element and adds div element
-            const padContainer = document.getElementById('pads-container');
-            const pad = document.createElement('div');
+            setTimeout(function () {
+                //gets pad-container element and adds div element
+                const padContainer = document.getElementById('pads-container');
+                const pad = document.createElement('div');
 
-            //add class and ID information to each pad
-            pad.classList.add('pad');
-            pad.classList.add(`${currentSongId}-theme`);
-            pad.id = `${i}`;
+                //add class and ID information to each pad
+                pad.classList.add('pad');
+                pad.classList.add(`${currentSongId}-theme`);
+                pad.id = `${i}`;
 
-            pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
+                pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
-            padContainer.appendChild(pad);
-
+                padContainer.appendChild(pad);
+            }, 100 * i);
         }
 
         createPad();
