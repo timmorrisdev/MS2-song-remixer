@@ -199,7 +199,10 @@ function buildPadsArea(song) {
 
     // remove hidden class from transport section
     const transport = document.getElementById('transportContainer');
-    transport.classList.remove('hidden');
+    if (transport.classList.contains('hidden') === false) {
+        transport.classList.add('hidden');
+    };
+
 
     //replace page heading content and capitalise first letter of song ID
     const pageHeader = document.getElementById('pageHeader');
@@ -227,18 +230,17 @@ function buildPadsArea(song) {
                 pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
                 padContainer.appendChild(pad);
-            }, 100 * i);
+            }, 90 * i);
         }
 
         createPad();
 
-        /*function padNames() {
-            const getPad = document.getElementById(`${i}`)
-            getPad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
-        }*/
-
-        //padNames();
     };
+
+    setTimeout(function () {
+        transport.classList.remove('hidden');
+    }, 90 * stemName.length);
+
 };
 
 //create howls for each song

@@ -180,7 +180,7 @@ h3,
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .dropdown button.aloosh-theme {
@@ -249,7 +249,7 @@ h3,
 }
 
 .dropdown-menu {
-    left: -20px !important;
+    left: -46px !important;
 }
 
 
