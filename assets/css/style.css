@@ -93,24 +93,24 @@ h3,
 
 #pageHeader {
     color: #ffacfc;
-    text-shadow: 2px 2px 4px #000;
+    text-shadow: 2px 2px 8px #000;
     text-decoration: underline;
     text-align: center;
 }
 
 #pageHeader.aloosh-theme {
     color: #000;
-    text-shadow: 5px 3px 4px #e89886;
+    text-shadow: 5px 3px 8px #e89886;
 }
 
 #pageHeader.escape-theme {
     color: #000;
-    text-shadow: 5px 3px 4px #FEB022;
+    text-shadow: 5px 3px 8px #FEB022;
 }
 
 #pageHeader.paradisco-theme {
     color: #fff;
-    text-shadow: 5px 3px 4px #330F0A;
+    text-shadow: 5px 3px 8px #330F0A;
 }
 
 /*--------------------------------- Game instructions */
@@ -392,6 +392,11 @@ h3,
     margin-right: 20px;
 }
 
+button:focus {
+    outline: none;
+}
+
+/*---------------------------------Footer */
 
 .footer {
     border: black solid 2px;
@@ -407,8 +412,66 @@ h3,
     height: 85px;
 }
 
-button:focus {
-    outline: none;
+.footer-links {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links a {
+    width: 60px;
+    height: 60px;
+}
+
+/* .footer-links img,
+.footer-links i {
+    width: 100%;
+    height: 100%;
+} */
+
+#bandLogoFooter {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 14px #000000a6;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.aloosh-theme #bandLogoFooter {
+    box-shadow: 0px 0px 14px #000000a6;
+}
+
+.escape-theme #bandLogoFooter {
+    box-shadow: 0px 0px 14px #000000a6;
+}
+
+.paradisco-theme #bandLogoFooter {
+    box-shadow: 0px 0px 14px #000000a6;
+}
+
+.footer-links i {
+    font-size: 3rem;
+    color: #ffacfc;
+    text-shadow: 0px 0px 14px #000;
+}
+
+.aloosh-theme.footer-links i {
+    color: rgba(232, 152, 134, 1);
+}
+
+.escape-theme.footer-links i {
+    color: rgba(254, 176, 34, 1);
+}
+
+.paradisco-theme.footer-links i {
+    color: rgba(239, 221, 141, 1);
+
+}
+
+.footer-links img {
+    width: 60px;
+    height: 60px;
 }
 
 /*---------------------------------Utility classes */

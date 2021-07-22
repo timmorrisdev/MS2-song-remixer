@@ -179,6 +179,11 @@ function changeTheme(newSong) {
     const dropdownTheme = dropdown.classList[0];
     dropdown.classList.replace(dropdownTheme, `${newSong}-theme`);
 
+    //replaces footer class
+    const footerLinks = document.getElementById('footerLinks');
+    const footerLinksTheme = footerLinks.classList[0];
+    footerLinks.classList.replace(footerLinksTheme, `${newSong}-theme`);
+
 }
 
 //build pad grid 
