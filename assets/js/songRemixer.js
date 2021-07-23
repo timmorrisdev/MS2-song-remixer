@@ -251,8 +251,6 @@ function buildPadsArea(song) {
 
 //create howls for each song
 
-
-/* 
 const alooshAudio = new Howl(alooshSprite);
 const escapeAudio = new Howl(escapeSprite);
 
@@ -354,37 +352,42 @@ function playAudio() {
     } else {
         alert('select a song from the menu and get mixing!');
     };
-
-
-
 };
-*/
 
 
+/*
 
 const alooshDrums = new Howl({
-    src: ['assets/songs/aloosh/drums.mp3']
+    src: ['assets/songs/aloosh/drums.mp3'],
+    html5: true,
 });
 const alooshBass = new Howl({
-    src: ['assets/songs/aloosh/bass.mp3']
+    src: ['assets/songs/aloosh/bass.mp3'],
+    html5: true,
 });
 const alooshGtrRhythm = new Howl({
-    src: ['assets/songs/aloosh/gtrRhythm.mp3']
+    src: ['assets/songs/aloosh/gtrRhythm.mp3'],
+    html5: true,
 });
 const alooshSynths = new Howl({
-    src: ['assets/songs/aloosh/synths.mp3']
+    src: ['assets/songs/aloosh/synths.mp3'],
+    html5: true,
 });
 const alooshGtrLead = new Howl({
-    src: ['assets/songs/aloosh/gtrLead.mp3']
+    src: ['assets/songs/aloosh/gtrLead.mp3'],
+    html5: true,
 });
 const alooshFX = new Howl({
-    src: ['assets/songs/aloosh/fx.mp3']
+    src: ['assets/songs/aloosh/fx.mp3'],
+    html5: true,
 });
 const alooshLeadVocal = new Howl({
-    src: ['assets/songs/aloosh/vocalLead.mp3']
+    src: ['assets/songs/aloosh/vocalLead.mp3'],
+    html5: true,
 });
 const alooshBackingVocals = new Howl({
-    src: ['assets/songs/aloosh/vocalBacking.mp3']
+    src: ['assets/songs/aloosh/vocalBacking.mp3'],
+    html5: true,
 });
 
 function playAudio() {
@@ -398,7 +401,7 @@ function playAudio() {
     alooshBackingVocals.play();
 };
 
-
+*/
 
 
 
@@ -515,7 +518,7 @@ $(document).ready(function () {
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
-        //alooshAudio.stop();
+        alooshAudio.stop();
         currentSongId = "paradisco";
         buildPadsArea(escapeInfo);
         changeTheme("paradisco");
