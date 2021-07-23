@@ -40,6 +40,41 @@
         </div>
     </nav>
 
+    <section class="container">
+        <div class="row">
+            <div class="col col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+                <h3 class="contact-heading text-center">Contact The Developer</h3>
+                <h5 class="text-center">We would love to hear from you!</h5>
+
+                <div class="contact-form">
+                    <form onsubmit="return sendMail(this);">
+                        <div class="form-row">
+                            <div class="col-12 col-lg-6 ">
+                                <input type="text" name="name" id="fullname" class="form-control" placeholder="Name"
+                                    required />
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <input type="email" name="email" id="emailaddress" class="form-control"
+                                    placeholder="Email" required />
+                            </div>
+                        </div>
+                        <textarea rows="5" name="commentContent" id="commentContent" class="form-control"
+                            placeholder="What would you like to say?" required></textarea>
+                        <div class="form-row text-center">
+                            <div class="col">
+                                <button type="submit" class="btn btn-secondary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
 
 
     <footer class="footer fixed-bottom mt-auto py-3">
@@ -61,6 +96,7 @@
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
     <script src="assets/js/songRemixer.js"></script>
+    <script src="assets/js/sendContact.js"></script>
 </body>
 
 </html>
