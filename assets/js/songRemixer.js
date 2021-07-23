@@ -1,3 +1,5 @@
+//create object for each song to be fed to Howl
+
 const alooshSprite = {
     "src": [
         "assets/songs/aloosh/aloosh.webm",
@@ -86,7 +88,7 @@ const escapeSprite = {
             188039.99999999997
         ]
     }
-}
+};
 
 //class and constructor to create Song objects
 
@@ -243,8 +245,14 @@ function buildPadsArea(song) {
 
 };
 
+
+
+
+
 //create howls for each song
 
+
+/* 
 const alooshAudio = new Howl(alooshSprite);
 const escapeAudio = new Howl(escapeSprite);
 
@@ -350,6 +358,49 @@ function playAudio() {
 
 
 };
+*/
+
+
+
+const alooshDrums = new Howl({
+    src: ['assets/songs/aloosh/drums.mp3']
+});
+const alooshBass = new Howl({
+    src: ['assets/songs/aloosh/bass.mp3']
+});
+const alooshGtrRhythym = new Howl({
+    src: ['assets/songs/aloosh/gtrRhythym.mp3']
+});
+const alooshSynths = new Howl({
+    src: ['assets/songs/aloosh/synths.mp3']
+});
+const alooshGtrLead = new Howl({
+    src: ['assets/songs/aloosh/gtrLead.mp3']
+});
+const alooshFX = new Howl({
+    src: ['assets/songs/aloosh/fx.mp3']
+});
+const alooshLeadVocal = new Howl({
+    src: ['assets/songs/aloosh/vocalLead.mp3']
+});
+const alooshBackingVocals = new Howl({
+    src: ['assets/songs/aloosh/vocalBacking.mp3']
+});
+
+function playAudio() {
+    alooshDrums.play();
+    alooshBass.play();
+    alooshGtrRhythym.play();
+    alooshSynths.play();
+    alooshGtrLead.play();
+    alooshFX.play();
+    alooshLeadVocal.play();
+    alooshBackingVocals.play();
+};
+
+
+
+
 
 // stop playback fucntion 
 
@@ -444,7 +495,7 @@ $(document).ready(function () {
         $('.instructions-container, #spacer').remove();
 
 
-        escapeAudio.stop();
+        //escapeAudio.stop();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
         changeTheme("aloosh");
