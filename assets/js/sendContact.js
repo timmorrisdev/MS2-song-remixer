@@ -1,5 +1,5 @@
 function sendContact(contactForm) {
-    emailjs.send("timMorrisDev", "template_jl3kepn", {
+    emailjs.send("timMorrisDev", "SongRemixerContact", {
             "from_name": contactForm.name.value,
             "from_email": contactForm.emailaddress.value,
             "comment_content": contactForm.commentContent.value
@@ -15,3 +15,5 @@ function sendContact(contactForm) {
         );
     return false; // To block from loading a new page
 };
+
+console.log("sendContact");
