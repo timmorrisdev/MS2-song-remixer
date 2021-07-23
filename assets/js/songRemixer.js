@@ -2,7 +2,7 @@
 
 const alooshSprite = {
     "src": [
-        "assets/songs/aloosh/aloosh.webm",
+        // "assets/songs/aloosh/aloosh.webm",
         "assets/songs/aloosh/aloosh.mp3"
     ],
     "sprite": {
@@ -47,7 +47,7 @@ const alooshSprite = {
 
 const escapeSprite = {
     "src": [
-        "assets/songs/escape/escapeSprite.webm",
+        //"assets/songs/escape/escapeSprite.webm",
         "assets/songs/escape/escapeSprite.mp3"
     ],
     "sprite": {
