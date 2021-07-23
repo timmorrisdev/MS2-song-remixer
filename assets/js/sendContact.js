@@ -15,5 +15,3 @@ function sendContact(contactForm) {
         );
     return false; // To block from loading a new page
 };
-
-console.log("sendContact");
