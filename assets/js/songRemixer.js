@@ -368,7 +368,7 @@ const alooshDrums = new Howl({
 const alooshBass = new Howl({
     src: ['assets/songs/aloosh/bass.mp3']
 });
-const alooshGtrRhythym = new Howl({
+const alooshGtrRhythm = new Howl({
     src: ['assets/songs/aloosh/gtrRhythym.mp3']
 });
 const alooshSynths = new Howl({
