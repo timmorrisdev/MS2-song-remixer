@@ -247,7 +247,7 @@ function buildPadsArea(song) {
 
 
 
-
+/*
 
 //create howls for each song
 
@@ -353,7 +353,7 @@ function playAudio() {
         alert('select a song from the menu and get mixing!');
     };
 };
-
+*/
 
 /*
 
@@ -406,7 +406,7 @@ function playAudio() {
 
 
 // stop playback fucntion 
-
+/*
 function stopAudio() {
 
     //if statement to stop audio based on current song selected
@@ -485,7 +485,7 @@ function clearMutes() {
         alert('No song loaded');
     }
 };
-
+*/
 //Sets current song variable for use within various functions across the site.
 let currentSongId = "";
 
@@ -508,7 +508,7 @@ $(document).ready(function () {
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
-        alooshAudio.stop();
+        //alooshAudio.stop();
         currentSongId = "escape";
         buildPadsArea(escapeInfo);
         changeTheme("escape");
@@ -518,7 +518,7 @@ $(document).ready(function () {
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
-        alooshAudio.stop();
+        // alooshAudio.stop();
         currentSongId = "paradisco";
         buildPadsArea(escapeInfo);
         changeTheme("paradisco");
@@ -527,18 +527,18 @@ $(document).ready(function () {
     //Play button click
     $('#playBtn').click(function () {
 
-        playAudio();
+        // playAudio();
 
     });
     //Stop button
     $('#stopBtn').click(function () {
-        stopAudio(currentSongId);
+        //  stopAudio(currentSongId);
 
     });
     //Individual pad clicked
     $("#pads-container").delegate(".pad", "click", function () {
         const padID = this.id;
-        padMute(padID);
+        // padMute(padID);
     });
     //Clear mutes button
     $('#clearMutes').click(function () {
