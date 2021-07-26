@@ -5,7 +5,8 @@ class Sprite {
         // Create audio sprite definition.
         self.sound = new Howl({
             src: options.src,
-            sprite: options.sprite
+            sprite: options.sprite,
+            preload: false,
         });
 
     }
