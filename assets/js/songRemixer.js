@@ -346,8 +346,10 @@ let currentSongId = "";
 $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
+        escapeAudio.sound.unload();
+        alooshAudio.sound.load();
+
         //remove instructions section
-        //buildHowl;
         $('.instructions-container, #spacer').remove();
 
         currentSongId = "aloosh";
@@ -358,6 +360,9 @@ $(document).ready(function () {
     });
     //select 'Escape'
     $('#select-escape').click(function () {
+        alooshAudio.sound.unload();
+        escapeAudio.sound.load();
+
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
