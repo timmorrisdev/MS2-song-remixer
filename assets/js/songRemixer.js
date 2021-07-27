@@ -101,6 +101,52 @@ const alooshAudio = new Sprite({
     }
 });
 
+const escapeAudio = {
+    "src": [
+        "/assets/escape/escape.webm",
+        "/assets/escape/escape.mp3"
+    ],
+    "sprite": {
+        "bass": [
+            0,
+            29692.83446712018
+        ],
+        "drums": [
+            31000,
+            29692.834467120178
+        ],
+        "fx": [
+            62000,
+            29692.834467120178
+        ],
+        "gtrLead": [
+            93000,
+            29692.834467120178
+        ],
+        "gtrRhythm": [
+            124000,
+            29692.834467120178
+        ],
+        "perc": [
+            155000,
+            29692.834467120178
+        ],
+        "synths": [
+            186000,
+            29692.834467120178
+        ],
+        "vocalBacking": [
+            217000,
+            29692.834467120178
+        ],
+        "vocalLead": [
+            248000,
+            29692.834467120178
+        ]
+    }
+};
+
+
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
 let allPads = [];
 
