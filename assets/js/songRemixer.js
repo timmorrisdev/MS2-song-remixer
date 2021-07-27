@@ -103,8 +103,8 @@ const alooshAudio = new Sprite({
 
 const escapeAudio = new Sprite({
     "src": [
-        "/assets/escape/escape.webm",
-        "/assets/escape/escape.mp3"
+        "assets/songs/escape/escape.webm",
+        "assets/songs/escape/escape.mp3"
     ],
     "sprite": {
         "bass": [
@@ -143,6 +143,17 @@ const escapeAudio = new Sprite({
             248000,
             29692.834467120178
         ]
+    },
+    spriteMap: {
+        pad0: 'bass',
+        pad1: 'drums',
+        pad2: 'fx',
+        pad3: 'gtrLead',
+        pad4: 'gtrRhythm',
+        pad5: 'perc',
+        pad6: 'synths',
+        pad7: 'vocalBacking',
+        pad8: 'vocalLead',
     }
 });
 
@@ -155,7 +166,7 @@ function playAudio() {
     allPads = [];
 
     //check current song
-    if (currentSongId !== "") {
+    if (currentSongId === 'aloosh') {
 
         //checks if audio is loaded and ready
         if (alooshAudio.sound.state() === 'loaded') {
@@ -200,8 +211,52 @@ function playAudio() {
             alert('song loading, please try again!')
         };
 
+    } else if (currentSongId === 'escape') {
+        //checks if audio is loaded and ready
+        if (escapeAudio.sound.state() === 'loaded') {
+            //retrieve current sprite ID(changes with each playback), create pad variable and push to allPads array
+            const drums = Object.keys(escapeAudio.sound._sprite)[1];
+            const pad0 = escapeAudio.sound.play(drums);
+            allPads.push(pad0);
+
+            const perc = Object.keys(escapeAudio.sound._sprite)[5];
+            const pad1 = escapeAudio.sound.play(perc);
+            allPads.push(pad1);
+
+            const bass = Object.keys(escapeAudio.sound._sprite)[0];
+            const pad2 = escapeAudio.sound.play(bass);
+            allPads.push(pad2);
+
+            const gtrRhythm = Object.keys(escapeAudio.sound._sprite)[4];
+            const pad3 = escapeAudio.sound.play(gtrRhythm);
+            allPads.push(pad3);
+
+            const synths = Object.keys(escapeAudio.sound._sprite)[6];
+            const pad4 = escapeAudio.sound.play(synths);
+            allPads.push(pad4);
+
+            const gtrLead = Object.keys(escapeAudio.sound._sprite)[3];
+            const pad5 = escapeAudio.sound.play(gtrLead);
+            allPads.push(pad5);
+
+            const fx = Object.keys(escapeAudio.sound._sprite)[2];
+            const pad6 = escapeAudio.sound.play(fx);
+            allPads.push(pad6);
+
+            const vocalLead = Object.keys(escapeAudio.sound._sprite)[8];
+            const pad7 = escapeAudio.sound.play(vocalLead);
+            allPads.push(pad7);
+
+            const vocalBacking = Object.keys(escapeAudio.sound._sprite)[7];
+            const pad8 = escapeAudio.sound.play(vocalBacking);
+            allPads.push(pad8);
+
+        } else {
+            alert('song loading, please try again!')
+        };
+
     } else {
-        alert('select a theme from the menu and get mixing!');
+        alert('select a song from the menu and get mixing!');
     };
 
 };
@@ -212,11 +267,14 @@ function stopAudio() {
 
     //if statement to stop audio based on current song selected
 
-    if (currentSongId !== "") {
+    if (currentSongId === 'aloosh') {
         alooshAudio.sound.stop();
+    } else if (currentSongId === 'escape') {
+        escapeAudio.sound.stop();
     } else {
         alert('no song playing');
     };
+
 };
 
 //pad mute toggle function
@@ -380,6 +438,7 @@ $(document).ready(function () {
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
+        //escapeAudio.sound.stop();
         currentSongId = "aloosh";
         buildPadsArea(alooshInfo);
 
@@ -392,7 +451,7 @@ $(document).ready(function () {
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
-        //alooshAudio.stop();
+        //alooshAudio.sound.stop();
         currentSongId = "escape";
         buildPadsArea(alooshInfo);
         changeTheme("escape");
