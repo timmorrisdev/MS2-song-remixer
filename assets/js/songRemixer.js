@@ -283,13 +283,21 @@ function padMute(padId) {
 
     const padMute = document.getElementById(`${padId}`);
 
-    if (currentSongId !== '') {
+    if (currentSongId === 'aloosh') {
 
         if (padMute.classList.contains('pad-muted')) {
             alooshAudio.sound.mute(false, allPads[`${padId}`]);
             padMute.classList.remove('pad-muted')
         } else {
             alooshAudio.sound.mute(true, allPads[`${padId}`]);
+            padMute.classList.add('pad-muted');
+        }
+    } else if (currentSongId === 'escape') {
+        if (padMute.classList.contains('pad-muted')) {
+            escapeAudio.sound.mute(false, allPads[`${padId}`]);
+            padMute.classList.remove('pad-muted')
+        } else {
+            escapeAudio.sound.mute(true, allPads[`${padId}`]);
             padMute.classList.add('pad-muted');
         }
     } else {
@@ -300,18 +308,35 @@ function padMute(padId) {
 //clear all mutes function
 
 function clearMutes() {
-    //remove mute from all sprites
-    alooshAudio.sound.mute(false);
+    if (currentSongId === 'aloosh') {
 
-    //get all pads and assign to variable
-    const getPads = document.getElementsByClassName('pad');
+        //remove mute from all sprites
+        alooshAudio.sound.mute(false);
 
-    //loop through pads and remove any existing 'pad-muted' class
-    for (let i = 0; i < getPads.length; i++) {
-        getPads[i].classList.contains('pad-muted');
-        getPads[i].classList.remove('pad-muted');
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
+
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            getPads[i].classList.contains('pad-muted');
+            getPads[i].classList.remove('pad-muted');
+        }
+    } else if (currentSongId === 'escape') {
+
+        //remove mute from all sprites
+        escapeAudio.sound.mute(false);
+
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
+
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            getPads[i].classList.contains('pad-muted');
+            getPads[i].classList.remove('pad-muted');
+        }
+    } else {
+        alert('No song loaded');
     }
-
 };
 
 
