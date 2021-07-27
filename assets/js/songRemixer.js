@@ -101,7 +101,7 @@ const alooshAudio = new Sprite({
     }
 });
 
-const escapeAudio = {
+const escapeAudio = new Sprite({
     "src": [
         "/assets/escape/escape.webm",
         "/assets/escape/escape.mp3"
@@ -144,7 +144,7 @@ const escapeAudio = {
             29692.834467120178
         ]
     }
-};
+});
 
 
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
