@@ -262,10 +262,11 @@ function playAudio() {
 
     } else if (currentSongId === 'escape') {
 
-        //prevents additional playback instance
-        if (!escapeAudio.sound.playing()) {
+        if (escapeAudio.sound.seek() === 0) {
 
+            //prevents additional playback instance
             if (!escapeAudio.sound.playing()) {
+
                 //checks if audio is loaded and ready
                 if (escapeAudio.sound.state() === 'loaded') {
 
@@ -312,12 +313,17 @@ function playAudio() {
                 } else {
                     alert('song loading, please try again!')
                 };
+
+            };
+
+        } else {
+            for (let i = 0; i < allPads.length; i++) {
+                escapeAudio.sound.play(allPads[i])
             };
         };
     } else {
         alert('select a song from the menu and get mixing!');
-    };
-
+    }
 };
 
 // pause playback function
@@ -419,10 +425,12 @@ function changeTheme(newSong) {
     const bodyTheme = document.body.classList[0];
     document.body.classList.replace(bodyTheme, `${newSong}-theme`);
 
+    /*
     //replaces the playBtn Id with the selected song
     playBtn = document.getElementById('playBtn');
     const playID = playBtn.classList[0];
     playBtn.classList.replace(playID, `${newSong}`);
+*/
 
     // update nav theme
     const navBrand = document.getElementById('navbarBrand');
@@ -465,11 +473,13 @@ function buildPadsArea(song) {
     //add pad-container style class
     padContainer.classList.add('pads-container')
 
-    // remove hidden class from transport section
-    const transport = document.getElementById('transportContainer');
-    if (transport.classList.contains('hidden') === false) {
-        transport.classList.add('hidden');
+    // hide transport if navigating from another song and reset
+    const transportContainer = document.getElementById('transportContainer');
+    if (transportContainer.classList.contains('hidden') === false) {
+        transportContainer.classList.add('hidden');
     };
+
+
 
 
     //replace page heading content and capitalise first letter of song ID
@@ -506,9 +516,8 @@ function buildPadsArea(song) {
     };
 
     setTimeout(function () {
-        transport.classList.remove('hidden');
+        transportContainer.classList.remove('hidden');
     }, 90 * stemName.length);
-
 
 };
 
@@ -528,13 +537,15 @@ $(document).ready(function () {
     //select 'Aloosh'
     $('#select-aloosh').click(function () {
 
-        //alooshAudio.sound.load();
-
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
         stopAudio();
         currentSongId = "aloosh";
+
+        playAudio();
+        stopAudio();
+
         buildPadsArea(alooshInfo);
         changeTheme(currentSongId);
 
@@ -542,11 +553,14 @@ $(document).ready(function () {
     //select 'Escape'
     $('#select-escape').click(function () {
 
+        stopAudio();
+        currentSongId = "escape";
         //remove instructions section
         $('.instructions-container, #spacer').remove();
 
+        playAudio();
         stopAudio();
-        currentSongId = "escape";
+
         buildPadsArea(escapeInfo);
         changeTheme(currentSongId);
 
