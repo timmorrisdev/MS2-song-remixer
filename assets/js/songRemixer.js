@@ -580,8 +580,10 @@ $(document).ready(function () {
     $('.transport').delegate('#stopBtn', 'click', function () {
 
         $('#pauseBtn').attr('id', 'playBtn');
-        $('#pauseBtn i').removeClass('fa-pause');
-        $('#pauseBtn i').addClass('fa-play');
+        $('#playBtn i').removeClass('fa-pause');
+        $('#playBtn i').addClass('fa-play');
+        $('#stopBtn i').removeClass('fa-stop');
+        $('#stopBtn i').addClass('fa-step-backward');
 
         stopAudio();
     });
