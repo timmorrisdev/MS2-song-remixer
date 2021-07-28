@@ -365,27 +365,27 @@ h3,
     font-size: 16px;
 }
 
-#playBtn {
+.play-btn {
     color: #30d430;
     margin-left: 20px;
     margin-right: 40px;
 
 }
 
-#playBtn:hover {
+.play-btn:hover {
     color: rgb(0, 255, 0);
 }
 
-#stopBtn {
+.stop-btn {
     color: #4d4d80;
     margin-right: 40px;
 }
 
-#stopBtn:hover {
+.stop-btn:hover {
     color: rgb(0, 0, 255);
 }
 
-#clearMutes {
+button.clear-mutes {
     border: 1px solid black;
     border-radius: 15px;
     background: lightgrey;
