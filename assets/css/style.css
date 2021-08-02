@@ -87,12 +87,12 @@ h3,
     transition: ease-in-out .3s;
 }
 
-#navbarNav .nav-link.active {
+/* #navbarNav .nav-link.active {
     color: #3c6eaf;
     text-shadow: 2px 2px 4px #000;
     font-size: 1.5rem;
     margin-right: 10px;
-}
+} */
 
 #navbarBrand.aloosh-theme,
 #navbarNav.aloosh-theme .nav-link {
@@ -100,10 +100,22 @@ h3,
     text-shadow: 2px 2px 4px #e89886;
 }
 
+#navbarBrand.aloosh-theme:hover,
+#navbarNav.aloosh-theme .nav-link:hover {
+    color: #e89886;
+    text-shadow: 2px 2px 4px #000;
+}
+
 #navbarBrand.escape-theme,
 #navbarNav.escape-theme .nav-link {
     color: #000;
     text-shadow: 2px 2px 4px #FEB022;
+}
+
+#navbarBrand.escape-theme:hover,
+#navbarNav.escape-theme .nav-link:hover {
+    color: #FEB022;
+    text-shadow: 2px 2px 4px #000;
 }
 
 #navbarBrand.paradisco-theme,
@@ -229,13 +241,20 @@ h3,
     background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     box-shadow: 0 0 10px #e89886;
+}
 
+.dropdown button.aloosh-theme:hover {
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
 }
 
 .dropdown button.escape-theme {
     background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     box-shadow: 0 0 10px #FEB022;
+}
+
+.dropdown button.escape-theme:hover {
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
 }
 
 .dropdown button.paradisco-theme {
@@ -431,7 +450,7 @@ h3,
     color: #30d430;
     margin-left: 20px;
     margin-right: 40px;
-
+    filter: drop-shadow(0px 0px 6px black);
 }
 
 .play-btn:hover {
@@ -439,8 +458,9 @@ h3,
 }
 
 .stop-btn {
-    color: #4d4d80;
+    color: #0404d6;
     margin-right: 40px;
+    filter: drop-shadow(0px 0px 6px black);
 }
 
 .stop-btn:hover {
@@ -452,6 +472,7 @@ button.clear-mutes {
     border-radius: 15px;
     background: lightgrey;
     margin-right: 20px;
+    filter: drop-shadow(0px 0px 6px black);
 }
 
 button:focus {
