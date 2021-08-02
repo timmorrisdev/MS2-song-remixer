@@ -471,6 +471,7 @@ function buildPadsArea(song) {
     padContainer.innerText = '';
 
     //add pad-container style class
+    padContainer.classList.remove('hidden')
     padContainer.classList.add('pads-container')
 
     // hide transport if navigating from another song and reset

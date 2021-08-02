@@ -199,6 +199,7 @@ h3,
 
     color: #000;
     font-size: 1rem;
+    font-weight: 600;
     margin-top: -6px;
     margin-bottom: -3px;
 }
@@ -251,6 +252,7 @@ h3,
     text-shadow: 2px 2px 4px #ffacfc;
     font-size: 2rem;
     font-family: 'Tourney', sans-serif;
+    font-weight: 500;
 }
 
 .aloosh-theme .dropdown-item {
@@ -317,7 +319,7 @@ h3,
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -382,6 +384,7 @@ h3,
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 16px;
+    font-weight: 600;
 }
 
 .play-btn {
@@ -439,8 +442,8 @@ button:focus {
 }
 
 .footer-links a {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 30px;
 }
 
 /* .footer-links img,
@@ -450,8 +453,8 @@ button:focus {
 } */
 
 #bandLogoFooter {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     box-shadow: 0px 0px 14px #000000a6;
     background-color: rgba(0, 0, 0, 0.3);
@@ -470,7 +473,7 @@ button:focus {
 }
 
 .footer-links i {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #ffacfc;
     text-shadow: 0px 0px 14px #000;
 }
@@ -489,8 +492,8 @@ button:focus {
 }
 
 .footer-links img {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 
 /*---------------------------------Contact page */
