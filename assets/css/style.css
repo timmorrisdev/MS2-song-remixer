@@ -5,10 +5,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    min-height: 100vh;
+}
+
+body.landing-theme {
     background: rgb(130, 192, 204);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
-    min-height: 100vh;
-
 }
 
 body.aloosh-theme {
@@ -50,6 +52,12 @@ h3,
     font-size: 1rem;
 }
 
+.navbar .navbar-brand:hover {
+    color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
+    transition: ease-in-out .3s;
+}
+
 .navbar {
     text-align: center;
 }
@@ -71,6 +79,12 @@ h3,
     text-shadow: 2px 2px 4px #000;
     font-size: 1.5rem;
     margin-right: 10px;
+}
+
+#navbarNav .nav-link:hover {
+    color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
+    transition: ease-in-out .3s;
 }
 
 #navbarNav .nav-link.active {
@@ -206,6 +220,11 @@ h3,
     box-shadow: 0 0 10px #000;
 }
 
+.dropdown button:hover {
+    transition: ease-in-out .5s;
+    background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
+}
+
 .dropdown button.aloosh-theme {
     background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
@@ -258,14 +277,30 @@ h3,
     font-weight: 500;
 }
 
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
+    border-radius: 10px;
+}
+
 .aloosh-theme .dropdown-item {
     color: #000;
     text-shadow: 2px 2px 4px #e89886;
 }
 
+.aloosh-theme .dropdown-item:hover {
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
+}
+
 .escape-theme .dropdown-item {
     color: #000;
     text-shadow: 2px 2px 4px #FEB022;
+}
+
+.escape-theme .dropdown-item:hover {
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
 }
 
 .paradisco-theme .dropdown-item {
@@ -465,30 +500,58 @@ button:focus {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.aloosh-theme #bandLogoFooter {
-    box-shadow: 0px 0px 14px #000000a6;
+#bandLogoFooter:hover {
+    box-shadow: 0px 0px 14px #ffacfc;
+    background-color: #ffacfc6b;
+    transition: ease-in-out .3s;
 }
 
-.escape-theme #bandLogoFooter {
-    box-shadow: 0px 0px 14px #000000a6;
+.aloosh-theme #bandLogoFooter:hover {
+    box-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
+    background-color: rgba(232, 152, 134, .5);
+    transition: ease-in-out .3s;
 }
 
-.paradisco-theme #bandLogoFooter {
-    box-shadow: 0px 0px 14px #000000a6;
+.escape-theme #bandLogoFooter:hover {
+    box-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
+    background-color: rgba(254, 176, 34, .5);
+    transition: ease-in-out .3s;
 }
 
 .footer-links i {
     font-size: 2rem;
-    color: #ffacfc;
     text-shadow: 0px 0px 14px #000;
+}
+
+.landing-theme.footer-links i {
+    color: #ffacfc;
+
+}
+
+.landing-theme.footer-links i:hover {
+    color: #000;
+    text-shadow: 0px 0px 14px #ffacfc;
+    transition: ease-in-out .3s;
 }
 
 .aloosh-theme.footer-links i {
     color: rgba(232, 152, 134, 1);
 }
 
+.aloosh-theme.footer-links i:hover {
+    color: #000;
+    text-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
+    transition: ease-in-out .3s;
+}
+
 .escape-theme.footer-links i {
     color: rgba(254, 176, 34, 1);
+}
+
+.escape-theme.footer-links i:hover {
+    color: #000;
+    text-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
+    transition: ease-in-out .3s;
 }
 
 .paradisco-theme.footer-links i {
@@ -513,20 +576,33 @@ button:focus {
 
 .contact-page h5 {
     color: #ffacfc;
-    text-shadow: 2px 2px 8px #000;
+    text-shadow: 0px 0px 4px #000;
+    text-decoration: underline;
 }
 
 .form-control,
 .form-control:focus {
     margin-bottom: 10px;
-    background-color: rgba(89, 41, 65, 1);
-    box-shadow: 2px 2px 8px rgb(237, 229, 166);
-    color: rgb(237, 229, 166);
+    background-color: #EDE7E3;
+    box-shadow: 0px 0px 7px rgb(255, 166, 43);
+    color: black;
+    border: 1px solid #000
 }
 
 .form-control::placeholder {
-    color: rgba(237, 229, 166, 0.7);
+    /* color: rgba(237, 229, 166, 0.7); */
     opacity: 1;
+}
+
+.contact-form button {
+    background-color: #ffacfc;
+    color: #000;
+    box-shadow: 0px 0px 8px #000;
+}
+
+.contact-form button:hover {
+    background-color: rgb(255, 166, 43);
+
 }
 
 /*---------------------------------Utility classes */
