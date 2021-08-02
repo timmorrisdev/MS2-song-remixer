@@ -45,11 +45,26 @@ h3,
     text-align: center;
     color: #ffc5fd;
     text-shadow: 2px 2px 4px #000;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+}
+
+.navbar {
+    text-align: center;
 }
 
 #navbarNav {
     padding-right: 15px;
 }
+
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, .8);
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px #000;
+}
+
 
 #navbarNav .nav-link {
     color: #ffacfc;
@@ -86,7 +101,7 @@ h3,
 /*--------------------------------- Spacer div */
 
 #spacer {
-    height: 0px;
+    height: 20px;
 }
 
 /*--------------------------------- Page Header */
@@ -96,16 +111,19 @@ h3,
     text-shadow: 2px 2px 8px #000;
     text-decoration: underline;
     text-align: center;
+
 }
 
 #pageHeader.aloosh-theme {
     color: #000;
     text-shadow: 5px 3px 8px #e89886;
+    margin-top: -10px;
 }
 
 #pageHeader.escape-theme {
     color: #000;
     text-shadow: 5px 3px 8px #FEB022;
+    margin-top: -10px;
 }
 
 #pageHeader.paradisco-theme {
@@ -181,6 +199,8 @@ h3,
 
     color: #000;
     font-size: 1rem;
+    margin-top: -6px;
+    margin-bottom: -3px;
 }
 
 .dropdown button.aloosh-theme {
@@ -249,7 +269,7 @@ h3,
 }
 
 .dropdown-menu {
-    left: -46px !important;
+    left: -16px !important;
 }
 
 
@@ -267,15 +287,13 @@ h3,
     align-content: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+    margin-bottom: 5px;
 }
 
 .pad {
     position: relative;
-    flex-basis: calc(33.333% - 10px);
-    margin: 5px;
+    flex-basis: calc(33.333% - 4px);
+    margin: 2px;
     border: 2px solid black;
     border-radius: 20px;
     box-sizing: border-box;
@@ -300,6 +318,7 @@ h3,
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    text-align: center;
 }
 
 .pad.aloosh-theme {
@@ -336,7 +355,7 @@ h3,
 
     border: solid black 2px;
     background: #888888;
-    padding: 10px;
+    padding: 5px;
     border-radius: 31px;
 
 }
@@ -355,7 +374,7 @@ h3,
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .transport span {
@@ -420,8 +439,8 @@ button:focus {
 }
 
 .footer-links a {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 /* .footer-links img,
@@ -513,8 +532,20 @@ button:focus {
 @media only screen and (min-width: 600px) {}
 
 @media only screen and (min-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.25rem;
+    }
+
     #spacer {
         height: 85px;
+    }
+
+    #pageHeader.aloosh-theme {
+        margin-top: 0;
+    }
+
+    #pageHeader.escape-theme {
+        margin-top: 0;
     }
 
     .instructions-container {
@@ -524,6 +555,11 @@ button:focus {
     #pageHeader {
         font-size: 3.5rem;
 
+    }
+
+    .pads-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .contact-page h1 {
