@@ -28,11 +28,22 @@ ___
 
 - Colour Scheme
 
+    So that thie site would fit with the band image, I used one of the band's social media posts of artwork for one of the songs featured to generate a palette using [Coolors](https://coolors.co/). I then used the 'generate' palette function to search for palettes that I felt fitted with the bands image, which is fairly colourful and phsycadelic.
+
+    I also chose to find two contrasting palettes for each song to offer the user a 'light' or 'dark' theme option for each song.
+
+    The palettes I chose were: [Landing / Contact](), [Aloosh 'Light'](), [Aloosh 'Dark'](), [Escape 'Light'](), [Escape 'Dark']().
+
 - Fonts
-    - Montserrat / Lato / Quicksand
+    - Tourney / Montserrat.
+
+        I used Tourney for any headers across the site as I felt the style fitted with the band image. I then used Montserrat for more detailed text across the site as it has good readability and a clean style. 
 
 - Wireframes
-    - [Landing Page](https://github.com/TimMorrisDev/south-coast-sup/blob/master/assets/wireframes/Landing%20Page.png)
+    - [Landing Page]()
+
+    - [How to play]()
+    - [Contact Us]()
    
 
 ### Design Decisions Made During Development
@@ -40,6 +51,8 @@ ___
 
 ### Future Development Opportunities
 - Recording of arrangements
+
+    In the furture I would like to develop a 'back-end' aspect to the site that might allow users to capture and subsequently share their unique mixes of the song via social media. This would have the goal of increasing game enjoyment for the user and also increase the effectiveness of the game as a promotional tool for the band.
 ___
 ## Features
 - Responsive across all devices and screen sizes.
@@ -54,11 +67,18 @@ ___
 
 ### Frameworks, Libraries & Programs Used
 - [HowlerJS](https://howlerjs.com/)
+    - HowlerJS was used to intergrate audio on the site. It utilises mostly the web audio API with fall back to HMTL5 audio where compatibility is an issue. I chose to use audiosprites for each song as I kept my file management neater and helped assure simultainious playback for each element of the song arrangements.
+
+- [Audioprite Generator](https://github.com/tonistiigi/audiosprite)
+
+    - I installed audiosprite using the npm package in my mac terminal. I then used the terminal to generate a stereo audiosprite for each songn in both mp3 and webm formats so HowlerJS can select the best for any particular device / browser. I chose to use audiosprites for the composit parts of the songs rather than individuual files to help ensure the intended playback when certain browsers or devices force falling back to HTML5 audio for playback.
+
+- [jQuery](https://jquery.com/)
+    - I used jQuery in my Javascript code for the song remixer game. I mostly made use of event handlers to intergrate user interaction with the site with my Javascript functions controlling the features ofered to the user.
+    - jQuery was also used as part of Bootstrap and is used for Javascript plugins such as the responsive nav bar and modals.
 
 - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap was used for the responsive 'grid'. Code snippets from the Bootstrap documentation were used in various places and modified to suit the purpose and design of the site.
-- [jQuery](https://jquery.com/)
-    - jQuery came as part of Bootstrap and was used for Javascript plugins such as the responsive nav bar and modals.
 - [Google Fonts](https://fonts.google.com/)
     - Google Fonts was used to import the 'Montserrat', 'Lato' and 'Quicksand' fonts, which were used throughout the site.
 - [Font Awesome](https://fontawesome.com/)
@@ -79,6 +99,11 @@ ___
 
 ___
 ## Testing
+### Responsiveness Testing
+I used google dev tools throughout the development process to check responsiveness across different screen sizes. 
+
+I was also sure to deploy the site to GitHub pages early in development to allow for review of the live site on various devicesthroughout the process.
+
 ### W3C Markup and CSS Validation
 I used the W3C Markup and CSS Validator Services to check and validate each page throughout the site to check for errors. 
 #### [Markup Validation Service](https://validator.w3.org/)
