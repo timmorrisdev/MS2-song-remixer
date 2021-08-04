@@ -13,21 +13,6 @@ body.landing-theme {
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
 }
 
-body.aloosh-theme {
-    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 0%, rgba(184, 190, 221, 1) 14%, rgba(195, 162, 183, 1) 78%);
-    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
-}
-
-body.escape-theme {
-    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 21%, rgba(95, 191, 249, 1) 41%, rgba(154, 193, 39, 1) 96%);
-    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
-}
-
-body.paradisco-theme {
-    background: rgb(51, 15, 10);
-    background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 48%, rgba(244, 253, 175, 1) 88%);
-}
-
 body.contact-theme {
     background: rgb(237, 229, 166);
     background: radial-gradient(circle, rgba(237, 229, 166, 1) 2%, rgba(82, 183, 136, 1) 23%, rgba(89, 41, 65, 1) 55%, rgba(178, 211, 168, 1) 78%, rgba(73, 132, 103, 1) 100%);
@@ -87,43 +72,6 @@ h3,
     transition: ease-in-out .3s;
 }
 
-/* #navbarNav .nav-link.active {
-    color: #3c6eaf;
-    text-shadow: 2px 2px 4px #000;
-    font-size: 1.5rem;
-    margin-right: 10px;
-} */
-
-#navbarBrand.aloosh-theme,
-#navbarNav.aloosh-theme .nav-link {
-    color: #000;
-    text-shadow: 2px 2px 4px #e89886;
-}
-
-#navbarBrand.aloosh-theme:hover,
-#navbarNav.aloosh-theme .nav-link:hover {
-    color: #e89886;
-    text-shadow: 2px 2px 4px #000;
-}
-
-#navbarBrand.escape-theme,
-#navbarNav.escape-theme .nav-link {
-    color: #000;
-    text-shadow: 2px 2px 4px #FEB022;
-}
-
-#navbarBrand.escape-theme:hover,
-#navbarNav.escape-theme .nav-link:hover {
-    color: #FEB022;
-    text-shadow: 2px 2px 4px #000;
-}
-
-#navbarBrand.paradisco-theme,
-#navbarNav.paradisco-theme .nav-link {
-    color: #330f0a;
-    text-shadow: 2px 2px 4px #efdd8d;
-}
-
 /*--------------------------------- Spacer div */
 
 #spacer {
@@ -138,23 +86,6 @@ h3,
     text-decoration: underline;
     text-align: center;
 
-}
-
-#pageHeader.aloosh-theme {
-    color: #000;
-    text-shadow: 5px 3px 8px #e89886;
-    margin-top: -10px;
-}
-
-#pageHeader.escape-theme {
-    color: #000;
-    text-shadow: 5px 3px 8px #FEB022;
-    margin-top: -10px;
-}
-
-#pageHeader.paradisco-theme {
-    color: #fff;
-    text-shadow: 5px 3px 8px #330F0A;
 }
 
 /*--------------------------------- Game instructions */
@@ -237,55 +168,11 @@ h3,
     background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
 }
 
-.dropdown button.aloosh-theme {
-    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-    box-shadow: 0 0 10px #e89886;
-}
-
-.dropdown button.aloosh-theme:hover {
-    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
-}
-
-.dropdown button.escape-theme {
-    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-    box-shadow: 0 0 10px #FEB022;
-}
-
-.dropdown button.escape-theme:hover {
-    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
-}
-
-.dropdown button.paradisco-theme {
-    background: rgb(101, 116, 58);
-    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
-    border-color: #fff;
-    color: #fff;
-}
-
 .dropdown-menu.show {
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
-}
-
-.dropdown-menu.show.aloosh-theme {
-    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-}
-
-.dropdown-menu.show.escape-theme {
-    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-}
-
-.dropdown-menu.show.paradisco-theme {
-    background: rgb(101, 116, 58);
-    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
-    border-color: #fff;
-    color: #fff;
 }
 
 .dropdown-item {
@@ -300,31 +187,6 @@ h3,
 .dropdown-item:hover {
     background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
     border-radius: 10px;
-}
-
-.aloosh-theme .dropdown-item {
-    color: #000;
-    text-shadow: 2px 2px 4px #e89886;
-}
-
-.aloosh-theme .dropdown-item:hover {
-    border-radius: 10px;
-    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
-}
-
-.escape-theme .dropdown-item {
-    color: #000;
-    text-shadow: 2px 2px 4px #FEB022;
-}
-
-.escape-theme .dropdown-item:hover {
-    border-radius: 10px;
-    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
-}
-
-.paradisco-theme .dropdown-item {
-    color: #fff;
-    text-shadow: 2px 2px 4px #330F0A;
 }
 
 .dropdown-menu {
@@ -378,25 +240,6 @@ h3,
     align-items: center;
     font-weight: 700;
     text-align: center;
-}
-
-.pad.aloosh-theme {
-    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
-    box-shadow: 0px 0px 10px #e89886;
-}
-
-.pad.escape-theme {
-    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
-    box-shadow: 0px 0px 10px #FEB022;
-}
-
-.pad.paradisco-theme {
-    background: rgb(101, 116, 58);
-    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
-    border-color: #fff;
-    color: #fff;
 }
 
 #pads-container .pad-muted {
@@ -512,12 +355,6 @@ button:focus {
     height: 30px;
 }
 
-/* .footer-links img,
-.footer-links i {
-    width: 100%;
-    height: 100%;
-} */
-
 #bandLogoFooter {
     width: 55px;
     height: 55px;
@@ -529,18 +366,6 @@ button:focus {
 #bandLogoFooter:hover {
     box-shadow: 0px 0px 14px #ffacfc;
     background-color: #ffacfc6b;
-    transition: ease-in-out .3s;
-}
-
-.aloosh-theme #bandLogoFooter:hover {
-    box-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
-    background-color: rgba(232, 152, 134, .5);
-    transition: ease-in-out .3s;
-}
-
-.escape-theme #bandLogoFooter:hover {
-    box-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
-    background-color: rgba(254, 176, 34, .5);
     transition: ease-in-out .3s;
 }
 
@@ -558,31 +383,6 @@ button:focus {
     color: #000;
     text-shadow: 0px 0px 14px #ffacfc;
     transition: ease-in-out .3s;
-}
-
-.aloosh-theme.footer-links i {
-    color: rgba(232, 152, 134, 1);
-}
-
-.aloosh-theme.footer-links i:hover {
-    color: #000;
-    text-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
-    transition: ease-in-out .3s;
-}
-
-.escape-theme.footer-links i {
-    color: rgba(254, 176, 34, 1);
-}
-
-.escape-theme.footer-links i:hover {
-    color: #000;
-    text-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
-    transition: ease-in-out .3s;
-}
-
-.paradisco-theme.footer-links i {
-    color: rgba(239, 221, 141, 1);
-
 }
 
 .footer-links img {
@@ -628,6 +428,199 @@ button:focus {
 
 .contact-form button:hover {
     background-color: rgb(255, 166, 43);
+
+}
+
+/*---------------------------------Aloosh theme */
+
+body.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 0%, rgba(184, 190, 221, 1) 14%, rgba(195, 162, 183, 1) 78%);
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
+}
+
+.aloosh-theme #navbarBrand,
+.aloosh-theme #navbarNav .nav-link {
+    color: #000;
+    text-shadow: 2px 2px 4px #e89886;
+}
+
+.aloosh-theme #navbarBrand:hover,
+.aloosh-theme #navbarNav .nav-link:hover {
+    color: #e89886;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.aloosh-theme #pageHeader {
+    color: #000;
+    text-shadow: 5px 3px 8px #e89886;
+    margin-top: -10px;
+}
+
+.aloosh-theme .dropdown-menu.show {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+}
+
+.dropdown button.aloosh-theme {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    box-shadow: 0 0 10px #e89886;
+}
+
+.dropdown button.aloosh-theme:hover {
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
+}
+
+.aloosh-theme .dropdown-item {
+    color: #000;
+    text-shadow: 2px 2px 4px #e89886;
+}
+
+.aloosh-theme .dropdown-item:hover {
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
+}
+
+.aloosh-theme .pad {
+    background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    box-shadow: 0px 0px 10px #e89886;
+}
+
+.aloosh-theme #bandLogoFooter:hover {
+    box-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
+    background-color: rgba(232, 152, 134, .5);
+    transition: ease-in-out .3s;
+}
+
+.aloosh-theme .footer-links i {
+    color: rgba(232, 152, 134, 1);
+}
+
+.aloosh-theme .footer-links i:hover {
+    color: #000;
+    text-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
+    transition: ease-in-out .3s;
+}
+
+/*---------------------------------Escape theme */
+
+body.escape-theme {
+    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 21%, rgba(95, 191, 249, 1) 41%, rgba(154, 193, 39, 1) 96%);
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
+}
+
+.escape-theme #navbarBrand,
+.escape-theme #navbarNav .nav-link {
+    color: #000;
+    text-shadow: 2px 2px 4px #FEB022;
+}
+
+.escape-theme #navbarBrand:hover,
+.escape-theme #navbarNav .nav-link:hover {
+    color: #FEB022;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.escape-theme #pageHeader {
+    color: #000;
+    text-shadow: 5px 3px 8px #FEB022;
+    margin-top: -10px;
+}
+
+.escape-theme .dropdown button {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    box-shadow: 0 0 10px #FEB022;
+}
+
+.escape-theme .dropdown button:hover {
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
+}
+
+.escape-theme .dropdown-menu.show {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+}
+
+.escape-theme .dropdown-item {
+    color: #000;
+    text-shadow: 2px 2px 4px #FEB022;
+}
+
+.escape-theme .dropdown-item:hover {
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
+}
+
+.escape-theme .pad {
+    background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    box-shadow: 0px 0px 10px #FEB022;
+}
+
+.escape-theme #bandLogoFooter:hover {
+    box-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
+    background-color: rgba(254, 176, 34, .5);
+    transition: ease-in-out .3s;
+}
+
+.escape-theme .footer-links i {
+    color: rgba(254, 176, 34, 1);
+}
+
+.escape-theme .footer-links i:hover {
+    color: #000;
+    text-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
+    transition: ease-in-out .3s;
+}
+
+/*---------------------------------Aloosh Dark theme */
+
+body.aloosh-theme.dark {
+    background: rgb(51, 15, 10);
+    background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 48%, rgba(244, 253, 175, 1) 88%);
+}
+
+.aloosh-theme.dark #navbarBrand,
+.aloosh-theme.dark #navbarNav .nav-link {
+    color: #330f0a;
+    text-shadow: 2px 2px 4px #efdd8d;
+}
+
+.aloosh-theme.dark #pageHeader {
+    color: #fff;
+    text-shadow: 5px 3px 8px #330F0A;
+}
+
+.aloosh-theme.dark .dropdown button {
+    background: rgb(101, 116, 58);
+    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
+    border-color: #fff;
+    color: #fff;
+}
+
+.aloosh-theme.dark .dropdown-menu.show {
+    background: rgb(101, 116, 58);
+    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
+    border-color: #fff;
+    color: #fff;
+}
+
+.aloosh-theme.dark .dropdown-item {
+    color: #fff;
+    text-shadow: 2px 2px 4px #330F0A;
+}
+
+.aloosh-theme.dark .pad {
+    background: rgb(101, 116, 58);
+    background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
+    border-color: #fff;
+    color: #fff;
+}
+
+.aloosh-theme.dark .footer-links i {
+    color: rgba(239, 221, 141, 1);
 
 }
 

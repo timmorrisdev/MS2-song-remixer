@@ -448,35 +448,35 @@ function changeTheme(newSong) {
     const playID = playBtn.classList[0];
     playBtn.classList.replace(playID, `${newSong}`);
 */
+    /*
+        // update nav theme
+        const navBrand = document.getElementById('navbarBrand');
+        const navBrandTheme = navBrand.classList[0];
+        navBrand.classList.replace(navBrandTheme, `${newSong}-theme`)
 
-    // update nav theme
-    const navBrand = document.getElementById('navbarBrand');
-    const navBrandTheme = navBrand.classList[0];
-    navBrand.classList.replace(navBrandTheme, `${newSong}-theme`)
+        const navLink = document.getElementById('navbarNav');
+        const navLinkTheme = navLink.classList[0];
+        navLink.classList.replace(navLinkTheme, `${newSong}-theme`)
 
-    const navLink = document.getElementById('navbarNav');
-    const navLinkTheme = navLink.classList[0];
-    navLink.classList.replace(navLinkTheme, `${newSong}-theme`)
+        // update page header theme
+        const pageHeader = document.getElementById('pageHeader');
+        pageHeaderTheme = pageHeader.classList[0];
+        pageHeader.classList.replace(pageHeaderTheme, `${newSong}-theme`)
 
-    // update page header theme
-    const pageHeader = document.getElementById('pageHeader');
-    pageHeaderTheme = pageHeader.classList[0];
-    pageHeader.classList.replace(pageHeaderTheme, `${newSong}-theme`)
+        //replaces song select button classes
+        const button = document.getElementById('songSelectorButton');
+        const buttonTheme = button.classList[0];
+        button.classList.replace(buttonTheme, `${newSong}-theme`);
 
-    //replaces song select button classes
-    const button = document.getElementById('songSelectorButton');
-    const buttonTheme = button.classList[0];
-    button.classList.replace(buttonTheme, `${newSong}-theme`);
+        const dropdown = document.getElementById('songSelectorDropdown');
+        const dropdownTheme = dropdown.classList[0];
+        dropdown.classList.replace(dropdownTheme, `${newSong}-theme`);
 
-    const dropdown = document.getElementById('songSelectorDropdown');
-    const dropdownTheme = dropdown.classList[0];
-    dropdown.classList.replace(dropdownTheme, `${newSong}-theme`);
-
-    //replaces footer class
-    const footerLinks = document.getElementById('footerLinks');
-    const footerLinksTheme = footerLinks.classList[0];
-    footerLinks.classList.replace(footerLinksTheme, `${newSong}-theme`);
-
+        //replaces footer class
+        const footerLinks = document.getElementById('footerLinks');
+        const footerLinksTheme = footerLinks.classList[0];
+        footerLinks.classList.replace(footerLinksTheme, `${newSong}-theme`);
+    */
 }
 
 //build pad grid 
