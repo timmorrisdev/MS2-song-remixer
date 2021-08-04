@@ -270,7 +270,6 @@ h3,
     height: 60px;
     width: 60px;
     position: relative;
-
 }
 
 .transport button i {
@@ -279,6 +278,7 @@ h3,
     top: 50%;
     transform: translate(-50%, -50%);
     font-size: 60px;
+    filter: drop-shadow(0px 0px 6px black);
 }
 
 .transport span {
@@ -293,7 +293,7 @@ h3,
     color: #30d430;
     margin-left: 20px;
     margin-right: 40px;
-    filter: drop-shadow(0px 0px 6px black);
+
 }
 
 .play-btn:hover {
@@ -303,7 +303,7 @@ h3,
 .stop-btn {
     color: #0404d6;
     margin-right: 40px;
-    filter: drop-shadow(0px 0px 6px black);
+
 }
 
 .stop-btn:hover {
@@ -359,13 +359,16 @@ button:focus {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    box-shadow: 0px 0px 14px #000000a6;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0px 0px 14px #000000a6;
+    background-color: rgba(0, 0, 0, 0.3); */
 }
 
-#bandLogoFooter:hover {
-    box-shadow: 0px 0px 14px #ffacfc;
-    background-color: #ffacfc6b;
+#bandLogoFooter img {
+    filter: drop-shadow(0px 0px 14px #000);
+}
+
+#bandLogoFooter img:hover {
+    filter: drop-shadow(0px 0px 14px #ffacfc);
     transition: ease-in-out .3s;
 }
 
@@ -487,9 +490,8 @@ body.aloosh-theme {
     box-shadow: 0px 0px 10px #e89886;
 }
 
-.aloosh-theme #bandLogoFooter:hover {
-    box-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
-    background-color: rgba(232, 152, 134, .5);
+.aloosh-theme #bandLogoFooter img:hover {
+    filter: drop-shadow(0px 0px 14px rgba(232, 152, 134, 1));
     transition: ease-in-out .3s;
 }
 
@@ -559,9 +561,8 @@ body.escape-theme {
     box-shadow: 0px 0px 10px #FEB022;
 }
 
-.escape-theme #bandLogoFooter:hover {
-    box-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
-    background-color: rgba(254, 176, 34, .5);
+.escape-theme #bandLogoFooter img:hover {
+    filter: drop-shadow(0px 0px 14px rgba(254, 176, 34, 1));
     transition: ease-in-out .3s;
 }
 

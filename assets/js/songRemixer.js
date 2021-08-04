@@ -491,13 +491,31 @@ function buildPadsArea(song) {
     padContainer.classList.remove('hidden')
     padContainer.classList.add('pads-container')
 
+    const playBtn = document.getElementsByClassName('play-btn');
+    if (playBtn[0].id !== 'playBtn') {
+        playBtn[0].id = 'playBtn'
+    }
+
     // hide transport if navigating from another song and reset
     const transportContainer = document.getElementById('transportContainer');
+    const playIcon = document.getElementById('playIcon');
+    const stopIcon = document.getElementById('stopIcon');
+    const clearMutes = document.getElementById('clearMutes');
+
     if (transportContainer.classList.contains('hidden') === false) {
         transportContainer.classList.add('hidden');
     };
-
-
+    if (playIcon.classList.contains('fa-pause')) {
+        playIcon.classList.remove('fa-pause');
+        playIcon.classList.add('fa-play');
+    };
+    if (stopIcon.classList.contains('fa-step-backward')) {
+        stopIcon.classList.remove('fa-step-backward');
+        stopIcon.classList.add('fa-stop');
+    };
+    if (clearMutes.classList.contains('mute-active')) {
+        clearMutes.classList.remove('mute-active');
+    };
 
 
     //replace page heading content and capitalise first letter of song ID
@@ -538,13 +556,6 @@ function buildPadsArea(song) {
     }, 90 * stemName.length);
 
 };
-
-
-
-
-
-
-
 
 //Sets current song variable for use within various functions across the site.
 let currentSongId = "";
