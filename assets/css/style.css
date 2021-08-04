@@ -470,9 +470,14 @@ h3,
 button.clear-mutes {
     border: 1px solid black;
     border-radius: 15px;
-    background: lightgrey;
+    background: #dcdcdc;
     margin-right: 20px;
     filter: drop-shadow(0px 0px 6px black);
+}
+
+button.clear-mutes.mute-active {
+    animation: mute-pad-blink .8s infinite;
+    animation-direction: alternate;
 }
 
 button:focus {
@@ -630,6 +635,21 @@ button:focus {
 
 .hidden {
     display: none;
+}
+
+/*---------------------------------Animations */
+
+@keyframes mute-pad-blink {
+
+    0% {
+        background: #ff4141;
+
+    }
+
+    100% {
+        background: #dcdcdc;
+
+    }
 }
 
 /*---------------------------------Media queries */

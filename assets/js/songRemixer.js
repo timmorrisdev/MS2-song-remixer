@@ -357,6 +357,7 @@ function stopAudio() {
 function padMute(padId) {
 
     const padMute = document.getElementById(`${padId}`);
+    const muteBtn = document.getElementById('clearMutes');
 
     if (currentSongId === 'aloosh') {
 
@@ -378,11 +379,19 @@ function padMute(padId) {
     } else {
         alert('select a song a get mixing!');
     };
+
+    if (muteBtn.classList.contains('mute-active') === false) {
+        muteBtn.classList.add('mute-active');
+    }
+
 }
 
 //clear all mutes function
 
 function clearMutes() {
+
+    const muteBtn = document.getElementById('clearMutes');
+
     if (currentSongId === 'aloosh') {
 
         //remove mute from all sprites
@@ -396,6 +405,9 @@ function clearMutes() {
             getPads[i].classList.contains('pad-muted');
             getPads[i].classList.remove('pad-muted');
         }
+
+
+
     } else if (currentSongId === 'escape') {
 
         //remove mute from all sprites
@@ -409,12 +421,17 @@ function clearMutes() {
             getPads[i].classList.contains('pad-muted');
             getPads[i].classList.remove('pad-muted');
         }
+
+
+
     } else {
         alert('No song loaded');
     }
+
+    if (muteBtn.classList.contains('mute-active')) {
+        muteBtn.classList.remove('mute-active');
+    }
 };
-
-
 
 
 // function to change the theme of various elements of the site when selecting a new song
