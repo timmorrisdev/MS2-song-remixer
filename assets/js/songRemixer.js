@@ -528,6 +528,8 @@ $(document).ready(function () {
 
         //remove instructions section
         $('.instructions-container, #spacer').remove();
+        $('#darkMode').removeClass('hidden');
+        $('#lightMode').removeClass('hidden');
 
         stopAudio();
         currentSongId = "aloosh";
@@ -546,7 +548,10 @@ $(document).ready(function () {
         currentSongId = "escape";
         //remove instructions section
         $('.instructions-container, #spacer').remove();
+        $('#darkMode').removeClass('hidden');
+        $('#lightMode').removeClass('hidden');
 
+        //move seek from zero to allow mutes to function
         playAudio();
         stopAudio();
 
@@ -555,20 +560,14 @@ $(document).ready(function () {
     });
     //Play button click
     $('.transport').delegate('#playBtn', 'click', function () {
-
         playAudio();
-
     });
     $('.transport').delegate('#pauseBtn', 'click', function () {
-
         pauseAudio();
     });
-
     //Stop button
     $('.transport').delegate('#stopBtn', 'click', function () {
-
         stopAudio();
-
     });
     //Individual pad clicked
     $('#pads-container').delegate('.pad', 'click', function () {
@@ -578,6 +577,17 @@ $(document).ready(function () {
     //Clear mutes button
     $('#clearMutes').click(function () {
         clearMutes();
+    });
+    //Dark Mode
+    $('#darkMode').click(function () {
+        $('body').addClass('dark');
+        $('#darkMode').addClass('active');
+        $('#lightMode').removeClass('active')
+    });
+    $('#lightMode').click(function () {
+        $('body').removeClass('dark');
+        $('#lightMode').addClass('active');
+        $('#darkMode').removeClass('active')
     });
 
 });
