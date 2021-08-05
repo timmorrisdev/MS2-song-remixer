@@ -1,55 +1,15 @@
-//class and constructor to create Song objects
-/*
-class Song {
-    constructor(name, tempo, stems = []) {
-        this.name = name;
-        this.tempo = tempo;
-        this.stems = stems;
-    }
-};
+// define dom object variables
 
-//supply song information to Song class (name, tempo, stems[])
+const transportContainer = document.getElementById('transportContainer');
+const playBtn = document.getElementById('playBtn');
+const stopBtn = document.getElementById('stopBtn');
+const playIcon = document.getElementById('playIcon');
+const stopIcon = document.getElementById('stopIcon');
+const muteBtn = document.getElementById('clearMutes');
 
-const alooshInfo = new Song('aloosh', '91', [{
-    name: 'DRUMS'
-}, {
-    name: 'PERCUSSION'
-}, {
-    name: 'BASS'
-}, {
-    name: 'MAIN GUITAR'
-}, {
-    name: 'SYNTHS'
-}, {
-    name: 'LEAD GUITAR'
-}, {
-    name: 'FX'
-}, {
-    name: 'LEAD VOCAL'
-}, {
-    name: 'BACKING VOCALS'
-}, ]);
 
-const escapeInfo = new Song('escape', '97', [{
-    name: 'DRUMS'
-}, {
-    name: 'PERCUSSION'
-}, {
-    name: 'BASS'
-}, {
-    name: 'MAIN GUITAR'
-}, {
-    name: 'SYNTHS'
-}, {
-    name: 'LEAD GUITAR'
-}, {
-    name: 'FX'
-}, {
-    name: 'LEAD VOCAL'
-}, {
-    name: 'BACKING VOCALS'
-}, ]);
-*/
+// Song sprite and info constructor
+
 class Sprite {
     constructor(options, name, tempo, stems = []) {
 
@@ -213,37 +173,29 @@ const escapeAudio = new Sprite({
     name: 'BACKING VOCALS'
 }, ]);
 
-
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
 let allPads = [];
 
-function audioControl() {
-
-    //if else statement to determine which function to use
-
-    if (currentSongId === 'aloosh') {
-        if (alooshAudio.sound.playing) {
-            pauseAudio();
-
-        }
-
-    } else if (currentSongId === 'escape') {
-
-    };
-};
-
 function playAudio() {
 
-    //check current song
-    if (currentSongId === 'aloosh') {
+    //checks if audio is loaded and ready
+    if (alooshAudio.sound.state() === 'loaded') {
 
-        if (alooshAudio.sound.seek() === 0) {
+        // change icons and ID in transport ready for pause or stop function
 
-            //prevents additional playback instance
-            if (!alooshAudio.sound.playing()) {
+        playIcon.classList.remove('fa-play');
+        playIcon.classList.add('fa-pause');
+        playBtn.id = 'pauseBtn';
+        stopIcon.classList.remove('fa-step-backward');
+        stopIcon.classList.add('fa-stop');
 
-                //checks if audio is loaded and ready
-                if (alooshAudio.sound.state() === 'loaded') {
+        //check current song
+        if (currentSongId === 'aloosh') {
+
+            if (alooshAudio.sound.seek() === 0) {
+
+                //prevents additional playback instance
+                if (!alooshAudio.sound.playing()) {
 
                     //clears existing sprite IDs from allPads variable
                     allPads = [];
@@ -286,26 +238,21 @@ function playAudio() {
                     allPads.push(pad8);
 
                 } else {
-                    alert('song loading, please try again!')
-                }
-            };
+                    alert('song already playing')
+                };
 
-        } else {
-            for (let i = 0; i < allPads.length; i++) {
-                alooshAudio.sound.play(allPads[i])
-            };
+            } else {
+                for (let i = 0; i < allPads.length; i++) {
+                    alooshAudio.sound.play(allPads[i])
+                };
+            }
 
-        }
+        } else if (currentSongId === 'escape') {
 
-    } else if (currentSongId === 'escape') {
+            if (escapeAudio.sound.seek() === 0) {
 
-        if (escapeAudio.sound.seek() === 0) {
-
-            //prevents additional playback instance
-            if (!escapeAudio.sound.playing()) {
-
-                //checks if audio is loaded and ready
-                if (escapeAudio.sound.state() === 'loaded') {
+                //prevents additional playback instance
+                if (!escapeAudio.sound.playing()) {
 
                     //clears existing sprite IDs from allPads variable
                     allPads = [];
@@ -348,26 +295,39 @@ function playAudio() {
                     allPads.push(pad8);
 
                 } else {
-                    alert('song loading, please try again!')
+                    alert('song already playing')
                 };
 
+            } else {
+                for (let i = 0; i < allPads.length; i++) {
+                    escapeAudio.sound.play(allPads[i])
+                };
             };
-
         } else {
-            for (let i = 0; i < allPads.length; i++) {
-                escapeAudio.sound.play(allPads[i])
-            };
-        };
+            alert('select a song from the menu and get mixing!');
+        }
+
     } else {
-        alert('select a song from the menu and get mixing!');
-    }
+        alert('song loading, please try again');
+    };
+
 };
 
 // pause playback function
 
 function pauseAudio() {
-    //if statement to pause audio based on current song selected
 
+    const pauseBtn = document.getElementById('pauseBtn');
+
+    playIcon.classList.remove('fa-pause');
+    playIcon.classList.add('fa-play');
+
+    pauseBtn.id = 'playBtn';
+    stopIcon.classList.remove('fa-stop');
+    stopIcon.classList.add('fa-step-backward');
+
+
+    //if statement to pause audio based on current song selected
     if (currentSongId === 'aloosh') {
         alooshAudio.sound.pause();
     } else if (currentSongId === 'escape') {
@@ -378,6 +338,16 @@ function pauseAudio() {
 // stop playback fucntion 
 
 function stopAudio() {
+
+    const playClass = document.getElementsByClassName('play-btn');
+    if (playClass[0].id !== 'playBtn') {
+        playClass[0].id = 'playBtn'
+    }
+
+    playIcon.classList.remove('fa-pause');
+    playIcon.classList.add('fa-play');
+    stopIcon.classList.remove('fa-stop');
+    stopIcon.classList.add('fa-step-backward');
 
     //if statement to stop audio based on current song selected
 
@@ -394,7 +364,6 @@ function stopAudio() {
 function padMute(padId) {
 
     const padMute = document.getElementById(`${padId}`);
-    const muteBtn = document.getElementById('clearMutes');
 
     if (currentSongId === 'aloosh') {
 
@@ -426,8 +395,6 @@ function padMute(padId) {
 //clear all mutes function
 
 function clearMutes() {
-
-    const muteBtn = document.getElementById('clearMutes');
 
     if (currentSongId === 'aloosh') {
 
@@ -528,16 +495,12 @@ function buildPadsArea(song) {
     padContainer.classList.remove('hidden')
     padContainer.classList.add('pads-container')
 
-    const playBtn = document.getElementsByClassName('play-btn');
-    if (playBtn[0].id !== 'playBtn') {
-        playBtn[0].id = 'playBtn'
+    const playClass = document.getElementsByClassName('play-btn');
+    if (playClass[0].id !== 'playBtn') {
+        playClass[0].id = 'playBtn'
     }
 
     // hide transport if navigating from another song and reset
-    const transportContainer = document.getElementById('transportContainer');
-    const playIcon = document.getElementById('playIcon');
-    const stopIcon = document.getElementById('stopIcon');
-    const clearMutes = document.getElementById('clearMutes');
 
     if (transportContainer.classList.contains('hidden') === false) {
         transportContainer.classList.add('hidden');
@@ -550,8 +513,8 @@ function buildPadsArea(song) {
         stopIcon.classList.remove('fa-step-backward');
         stopIcon.classList.add('fa-stop');
     };
-    if (clearMutes.classList.contains('mute-active')) {
-        clearMutes.classList.remove('mute-active');
+    if (muteBtn.classList.contains('mute-active')) {
+        muteBtn.classList.remove('mute-active');
     };
 
 
@@ -630,27 +593,13 @@ $(document).ready(function () {
         buildPadsArea(escapeAudio);
         changeTheme(currentSongId);
     });
-
-
     //Play button click
     $('.transport').delegate('#playBtn', 'click', function () {
-
-        $('#playBtn i').removeClass('fa-play');
-        $('#playBtn i').addClass('fa-pause');
-        $('#playBtn').attr('id', 'pauseBtn');
-        $('#stopBtn i').removeClass('fa-step-backward');
-        $('#stopBtn i').addClass('fa-stop');
 
         playAudio();
 
     });
     $('.transport').delegate('#pauseBtn', 'click', function () {
-
-        $('#pauseBtn i').removeClass('fa-pause');
-        $('#pauseBtn i').addClass('fa-play');
-        $('#pauseBtn').attr('id', 'playBtn');
-        $('#stopBtn i').removeClass('fa-stop');
-        $('#stopBtn i').addClass('fa-step-backward');
 
         pauseAudio();
     });
@@ -658,13 +607,8 @@ $(document).ready(function () {
     //Stop button
     $('.transport').delegate('#stopBtn', 'click', function () {
 
-        $('#pauseBtn').attr('id', 'playBtn');
-        $('#playBtn i').removeClass('fa-pause');
-        $('#playBtn i').addClass('fa-play');
-        $('#stopBtn i').removeClass('fa-stop');
-        $('#stopBtn i').addClass('fa-step-backward');
-
         stopAudio();
+
     });
     //Individual pad clicked
     $('#pads-container').delegate('.pad', 'click', function () {
