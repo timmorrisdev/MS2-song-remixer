@@ -6,6 +6,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 body.landing-theme {
@@ -208,6 +210,7 @@ h3,
 
 .pads-container {
     height: 50vh;
+    width: 50vh;
     max-width: 500px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -224,6 +227,8 @@ h3,
 .pad {
     position: relative;
     flex-basis: calc(33.333% - 4px);
+    max-height: 33%;
+    max-width: 33%;
     margin: 2px;
     border: 2px solid black;
     border-radius: 20px;
@@ -339,9 +344,13 @@ button:focus {
 
 /*---------------------------------Footer */
 
+.footer-spacer {
+    flex-grow: 1
+}
+
 .footer {
     /* border: black solid 2px; */
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -351,6 +360,7 @@ button:focus {
     padding-bottom: 10px;
     /* border-top: solid 3px rgba(12, 28, 49, 1); */
     height: 85px;
+    margin-top: auto;
 }
 
 .footer-links {
@@ -375,6 +385,12 @@ button:focus {
 
 #bandLogoFooter img {
     filter: drop-shadow(0px 0px 14px #000);
+    animation: spin 3s linear infinite;
+    animation-play-state: paused;
+}
+
+#bandLogoFooter.playing img {
+    animation-play-state: running;
 }
 
 #bandLogoFooter img:hover {
@@ -810,6 +826,18 @@ body.escape-theme.dark {
     100% {
         background: #dcdcdc;
 
+    }
+}
+
+/* Animation inspired by Traversy Media youTube video listed in readme */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 

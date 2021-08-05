@@ -447,6 +447,10 @@ function changeTheme(newSong) {
 
 function buildPadsArea(song) {
 
+    // while (alooshAudio.sound.state() === 'loading') {
+
+    // }
+
     //clears the pad container of the existing song grid
     const padContainer = document.getElementById('pads-container');
     padContainer.innerText = '';
@@ -561,13 +565,16 @@ $(document).ready(function () {
     //Play button click
     $('.transport').delegate('#playBtn', 'click', function () {
         playAudio();
+        $('#bandLogoFooter').addClass('playing');
     });
     $('.transport').delegate('#pauseBtn', 'click', function () {
         pauseAudio();
+        $('#bandLogoFooter').removeClass('playing');
     });
     //Stop button
     $('.transport').delegate('#stopBtn', 'click', function () {
         stopAudio();
+        $('#bandLogoFooter').removeClass('playing');
     });
     //Individual pad clicked
     $('#pads-container').delegate('.pad', 'click', function () {
