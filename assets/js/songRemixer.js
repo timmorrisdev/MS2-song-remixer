@@ -1,5 +1,5 @@
 //class and constructor to create Song objects
-
+/*
 class Song {
     constructor(name, tempo, stems = []) {
         this.name = name;
@@ -49,18 +49,19 @@ const escapeInfo = new Song('escape', '97', [{
 }, {
     name: 'BACKING VOCALS'
 }, ]);
-
+*/
 class Sprite {
-    constructor(options) {
-        let self = this;
+    constructor(options, name, tempo, stems = []) {
 
         // Create audio sprite definition.
-        self.sound = new Howl({
+        this.sound = new Howl({
             src: options.src,
             sprite: options.sprite,
             loop: true,
         });
-
+        this.name = name;
+        this.tempo = tempo;
+        this.stems = stems;
     }
 };
 
@@ -105,7 +106,7 @@ const alooshAudio = new Sprite({
         "vocalLead": [
             392000,
             47472.53968253966
-        ]
+        ],
     },
     spriteMap: {
         pad0: 'bass',
@@ -118,7 +119,25 @@ const alooshAudio = new Sprite({
         pad7: 'vocalBacking',
         pad8: 'vocalLead',
     }
-});
+}, 'aloosh', '91', [{
+    name: 'DRUMS'
+}, {
+    name: 'PERCUSSION'
+}, {
+    name: 'BASS'
+}, {
+    name: 'MAIN GUITAR'
+}, {
+    name: 'SYNTHS'
+}, {
+    name: 'LEAD GUITAR'
+}, {
+    name: 'FX'
+}, {
+    name: 'LEAD VOCAL'
+}, {
+    name: 'BACKING VOCALS'
+}, ]);
 
 const escapeAudio = new Sprite({
     "src": [
@@ -174,7 +193,25 @@ const escapeAudio = new Sprite({
         pad7: 'vocalBacking',
         pad8: 'vocalLead',
     }
-});
+}, 'escape', '97', [{
+    name: 'DRUMS'
+}, {
+    name: 'PERCUSSION'
+}, {
+    name: 'BASS'
+}, {
+    name: 'MAIN GUITAR'
+}, {
+    name: 'SYNTHS'
+}, {
+    name: 'LEAD GUITAR'
+}, {
+    name: 'FX'
+}, {
+    name: 'LEAD VOCAL'
+}, {
+    name: 'BACKING VOCALS'
+}, ]);
 
 
 //Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
@@ -575,7 +612,7 @@ $(document).ready(function () {
         playAudio();
         stopAudio();
 
-        buildPadsArea(alooshInfo);
+        buildPadsArea(alooshAudio);
         changeTheme(currentSongId);
 
     });
@@ -590,9 +627,8 @@ $(document).ready(function () {
         playAudio();
         stopAudio();
 
-        buildPadsArea(escapeInfo);
+        buildPadsArea(escapeAudio);
         changeTheme(currentSongId);
-
     });
 
 
