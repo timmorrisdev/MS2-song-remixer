@@ -7,6 +7,9 @@ const playIcon = document.getElementById('playIcon');
 const stopIcon = document.getElementById('stopIcon');
 const muteBtn = document.getElementById('clearMutes');
 
+//Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
+let allPads = [];
+
 
 // Song sprite and info constructor
 
@@ -173,9 +176,6 @@ const escapeAudio = new Sprite({
     name: 'BACKING VOCALS'
 }, ]);
 
-//Array to store sprite ID for each pad to enable access to audio parameters (mute / rate etc)
-let allPads = [];
-
 function playAudio() {
 
     //checks if audio is loaded and ready
@@ -306,11 +306,9 @@ function playAudio() {
         } else {
             alert('select a song from the menu and get mixing!');
         }
-
     } else {
         alert('song loading, please try again');
     };
-
 };
 
 // pause playback function
@@ -325,7 +323,6 @@ function pauseAudio() {
     pauseBtn.id = 'playBtn';
     stopIcon.classList.remove('fa-stop');
     stopIcon.classList.add('fa-step-backward');
-
 
     //if statement to pause audio based on current song selected
     if (currentSongId === 'aloosh') {
@@ -356,7 +353,6 @@ function stopAudio() {
     } else if (currentSongId === 'escape') {
         escapeAudio.sound.stop();
     };
-
 };
 
 //pad mute toggle function
@@ -445,42 +441,6 @@ function changeTheme(newSong) {
     //replaces the body class at index 0 with the new song theme
     const bodyTheme = document.body.classList[0];
     document.body.classList.replace(bodyTheme, `${newSong}-theme`);
-
-    /*
-    //replaces the playBtn Id with the selected song
-    playBtn = document.getElementById('playBtn');
-    const playID = playBtn.classList[0];
-    playBtn.classList.replace(playID, `${newSong}`);
-*/
-    /*
-        // update nav theme
-        const navBrand = document.getElementById('navbarBrand');
-        const navBrandTheme = navBrand.classList[0];
-        navBrand.classList.replace(navBrandTheme, `${newSong}-theme`)
-
-        const navLink = document.getElementById('navbarNav');
-        const navLinkTheme = navLink.classList[0];
-        navLink.classList.replace(navLinkTheme, `${newSong}-theme`)
-
-        // update page header theme
-        const pageHeader = document.getElementById('pageHeader');
-        pageHeaderTheme = pageHeader.classList[0];
-        pageHeader.classList.replace(pageHeaderTheme, `${newSong}-theme`)
-
-        //replaces song select button classes
-        const button = document.getElementById('songSelectorButton');
-        const buttonTheme = button.classList[0];
-        button.classList.replace(buttonTheme, `${newSong}-theme`);
-
-        const dropdown = document.getElementById('songSelectorDropdown');
-        const dropdownTheme = dropdown.classList[0];
-        dropdown.classList.replace(dropdownTheme, `${newSong}-theme`);
-
-        //replaces footer class
-        const footerLinks = document.getElementById('footerLinks');
-        const footerLinksTheme = footerLinks.classList[0];
-        footerLinks.classList.replace(footerLinksTheme, `${newSong}-theme`);
-    */
 }
 
 //build pad grid 
