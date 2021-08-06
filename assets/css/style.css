@@ -142,8 +142,8 @@ h3,
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-top: 15vh;
-
 }
 
 /*--------------------------------- song nav section */
@@ -317,7 +317,7 @@ h3,
 .play-btn {
     color: #30d430;
     margin-left: 20px;
-    margin-right: 40px;
+    margin-right: 20px;
 
 }
 
@@ -327,7 +327,7 @@ h3,
 
 .stop-btn {
     color: #0404d6;
-    margin-right: 40px;
+    margin-right: 20px;
 
 }
 
@@ -346,6 +346,10 @@ button.clear-mutes {
 button.clear-mutes.mute-active {
     animation: mute-pad-blink .8s infinite;
     animation-direction: alternate;
+}
+
+.info-button {
+    margin-right: 20px;
 }
 
 button:focus {
@@ -543,6 +547,14 @@ body.aloosh-theme {
     box-shadow: 0px 0px 10px #e89886;
 }
 
+.aloosh-theme .info-button {
+    color: rgba(208, 86, 58, 1);
+}
+
+.aloosh-theme .info-button:hover {
+    color: rgba(232, 152, 134, 1);
+}
+
 .aloosh-theme #bandLogoFooter img:hover {
     filter: drop-shadow(0px 0px 14px rgba(232, 152, 134, 1));
     transition: ease-in-out .3s;
@@ -629,6 +641,14 @@ body.escape-theme {
     background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     box-shadow: 0px 0px 10px #FEB022;
+}
+
+.escape-theme .info-button {
+    color: rgba(254, 176, 34, 1);
+}
+
+.escape-theme .info-button:hover {
+    color: rgba(226, 220, 5, 1);
 }
 
 .escape-theme #bandLogoFooter img:hover {
@@ -719,6 +739,15 @@ body.aloosh-theme.dark {
     color: #fff;
 }
 
+.aloosh-theme.dark .info-button {
+    color: rgba(239, 221, 141, 1);
+
+}
+
+.aloosh-theme.dark .info-button:hover {
+    color: rgba(101, 116, 58, 1);
+}
+
 .aloosh-theme.dark #bandLogoFooter img:hover {
     filter: drop-shadow(0px 0px 14px rgba(239, 221, 141, 1));
     transition: ease-in-out .3s;
@@ -807,6 +836,14 @@ body.escape-theme.dark {
     background: radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     border-color: #fff;
     color: #000;
+}
+
+.escape-theme.dark .info-button {
+    color: #C6AC8F;
+}
+
+.escape-theme.dark .info-button:hover {
+    color: #EAE0D5;
 }
 
 .escape-theme.dark #bandLogoFooter img:hover {

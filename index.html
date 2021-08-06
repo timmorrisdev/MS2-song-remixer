@@ -94,7 +94,7 @@
         </div>
 
         <div class="loading hidden">
-            <H1>Loading... Please Wait</H1>
+            <H1>Loading... <br>Please Wait</H1>
         </div>
 
         <div class="transport-container row hidden" id="transportContainer">
@@ -104,8 +104,10 @@
                 <button id="stopBtn" class="stop-btn"><i class="fas fa-stop" id="stopIcon"></i></button>
 
                 <button id="clearMutes" class="clear-mutes"><span>Reset<br>Pads</span></button>
+                <button id="infoBtn" class="info-button" data-toggle="modal" data-target="#exampleModal"><i
+                        class="fas fa-info-circle" id=""></i></button>
             </div>
-            <div class="info-button"><i class="fas fa-info-circle" id="infoBtn"></i></div>
+
         </div>
 
     </div>
@@ -124,6 +126,10 @@
         </div>
 
     </footer>
+
+    <!-- instructions modal. copied from Bootstrap documentation and modified -->
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"
