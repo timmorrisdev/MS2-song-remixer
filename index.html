@@ -104,7 +104,7 @@
                 <button id="stopBtn" class="stop-btn"><i class="fas fa-stop" id="stopIcon"></i></button>
 
                 <button id="clearMutes" class="clear-mutes"><span>Reset<br>Pads</span></button>
-                <button id="infoBtn" class="info-button" data-toggle="modal" data-target="#exampleModal"><i
+                <button id="infoBtn" class="info-button" data-toggle="modal" data-target="#instructionsModal"><i
                         class="fas fa-info-circle" id=""></i></button>
             </div>
 
@@ -129,7 +129,25 @@
 
     <!-- instructions modal. copied from Bootstrap documentation and modified -->
 
+    <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content game-instructions container">
 
+                <h2 class="modal-title" id="exampleModalLabel">Instructions</h2>
+                <ol>
+                    <li>1. Select a song from the menu below. <i class="fas fa-music"></i></li>
+                    <li>2. Hit play! <i class="fas fa-play"></i></li>
+                    <li>3. Use the pads to explore the mix. <i class="fas fa-record-vinyl"></i></li>
+
+                </ol>
+
+                <div class="modal-footer mx-auto">
+                    <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.core.min.js"
