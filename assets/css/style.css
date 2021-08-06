@@ -133,6 +133,17 @@ h3,
 
 .game-instructions li {
     margin-bottom: 20px;
+
+}
+
+/*--------------------------------- Loading warning */
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+
 }
 
 /*--------------------------------- song nav section */
@@ -484,6 +495,12 @@ body.aloosh-theme {
     margin-top: -10px;
 }
 
+.aloosh-theme .loading h1 {
+    animation: loading-aloosh .6s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
 .aloosh-theme .dark-mode,
 .aloosh-theme .light-mode {
     color: #000;
@@ -492,8 +509,7 @@ body.aloosh-theme {
 
 .aloosh-theme .dark-mode.active,
 .aloosh-theme .light-mode.active {
-    border: solid 1px #e89886;
-    border-radius: 10px;
+    text-decoration: underline #e89886;
 }
 
 .aloosh-theme .dropdown-menu.show {
@@ -567,6 +583,12 @@ body.escape-theme {
     margin-top: -10px;
 }
 
+.escape-theme .loading h1 {
+    animation: loading-escape .6s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
 .escape-theme .dark-mode,
 .escape-theme .light-mode {
     color: #000;
@@ -575,8 +597,7 @@ body.escape-theme {
 
 .escape-theme .dark-mode.active,
 .escape-theme .light-mode.active {
-    border: solid 1px #FEB022;
-    border-radius: 10px;
+    text-decoration: underline #FEB022;
 }
 
 .escape-theme .dropdown button {
@@ -657,8 +678,7 @@ body.aloosh-theme.dark {
 
 .aloosh-theme.dark .dark-mode.active,
 .aloosh-theme.dark .light-mode.active {
-    border: solid 1px rgb(151, 143, 143);
-    border-radius: 10px;
+    text-decoration: underline #efdd8d;
 }
 
 .aloosh-theme.dark .dropdown button {
@@ -747,8 +767,7 @@ body.escape-theme.dark {
 
 .escape-theme.dark .dark-mode.active,
 .escape-theme.dark .light-mode.active {
-    border: solid 1px #C6AC8F;
-    border-radius: 10px;
+    text-decoration: underline #fff;
 }
 
 .escape-theme.dark .dropdown button {
@@ -824,6 +843,30 @@ body.escape-theme.dark {
 
     100% {
         background: #dcdcdc;
+
+    }
+}
+
+@keyframes loading-aloosh {
+    0% {
+        color: #e89886;
+
+    }
+
+    100% {
+        color: #000;
+
+    }
+}
+
+@keyframes loading-escape {
+    0% {
+        color: #FEB022;
+
+    }
+
+    100% {
+        color: #000;
 
     }
 }

@@ -453,6 +453,8 @@ function buildPadsArea(song) {
     const checkLoadState = setInterval(function () {
         if (alooshAudio.sound.state() === 'loaded' && escapeAudio.sound.state() === 'loaded') {
 
+            $('.loading').addClass('hidden');
+
             //clears the pad container of the existing song grid
             const padContainer = document.getElementById('pads-container');
             padContainer.innerText = '';
@@ -523,10 +525,10 @@ function buildPadsArea(song) {
             clearInterval(checkLoadState);
 
         } else {
-            alert('please wait');
+            $('.loading').removeClass('hidden');
         }
 
-    }, 500);
+    }, 10);
 
 };
 
@@ -546,6 +548,7 @@ $(document).ready(function () {
 
         playAudio();
         stopAudio();
+        clearMutes();
 
         buildPadsArea(alooshAudio);
         changeTheme(currentSongId);
@@ -564,6 +567,7 @@ $(document).ready(function () {
         //move seek from zero to allow mutes to function
         playAudio();
         stopAudio();
+        clearMutes();
 
         buildPadsArea(escapeAudio);
         changeTheme(currentSongId);
