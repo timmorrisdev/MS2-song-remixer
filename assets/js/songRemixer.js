@@ -310,9 +310,7 @@ function playAudio() {
         } else {
             alert('select a song from the menu and get mixing!');
         }
-    } else {
-        alert('song loading, please try again');
-    };
+    }
 };
 
 // pause playback function
@@ -451,81 +449,86 @@ function changeTheme(newSong) {
 
 function buildPadsArea(song) {
 
-    // while (alooshAudio.sound.state() === 'loading') {
 
-    // }
+    const checkLoadState = setInterval(function () {
+        if (alooshAudio.sound.state() === 'loaded' && escapeAudio.sound.state() === 'loaded') {
 
-    //clears the pad container of the existing song grid
-    const padContainer = document.getElementById('pads-container');
-    padContainer.innerText = '';
+            //clears the pad container of the existing song grid
+            const padContainer = document.getElementById('pads-container');
+            padContainer.innerText = '';
 
-    //add pad-container style class
-    padContainer.classList.remove('hidden')
-    padContainer.classList.add('pads-container')
+            //add pad-container style class
+            padContainer.classList.remove('hidden');
+            padContainer.classList.add('pads-container');
 
-    const playClass = document.getElementsByClassName('play-btn');
-    if (playClass[0].id !== 'playBtn') {
-        playClass[0].id = 'playBtn'
-    }
+            const playClass = document.getElementsByClassName('play-btn');
+            if (playClass[0].id !== 'playBtn') {
+                playClass[0].id = 'playBtn'
+            }
 
-    // hide transport if navigating from another song and reset
+            // hide transport if navigating from another song and reset
 
-    if (transportContainer.classList.contains('hidden') === false) {
-        transportContainer.classList.add('hidden');
-    };
-    if (playIcon.classList.contains('fa-pause')) {
-        playIcon.classList.remove('fa-pause');
-        playIcon.classList.add('fa-play');
-    };
-    if (stopIcon.classList.contains('fa-step-backward')) {
-        stopIcon.classList.remove('fa-step-backward');
-        stopIcon.classList.add('fa-stop');
-    };
-    if (muteBtn.classList.contains('mute-active')) {
-        muteBtn.classList.remove('mute-active');
-    };
+            if (transportContainer.classList.contains('hidden') === false) {
+                transportContainer.classList.add('hidden');
+            };
+            if (playIcon.classList.contains('fa-pause')) {
+                playIcon.classList.remove('fa-pause');
+                playIcon.classList.add('fa-play');
+            };
+            if (stopIcon.classList.contains('fa-step-backward')) {
+                stopIcon.classList.remove('fa-step-backward');
+                stopIcon.classList.add('fa-stop');
+            };
+            if (muteBtn.classList.contains('mute-active')) {
+                muteBtn.classList.remove('mute-active');
+            };
 
 
-    //replace page heading content and capitalise first letter of song ID
-    const pageHeader = document.getElementById('pageHeader');
-    const newHeader = currentSongId[0].toUpperCase() + currentSongId.slice(1).toLowerCase();
-    pageHeader.innerHTML = newHeader;
+            //replace page heading content and capitalise first letter of song ID
+            const pageHeader = document.getElementById('pageHeader');
+            const newHeader = currentSongId[0].toUpperCase() + currentSongId.slice(1).toLowerCase();
+            pageHeader.innerHTML = newHeader;
 
-    //assign current song stems information to variable
-    const stemName = song.stems;
+            //assign current song stems information to variable
+            const stemName = song.stems;
 
-    for (let i = 0; i < song.stems.length; i++) {
+            for (let i = 0; i < song.stems.length; i++) {
 
-        //create pad grid function
-        function createPad() {
+                //create pad grid function
+                function createPad() {
+
+                    setTimeout(function () {
+                        //gets pad-container element and adds div element
+                        const padContainer = document.getElementById('pads-container');
+                        const pad = document.createElement('div');
+
+                        //add class and ID information to each pad
+                        pad.classList.add('pad');
+                        pad.classList.add(`${currentSongId}-theme`);
+                        pad.id = `${i}`;
+
+                        pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
+
+                        padContainer.appendChild(pad);
+                    }, 90 * i);
+                }
+
+                createPad();
+
+            };
 
             setTimeout(function () {
-                //gets pad-container element and adds div element
-                const padContainer = document.getElementById('pads-container');
-                const pad = document.createElement('div');
+                transportContainer.classList.remove('hidden');
+            }, 90 * stemName.length);
+            clearInterval(checkLoadState);
 
-                //add class and ID information to each pad
-                pad.classList.add('pad');
-                pad.classList.add(`${currentSongId}-theme`);
-                pad.id = `${i}`;
-
-                pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
-
-                padContainer.appendChild(pad);
-            }, 90 * i);
+        } else {
+            alert('please wait');
         }
 
-        createPad();
-
-    };
-
-    setTimeout(function () {
-        transportContainer.classList.remove('hidden');
-    }, 90 * stemName.length);
+    }, 500);
 
 };
-
-
 
 //jQuery Event Handlers
 
