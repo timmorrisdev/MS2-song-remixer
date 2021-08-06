@@ -8,10 +8,13 @@ function sendContact(contactForm) {
         .then(
             function (response) {
                 console.log("SUCCESS", response);
+
             },
             function (error) {
                 console.log("FAILED", error);
+
             }
         );
-    return false; // To block from loading a new page
+    alert('Thanks for getting in touch!');
+
 };

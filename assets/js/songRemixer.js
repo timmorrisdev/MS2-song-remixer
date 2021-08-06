@@ -435,6 +435,14 @@ function clearMutes() {
     }
 };
 
+// function to reset 'reset pads' button if pads manually turned on
+
+function checkMutes() {
+    if ($('.pad').filter('.pad-muted').length === 0) {
+        muteBtn.classList.remove('mute-active');
+    }
+}
+
 
 // function to change the theme of various elements of the site when selecting a new song
 
@@ -590,6 +598,7 @@ $(document).ready(function () {
     $('#pads-container').delegate('.pad', 'click', function () {
         const padID = this.id;
         padMute(padID);
+        checkMutes();
     });
     //Clear mutes button
     $('#clearMutes').click(function () {
