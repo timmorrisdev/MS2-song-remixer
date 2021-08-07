@@ -536,6 +536,8 @@ function buildPadsArea(song) {
                 muteBtn.classList.remove('mute-active');
             };
 
+            $('#clearMutes').tooltip('enable');
+
 
             //replace page heading content and capitalise first letter of song ID
             const pageHeader = document.getElementById('pageHeader');
@@ -572,8 +574,13 @@ function buildPadsArea(song) {
 
             setTimeout(function () {
                 transportContainer.classList.remove('hidden');
+                $('#clearMutes').tooltip('show');
             }, 90 * stemName.length);
             clearInterval(checkLoadState);
+
+            setTimeout(function () {
+                $('#clearMutes').tooltip('disable');
+            }, 3000);
 
         } else {
             $('.loading').removeClass('hidden');
@@ -667,5 +674,8 @@ $(document).ready(function () {
         $('#lightMode').addClass('active');
         $('#darkMode').removeClass('active')
     });
+
+    $('[data-toggle="tooltip"]').tooltip()
+
 
 });
