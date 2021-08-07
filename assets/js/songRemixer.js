@@ -435,6 +435,49 @@ function clearMutes() {
     }
 };
 
+function muteAll() {
+    if (currentSongId === 'aloosh') {
+
+        //add mute from all sprites
+        alooshAudio.sound.mute(true);
+
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
+
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            if (getPads[i].classList.contains('pad-muted') !== true);
+            getPads[i].classList.add('pad-muted');
+        }
+
+
+
+    } else if (currentSongId === 'escape') {
+
+        //remove mute from all sprites
+        escapeAudio.sound.mute(true);
+
+        //get all pads and assign to variable
+        const getPads = document.getElementsByClassName('pad');
+
+        //loop through pads and remove any existing 'pad-muted' class
+        for (let i = 0; i < getPads.length; i++) {
+            if (getPads[i].classList.contains('pad-muted') !== true);
+            getPads[i].classList.add('pad-muted');
+        }
+
+
+
+
+    } else {
+        alert('No song loaded');
+    }
+
+    if (muteBtn.classList.contains('mute-active') !== true) {
+        muteBtn.classList.add('mute-active');
+    }
+}
+
 // function to reset 'reset pads' button if pads manually turned on
 
 function checkMutes() {
@@ -601,8 +644,17 @@ $(document).ready(function () {
         checkMutes();
     });
     //Clear mutes button
-    $('#clearMutes').click(function () {
-        clearMutes();
+    $('#clearMutes').click(function (e) {
+        if (e.shiftKey) {
+            muteAll();
+            console.log("shif");
+        } else {
+            clearMutes();
+        };
+    });
+    // mute all double click
+    $('#clearMutes').dblclick(function () {
+        muteAll();
     });
     //Dark Mode
     $('#darkMode').click(function () {

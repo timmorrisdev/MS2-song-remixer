@@ -58,6 +58,10 @@ ___
 - Recording of arrangements
 
     In the furture I would like to develop a 'back-end' aspect to the site that might allow users to capture and subsequently share their unique mixes of the song via social media. This would have the goal of increasing game enjoyment for the user and also increase the effectiveness of the game as a promotional tool for the band.
+
+- Additional processing options
+
+    I would like to include the ability to further manipulate the different parts of each song. Perhaps adding individual volume / EQ / reverb settings. This could be a 'paid' feature to allow the band to generate revenue with the app.
 ___
 ## Features
 - Responsive across all devices and screen sizes.
@@ -88,8 +92,7 @@ ___
     - Google Fonts was used to import the 'Montserrat', 'Lato' and 'Quicksand' fonts, which were used throughout the site.
 - [Font Awesome](https://fontawesome.com/)
     - Used to source images for the transport section of the remixer.
-- [Hover.css](https://ianlunn.github.io/Hover/)
-    - 
+
 - [Git](https://git-scm.com/)
     - Git was used for version control using the terminal in Gitpod to 'add' and 'commit' to Git and to push changes to the GitHub repository using 'git push'.
 
