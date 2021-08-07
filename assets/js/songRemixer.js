@@ -2,7 +2,6 @@
 
 const transportContainer = document.getElementById('transportContainer');
 const playBtn = document.getElementById('playBtn');
-const stopBtn = document.getElementById('stopBtn');
 const playIcon = document.getElementById('playIcon');
 const stopIcon = document.getElementById('stopIcon');
 const muteBtn = document.getElementById('clearMutes');
@@ -30,7 +29,7 @@ class Sprite {
         this.tempo = tempo;
         this.stems = stems;
     }
-};
+}
 
 const alooshAudio = new Sprite({
     "src": [
@@ -242,13 +241,13 @@ function playAudio() {
                     alooshPads.push(pad8);
 
                 } else {
-                    alert('song already playing')
-                };
+                    alert('song already playing');
+                }
 
             } else {
                 for (let i = 0; i < alooshPads.length; i++) {
-                    alooshAudio.sound.play(alooshPads[i])
-                };
+                    alooshAudio.sound.play(alooshPads[i]);
+                }
             }
 
         } else if (currentSongId === 'escape') {
@@ -299,19 +298,19 @@ function playAudio() {
                     escapePads.push(pad8);
 
                 } else {
-                    alert('song already playing')
-                };
+                    alert('song already playing');
+                }
 
             } else {
                 for (let i = 0; i < escapePads.length; i++) {
-                    escapeAudio.sound.play(escapePads[i])
-                };
-            };
+                    escapeAudio.sound.play(escapePads[i]);
+                }
+            }
         } else {
             alert('select a song from the menu and get mixing!');
         }
     }
-};
+}
 
 // pause playback function
 
@@ -331,8 +330,8 @@ function pauseAudio() {
         alooshAudio.sound.pause();
     } else if (currentSongId === 'escape') {
         escapeAudio.sound.pause();
-    };
-};
+    }
+}
 
 // stop playback fucntion 
 
@@ -340,7 +339,7 @@ function stopAudio() {
 
     const playClass = document.getElementsByClassName('play-btn');
     if (playClass[0].id !== 'playBtn') {
-        playClass[0].id = 'playBtn'
+        playClass[0].id = 'playBtn';
     }
 
     playIcon.classList.remove('fa-pause');
@@ -354,8 +353,8 @@ function stopAudio() {
         alooshAudio.sound.stop();
     } else if (currentSongId === 'escape') {
         escapeAudio.sound.stop();
-    };
-};
+    }
+}
 
 //pad mute toggle function
 
@@ -367,7 +366,7 @@ function padMute(padId) {
 
         if (padMute.classList.contains('pad-muted')) {
             alooshAudio.sound.mute(false, alooshPads[`${padId}`]);
-            padMute.classList.remove('pad-muted')
+            padMute.classList.remove('pad-muted');
         } else {
             alooshAudio.sound.mute(true, alooshPads[`${padId}`]);
             padMute.classList.add('pad-muted');
@@ -375,14 +374,14 @@ function padMute(padId) {
     } else if (currentSongId === 'escape') {
         if (padMute.classList.contains('pad-muted')) {
             escapeAudio.sound.mute(false, escapePads[`${padId}`]);
-            padMute.classList.remove('pad-muted')
+            padMute.classList.remove('pad-muted');
         } else {
             escapeAudio.sound.mute(true, escapePads[`${padId}`]);
             padMute.classList.add('pad-muted');
         }
     } else {
         alert('select a song a get mixing!');
-    };
+    }
 
     if (muteBtn.classList.contains('mute-active') === false) {
         muteBtn.classList.add('mute-active');
@@ -433,7 +432,7 @@ function clearMutes() {
     if (muteBtn.classList.contains('mute-active')) {
         muteBtn.classList.remove('mute-active');
     }
-};
+}
 
 function muteAll() {
     if (currentSongId === 'aloosh') {
@@ -516,25 +515,25 @@ function buildPadsArea(song) {
 
             const playClass = document.getElementsByClassName('play-btn');
             if (playClass[0].id !== 'playBtn') {
-                playClass[0].id = 'playBtn'
+                playClass[0].id = 'playBtn';
             }
 
             // hide transport if navigating from another song and reset
 
             if (transportContainer.classList.contains('hidden') === false) {
                 transportContainer.classList.add('hidden');
-            };
+            }
             if (playIcon.classList.contains('fa-pause')) {
                 playIcon.classList.remove('fa-pause');
                 playIcon.classList.add('fa-play');
-            };
+            }
             if (stopIcon.classList.contains('fa-step-backward')) {
                 stopIcon.classList.remove('fa-step-backward');
                 stopIcon.classList.add('fa-stop');
-            };
+            }
             if (muteBtn.classList.contains('mute-active')) {
                 muteBtn.classList.remove('mute-active');
-            };
+            }
 
             $('#clearMutes').tooltip('enable');
 
@@ -550,27 +549,21 @@ function buildPadsArea(song) {
             for (let i = 0; i < song.stems.length; i++) {
 
                 //create pad grid function
-                function createPad() {
+                setTimeout(function () {
+                    //gets pad-container element and adds div element
+                    const padContainer = document.getElementById('pads-container');
+                    const pad = document.createElement('div');
 
-                    setTimeout(function () {
-                        //gets pad-container element and adds div element
-                        const padContainer = document.getElementById('pads-container');
-                        const pad = document.createElement('div');
+                    //add class and ID information to each pad
+                    pad.classList.add('pad');
+                    pad.classList.add(`${currentSongId}-theme`);
+                    pad.id = `${i}`;
 
-                        //add class and ID information to each pad
-                        pad.classList.add('pad');
-                        pad.classList.add(`${currentSongId}-theme`);
-                        pad.id = `${i}`;
+                    pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
 
-                        pad.innerHTML = `<span class="pad-content">${stemName[i].name}</span>`;
-
-                        padContainer.appendChild(pad);
-                    }, 90 * i);
-                }
-
-                createPad();
-
-            };
+                    padContainer.appendChild(pad);
+                }, 90 * i);
+            }
 
             setTimeout(function () {
                 transportContainer.classList.remove('hidden');
@@ -579,8 +572,9 @@ function buildPadsArea(song) {
             clearInterval(checkLoadState);
 
             setTimeout(function () {
+                $('#clearMutes').tooltip('hide');
                 $('#clearMutes').tooltip('disable');
-            }, 3000);
+            }, 7000);
 
         } else {
             $('.loading').removeClass('hidden');
@@ -588,7 +582,7 @@ function buildPadsArea(song) {
 
     }, 10);
 
-};
+}
 
 //jQuery Event Handlers
 
@@ -652,12 +646,12 @@ $(document).ready(function () {
     });
     //Clear mutes button
     $('#clearMutes').click(function (e) {
-        if (e.shiftKey) {
-            muteAll();
-            console.log("shif");
-        } else {
-            clearMutes();
-        };
+        // if (e.shiftKey) {
+        //     muteAll();
+        //     console.log("shif");
+        // } else {
+        clearMutes();
+        // };
     });
     // mute all double click
     $('#clearMutes').dblclick(function () {
@@ -667,15 +661,20 @@ $(document).ready(function () {
     $('#darkMode').click(function () {
         $('body').addClass('dark');
         $('#darkMode').addClass('active');
-        $('#lightMode').removeClass('active')
+        $('#lightMode').removeClass('active');
     });
+    //Light Mode
     $('#lightMode').click(function () {
         $('body').removeClass('dark');
         $('#lightMode').addClass('active');
-        $('#darkMode').removeClass('active')
+        $('#darkMode').removeClass('active');
     });
-
-    $('[data-toggle="tooltip"]').tooltip()
-
-
+    //enable tooltips from bootstrap documentation
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'manual'
+    });
+    // hide tooltip when info madal open
+    $('#infoBtn').click(function () {
+        $('#clearMutes').tooltip('hide');
+    });
 });

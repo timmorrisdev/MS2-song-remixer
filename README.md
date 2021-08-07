@@ -104,6 +104,10 @@ ___
     - Balsamiq was used to create the wireframes for the site while in the 'skeleton' stage of my UX process.
 - [Autoprefixer](http://autoprefixer.github.io/)
     - Autoprefixer was used in the final stage of development to parse CSS code and add vendor prefixes.
+- [Coloors.co](https://coolors.co/)
+    - Used to source colour palettes used throughout the site.
+- [CSS Gradient](https://cssgradient.io/)
+    - Used to generate background radial gradient effects.
 
 ___
 ## Testing
@@ -112,11 +116,25 @@ I used google dev tools throughout the development process to check responsivene
 
 I was also sure to deploy the site to GitHub pages early in development to allow for review of the live site on various devicesthroughout the process.
 
-### W3C Markup and CSS Validation
-I used the W3C Markup and CSS Validator Services to check and validate each page throughout the site to check for errors. 
+### W3C Markup, CSS Validation & JSHint Validation
+I used the W3C Markup, CSS Validator and JSHint Validator Services to check and validate each page throughout the site to check for errors. 
 #### [Markup Validation Service](https://validator.w3.org/)
 
 #### [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+#### [JSHint Validation Service](https://jshint.com/)
+The validator found the folowing warnings for me to address. 
+- 'Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.'
+    - This was caused by my addition of a setTimeout function to the buildPads function to allow for the 'cascading' effect while the pads are populating the game area. I had not removed the original function from within the setTimeout, which was now not needed. 
+    - Whilst this issue was fixed there is still a warning stating: 
+    
+        "Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (currentSongId, i)"
+
+        As I am using the reference outer scoped variables to apply styles and parameters based on the song selected, it is my understanding that this warning can be ignored for the purpose of this site.
+- One undefined variable - Howl.
+    - This is in fact not a variable but a reference to the 'Howl' class constructor used by HowlerJS. It is my understanding that the validator does not recognise the external, HowlerJS library being used and therefore I can ingore this warning for the purpose of this site.
+- One unused variable - stopBtn.
+    - At the top of my code, I have declared variables for various DOM elements I was likely to need to reference throughout the project. I had not needed to reference stopBtn and therefore it needed to be removed to pass validation.
 
 ### Lighthouse Testing
 
@@ -140,20 +158,20 @@ ___
 ## Deployment
 ### GitHub Pages
 The project was deployed to GitHub pages using the following method. 
-1. Log in to [GitHub.com](https://github.com/) and locate the south-coast-sup repository in my account.
+1. Log in to [GitHub.com](https://github.com/) and locate the [MS2-song-remixer repository](https://github.com/TimMorrisDev/MS2-song-remixer) in my account.
 2. Select the repo 'settings' menu and navigate to the 'pages' tab on the left hand side.
 3. In the 'source' section, select the master branch as the source for the site deployment. 
-4. Hit 'save' and wait a few mins for GitHub to process. The 'pages' settings tab will now show a message to confirm the repository is being published to the address https://timmorrisdev.github.io/south-coast-sup/.
+4. Hit 'save' and wait a few minutes for GitHub to process. The 'pages' settings tab will now show a message to confirm the repository is being published to the address https://timmorrisdev.github.io/MS2-song-remixer/.
 
 ### Forking the repository in GitHub
 Forking the repository creates a copy of the original repository in your own account to allow changes to be made without affecting the original repository.
-1. Log in to GitHub and navigate to the GitHub repository page.
+1. Log in to GitHub and navigate to the GitHub repository page [here](https://github.com/TimMorrisDev/MS2-song-remixer).
 2. In the top-right of the page, below the user avatar, locate the "fork" button.
 3. Click the "fork" button and you should now have a copy of the repository in your own account. 
 
 ### Making a Local Clone
 Details of how to make a local copy of the GutHub repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). To clone using HTTPS follow these steps.
-1. Navigate to the GitHub repository.
+1. Navigate to the GitHub repository [here](https://github.com/TimMorrisDev/MS2-song-remixer).
 2. Click the "Code" drop-down menu above the list of files.
 3. Copy the HTTPS address to the clipboard using the button provided.
 4. Open Terminal.
@@ -164,11 +182,19 @@ Details of how to make a local copy of the GutHub repository can be found [here]
 ___
 ## Credits
 ### Code
+- Inspiration for player features and layout from [Traversy Media](https://www.youtube.com/watch?v=QTHRWGn_sJw) and [Junior Developer Central](https://www.youtube.com/watch?v=jZL9gVwxO-U) YouTube videos.
+- Responsive grid for pads taken from [Stack Overflow article](https://stackoverflow.com/questions/46548987/a-grid-layout-with-responsive-squares) and modified to suit the site needs.
+- General information about class constructors and class inheritance from [The Net Ninja 'object oriented JavaScript'](https://www.youtube.com/watch?v=4l3bTDlT6ZI&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7) YouTube series.
+- Information relating to [HowlerJS](https://howlerjs.com/) gathered from [Techlahoma YouTube video](https://www.youtube.com/watch?v=isCQptdu1Kg).
+- Code for audio 'Howls' copied from [HowlerJS](https://howlerjs.com/) documentaion ['AudioSprite' demo](https://github.com/goldfire/howler.js#documentation) and then edited to fit the needs of the site. 
+- [Stack Overflow](https://stackoverflow.com/), [w3 Schools](https://www.w3schools.com/) & [CSS tricks](https://css-tricks.com/) were used throughout the project to research solutions to site requirements.
 
 
 ### Content
 - All content written by the developer.
 
+
 ### Media
+- All music written by, and copyright of the band Volleyball.
 
 
