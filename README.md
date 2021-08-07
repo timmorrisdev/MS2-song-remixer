@@ -88,6 +88,8 @@ ___
 
 - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
     - Bootstrap was used for the responsive 'grid'. Code snippets from the Bootstrap documentation were used in various places and modified to suit the purpose and design of the site.
+- [EmailJS](https://www.emailjs.com/)
+    - 
 - [Google Fonts](https://fonts.google.com/)
     - Google Fonts was used to import the 'Montserrat', 'Lato' and 'Quicksand' fonts, which were used throughout the site.
 - [Font Awesome](https://fontawesome.com/)
@@ -99,7 +101,7 @@ ___
 - [Gitpod](https://gitpod.io/)
     - Gitpod.io was used as the primary development environment when coding for the site. It's terminal was used to preview the site via temporary server, and for version control using Git commands.
 - [Github](https://github.com/)
-    - GitHub was used to store the code pushed from Gitpod and as deployment for the [published site.](https://timmorrisdev.github.io/south-coast-sup/)
+    - GitHub was used to store the code pushed from Gitpod and as deployment for the [published site.](https://timmorrisdev.github.io/MS2-song-remixer/)
 - [Balsamiq](https://balsamiq.com/)
     - Balsamiq was used to create the wireframes for the site while in the 'skeleton' stage of my UX process.
 - [Autoprefixer](http://autoprefixer.github.io/)

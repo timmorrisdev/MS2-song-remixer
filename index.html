@@ -29,9 +29,6 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="landing-theme navbar-nav ml-auto" id=navbarNav>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" href="instructions.html">How to Play<span class="sr-only"></span></a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Get in Touch</a>
                 </li>
@@ -42,13 +39,17 @@
 
     <!-- main page body -->
     <div class="container">
+
+        <!-- empty div to act as spacer for landing page content -->
         <div id="spacer"></div>
 
+        <!-- page header -->
         <h1 class="landing-header" id="pageHeader">Volleyball
             <br>Song-Remixer
         </h1>
 
-        <div class="container instructions-container">
+        <!-- instructions section -->
+        <section class="container instructions-container">
             <div class="row">
                 <div class="game-instructions col-12 col-md-6 offset-md-2">
                     <h2>Instructions</h2>
@@ -60,14 +61,16 @@
                     </ol>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- song nav section -->
-        <div class="song-nav-container">
+        <section class="song-nav-container">
 
+            <!-- light mode selector -->
             <div class="light-mode song-nav-item hidden active" id="lightMode">
                 <h3>Light<br>Mode</h3>
             </div>
+
             <!-- dropdown button from bootstrap documentaiton and modified -->
             <div class="dropdown song-nav-item">
                 <button class="landing-theme btn dropdown-toggle" type="button" id="songSelectorButton"
@@ -84,20 +87,24 @@
                     </a>
                 </div>
             </div>
+
+            <!-- dark mode selector -->
             <div class="dark-mode song-nav-item hidden" id="darkMode">
                 <h3>Dark<br>Mode</h3>
             </div>
-        </div>
+        </section>
 
+        <!-- pads section ready to be poulated on user selection -->
         <div class="row pads-container hidden" id="pads-container">
-
         </div>
 
-        <div class="loading hidden">
+        <!-- loading warning if audio not loaded prior to song selection -->
+        <section class="loading hidden">
             <H1>Loading... <br>Please Wait</H1>
-        </div>
+        </section>
 
-        <div class="transport-container row hidden" id="transportContainer">
+        <!-- transport section -->
+        <section class="transport-container row hidden" id="transportContainer">
             <div class="transport">
                 <button id="playBtn" class="landing-btn play-btn"><i class="fas fa-play" id="playIcon"></i></button>
 
@@ -109,10 +116,11 @@
                         class="fas fa-info-circle" id=""></i></button>
             </div>
 
-        </div>
+        </section>
 
     </div>
 
+    <!-- Footer -->
     <div class="footer-spacer"></div>
     <footer class="footer fixed-bottom mt-auto">
 
@@ -129,7 +137,6 @@
     </footer>
 
     <!-- instructions modal. copied from Bootstrap documentation and modified -->
-
     <div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModal" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content game-instructions">
