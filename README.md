@@ -1,5 +1,6 @@
-m  http# Volleyball Song Remixer
+# Volleyball Song Remixer
 ___
+![Responsive image of site]()
 
 ## Project Synopsis
 
