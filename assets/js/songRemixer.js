@@ -31,6 +31,8 @@ class Sprite {
     }
 }
 
+// create classes for each song
+
 const alooshAudio = new Sprite({
     "src": [
         "assets/songs/aloosh/aloosh.webm",
@@ -179,6 +181,8 @@ const escapeAudio = new Sprite({
     name: 'BACKING VOCALS'
 }, ]);
 
+// function to check current song selected and play audio from the Sprite class.
+
 function playAudio() {
 
     //checks if audio is loaded and ready
@@ -195,6 +199,7 @@ function playAudio() {
         //check current song
         if (currentSongId === 'aloosh') {
 
+            //condition to log audiosprite ID's to empty pads variable if not already done
             if (alooshAudio.sound.seek() === 0) {
 
                 //prevents additional playback instance
@@ -252,6 +257,8 @@ function playAudio() {
 
         } else if (currentSongId === 'escape') {
 
+
+            //condition to log audiosprite ID's to empty pads variable if not already done
             if (escapeAudio.sound.seek() === 0) {
 
                 //prevents additional playback instance
@@ -320,6 +327,7 @@ function pauseAudio() {
 
     const pauseBtn = document.getElementById('pauseBtn');
 
+    //change icons in transport section
     playIcon.classList.remove('fa-pause');
     playIcon.classList.add('fa-play');
 
@@ -339,6 +347,7 @@ function pauseAudio() {
 
 function stopAudio() {
 
+    //change icons in transport section
     const playClass = document.getElementsByClassName('play-btn');
     if (playClass[0].id !== 'playBtn') {
         playClass[0].id = 'playBtn';
@@ -362,6 +371,7 @@ function stopAudio() {
 
 function padMute(padId) {
 
+    //store the clicked pad ID into variable for use in identifying correct audiosprite to manipulate.
     const padMute = document.getElementById(`${padId}`);
 
     if (currentSongId === 'aloosh') {
@@ -425,8 +435,6 @@ function clearMutes() {
             getPads[i].classList.remove('pad-muted');
         }
 
-
-
     } else {
         alert('No song loaded');
     }
@@ -451,8 +459,6 @@ function muteAll() {
             getPads[i].classList.add('pad-muted');
         }
 
-
-
     } else if (currentSongId === 'escape') {
 
         //remove mute from all sprites
@@ -466,9 +472,6 @@ function muteAll() {
             if (getPads[i].classList.contains('pad-muted') !== true);
             getPads[i].classList.add('pad-muted');
         }
-
-
-
 
     } else {
         alert('No song loaded');
@@ -486,6 +489,8 @@ function removeMutes() {
         muteBtn.classList.remove('mute-active');
     }
 }
+
+// check desired state of pad upon playback using for loop looking for 'pad-muted' class and use result to mute or unmute each audiosprite
 
 function checkMutes() {
     const pads = document.getElementsByClassName('pad');
@@ -523,7 +528,7 @@ function changeTheme(newSong) {
 
 function buildPadsArea(song) {
 
-
+    // check if audio is loaded in browser before building the game area
     const checkLoadState = setInterval(function () {
         if (alooshAudio.sound.state() === 'loaded' && escapeAudio.sound.state() === 'loaded') {
 
@@ -601,6 +606,7 @@ function buildPadsArea(song) {
             }, 7000);
 
         } else {
+            // display 'loading' text if audio not loaded.
             $('.loading').removeClass('hidden');
         }
 
@@ -622,6 +628,7 @@ $(document).ready(function () {
         stopAudio();
         currentSongId = "aloosh";
 
+        //move seek from zero to store Sprite ID's and allow mutes to function   
         playAudio();
         stopAudio();
         clearMutes();
@@ -640,7 +647,7 @@ $(document).ready(function () {
         $('#darkMode').removeClass('hidden');
         $('#lightMode').removeClass('hidden');
 
-        //move seek from zero to allow mutes to function
+        //move seek from zero to store Sprite ID's and allow mutes to function
         playAudio();
         stopAudio();
         clearMutes();
@@ -654,6 +661,7 @@ $(document).ready(function () {
         checkMutes();
         $('#bandLogoFooter').addClass('playing');
     });
+    //pause button click
     $('.transport').delegate('#pauseBtn', 'click', function () {
         pauseAudio();
         $('#bandLogoFooter').removeClass('playing');

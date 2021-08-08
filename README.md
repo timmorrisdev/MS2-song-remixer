@@ -47,10 +47,9 @@ ___
         I used Tourney for any headers across the site as I felt the style fitted with the band image. I then used Montserrat for more detailed text across the site as it has good readability and a clean style. 
 
 - Wireframes
-    - [Landing Page]()
+    - [Landing / Game Page](assets/ux/wireframes/Home.pdf)
 
-    - [How to play]()
-    - [Contact Us]()
+    - [Contact Us](assets/ux/wireframes/contact.pdf)
    
 ## Features
 ### Landing page / instructions
@@ -145,8 +144,12 @@ I was also sure to deploy the site to GitHub pages early in development to allow
 ### W3C Markup, CSS Validation & JSHint Validation
 I used the W3C Markup, CSS Validator and JSHint Validator Services to check and validate each page throughout the site to check for errors. 
 #### [Markup Validation Service](https://validator.w3.org/)
+The validator found the following issues for me to address.
+- Element hr not allowed as child of element ol in this context.
+    - This was due to my nesting of hr elements within my game-instruction modal unordered list. I modified my code to include 'border-bottom' styling for each list item to rectify the issue.
 
 #### [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+My CSS file style.css passed through the w3 validator with no errors.
 
 #### [JSHint Validation Service](https://jshint.com/)
 The validator found the folowing warnings for me to address. 
@@ -163,8 +166,25 @@ The validator found the folowing warnings for me to address.
     - At the top of my code, I have declared variables for various DOM elements I was likely to need to reference throughout the project. I had not needed to reference stopBtn and therefore it needed to be removed to pass validation.
 
 ### Lighthouse Testing
+Lighthouse testing on the main website game page found the following issues.
+- 'Links do not have a discernible name'.
+    - I am using icons in my footer links and therefore had no text to acy as description. This was solved by adding the 'aria-label' attribute to each anchor tag with a short description. 
+
+- Heading elements are not in a sequentially-descending order (contact.html).
+    - This is a minor issue that I chose to ingore for the purpose of the site.
+
+Once this issue was resolved, lighthouse testing returned the following results:
+
+Main game page.
+
+![main page lighthouse](assets/ux/screengrabs/main-page-lighthouse.png)
+
+Contact page.
+
+![contact page lighthouse](assets/ux/screengrabs/contact-lighthouse.png)
 
 ### Testing UX user stories
+
 
 ### Peer Code Review
 

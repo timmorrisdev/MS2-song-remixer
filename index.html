@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Interactive song remixer website promoting the songs of the London-based band Volleyball.">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
-
 
     <title>Song Remixer</title>
 </head>
@@ -49,7 +49,7 @@
         </h1>
 
         <!-- instructions section -->
-        <section class="container instructions-container">
+        <div class="container instructions-container">
             <div class="row">
                 <div class="game-instructions col-12 col-md-6 offset-md-2">
                     <h2>Instructions</h2>
@@ -61,10 +61,10 @@
                     </ol>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- song nav section -->
-        <section class="song-nav-container">
+        <div class="song-nav-container">
 
             <!-- light mode selector -->
             <div class="light-mode song-nav-item hidden active" id="lightMode">
@@ -92,19 +92,19 @@
             <div class="dark-mode song-nav-item hidden" id="darkMode">
                 <h3>Dark<br>Mode</h3>
             </div>
-        </section>
+        </div>
 
         <!-- pads section ready to be poulated on user selection -->
         <div class="row pads-container hidden" id="pads-container">
         </div>
 
         <!-- loading warning if audio not loaded prior to song selection -->
-        <section class="loading hidden">
+        <div class="loading hidden">
             <H1>Loading... <br>Please Wait</H1>
-        </section>
+        </div>
 
         <!-- transport section -->
-        <section class="transport-container row hidden" id="transportContainer">
+        <div class="transport-container row hidden" id="transportContainer">
             <div class="transport">
                 <button id="playBtn" class="landing-btn play-btn"><i class="fas fa-play" id="playIcon"></i></button>
 
@@ -113,10 +113,10 @@
                 <button id="clearMutes" class="clear-mutes" data-toggle="tooltip" data-placement="top"
                     title="Double tap/click to mute all pads"><span>Reset<br>Pads</span></button>
                 <button id="infoBtn" class="info-button" data-toggle="modal" data-target="#instructionsModal"><i
-                        class="fas fa-info-circle" id=""></i></button>
+                        class="fas fa-info-circle"></i></button>
             </div>
 
-        </section>
+        </div>
 
     </div>
 
@@ -125,13 +125,17 @@
     <footer class="footer fixed-bottom mt-auto">
 
         <div class="landing-theme footer-links col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2" id="footerLinks">
-            <a href="https://www.facebook.com/bonjourvolleyball" target="_blank"> <i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/bonjourvolleyball/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://volleyballmusic.com" target="_blank" id="bandLogoFooter" class=""><img
-                    src="assets/images/VB-Sun-ALOOSHsmall.png" alt="Volleyball Band Logo"></a>
-            <a href="https://www.youtube.com/channel/UCTIzRR0EEx-INhEvfeGG_8g" target="_blank"><i
-                    class="fab fa-youtube"></i></a>
-            <a href="https://volleyballmusic.bandcamp.com/" target="_blank"><i class="fab fa-bandcamp"></i></a>
+            <a href="https://www.facebook.com/bonjourvolleyball" target="_blank" rel="noreferrer"
+                aria-label="Volleyball facebook page"> <i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/bonjourvolleyball/" target="_blank" rel="noreferrer"
+                aria-label="Volleyball instagram page"><i class="fab fa-instagram"></i></a>
+            <a href="https://volleyballmusic.com" target="_blank" id="bandLogoFooter" class="" rel="noreferrer"
+                aria-label="Volleyball website"><img src="assets/images/VB-Sun-ALOOSHsmall.png"
+                    alt="Volleyball Band Logo" rel="noreferrer"></a>
+            <a href="https://www.youtube.com/channel/UCTIzRR0EEx-INhEvfeGG_8g" target="_blank" rel="noreferrer"
+                aria-label="Volleyball youtube page"><i class="fab fa-youtube"></i></a>
+            <a href="https://volleyballmusic.bandcamp.com/" target="_blank" rel="noreferrer"
+                aria-label="Volleyball bandcamp page"><i class="fab fa-bandcamp"></i></a>
         </div>
 
     </footer>
@@ -141,24 +145,26 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content game-instructions">
 
-                <h2 class="modal-title" id="exampleModalLabel">Instructions</h2>
-                <ol>
+                <h2 class="modal-title" id="instructionsModalLabel">Instructions</h2>
+                <ul>
                     <li>Hit Play! <i class="fas fa-play"></i> to start the song.</li>
-                    <hr>
+
                     <li>Pause <i class="fas fa-pause"></i> lets you stop and resume where you left off.</li>
-                    <hr>
-                    <li>Stop <i class="fas fa-stop"></i> or Back <i class="fas fa-step-backward"></i> will take the song
+
+                    <li>Stop <i class="fas fa-stop"></i> or Back <i class="fas fa-step-backward"></i> will take the
+                        song
                         back to the beginning.</li>
-                    <hr>
+
                     <li>Use the pads <i class="far fa-square"></i> to turn off, or on the individual instruments.
                     </li>
-                    <hr>
-                    <li>The 'Reset Pads' button will bring everything back in to the song.<br>Or double click / tap to
+
+                    <li>The 'Reset Pads' button will bring everything back in to the song.<br>Or double click / tap
+                        to
                         mute
                         all the pads!</li>
-                    <hr>
 
-                </ol>
+
+                </ul>
 
                 <div class="modal-footer mx-auto">
                     <button type="button" class="btn btn-secondary modal-close" data-dismiss="modal">Close</button>

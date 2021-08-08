@@ -17,4 +17,4 @@ function sendContact(contactForm) {
         );
     alert('Thanks for getting in touch!');
 
-};
+}
