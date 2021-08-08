@@ -18,7 +18,6 @@ ___
 - I want to easily understand the game and how to play.
 - I want to remix different songs by bringing elements of the track in and out.
 - The site should be visually appealing and well laid out, with different colour themes for each song.
-- I should be able to customise my experience by turning music on or off.
 - I want to be able to connect with the band featured on their social media and own website.
 
 ### Business Goals
@@ -47,9 +46,9 @@ ___
         I used Tourney for any headers across the site as I felt the style fitted with the band image. I then used Montserrat for more detailed text across the site as it has good readability and a clean style. 
 
 - Wireframes
-    - [Landing / Game Page](assets/ux/wireframes/Home.pdf)
+    - [Landing / Game Page](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/wireframes/Home.pdf)
 
-    - [Contact Us](assets/ux/wireframes/contact.pdf)
+    - [Contact Us](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/wireframes/contact.pdf)
    
 ## Features
 ### Landing page / instructions
@@ -75,9 +74,7 @@ I included a contact page on the site so that I can gather any feedback from the
 - Responsive across all devices and screen sizes.
 - Adaptive to modify content shown to be appropriate for user device or screen size.
 
-
 ### Design Decisions Made During Development
-
 
 ### Future Development Opportunities
 - Recording of arrangements
@@ -185,6 +182,26 @@ Contact page.
 
 ### Testing UX user stories
 
+- I want to easily understand the game and how to play.
+    - There are clear and simple instructions presented on the landing page. 
+    ![main-instructions](assets/ux/screengrabs/main-instructions.png)
+    There is also the option to reveal more detailed game instructions if required by hitting the info button in the transport bar of the main game page. 
+    ![expanded instruction screengrab](assets/ux/screengrabs/expanded-instructions.png)
+
+- I want to remix different songs by bringing elements of the track in and out.
+    - By using the clearly-labelled pads on the main game page. I was able to manipulate which instruments were being heard in the mix of the song. It was easy to see which instruments were not being heard as the pad became 'greyed-out' when that instrument was muted.
+    ![pad view](assets/ux/screengrabs/pad-view.png)
+
+- The site should be visually appealing and well laid out, with different colour themes for each song.
+    - The game area is clearly modified for each song with defined themes that suit the bands image. There are also 'light' and 'dark' mode toggles so that the user can further customise their experience. 
+    ![aloosh light mode](assets/ux/screengrabs/aloosh-light.png)
+    ![aloosh dark mode](assets/ux/screengrabs/aloosh-dark.png)
+    ![escape light mode](assets/ux/screengrabs/escape-light.png)
+    ![escape dark mode](assets/ux/screengrabs/escape-dark.png)
+
+- I want to be able to connect with the band featured on their social media and own website.
+    - Link to the bands social media pages, as well as their website were clear and easy to find in the footer of the page.
+    ![footer links](assets/ux/screengrabs/page-footer.png)
 
 ### Peer Code Review
 
