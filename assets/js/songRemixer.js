@@ -302,6 +302,8 @@ function playAudio() {
                 }
 
             } else {
+
+
                 for (let i = 0; i < escapePads.length; i++) {
                     escapeAudio.sound.play(escapePads[i]);
                 }
@@ -479,9 +481,31 @@ function muteAll() {
 
 // function to reset 'reset pads' button if pads manually turned on
 
-function checkMutes() {
+function removeMutes() {
     if ($('.pad').filter('.pad-muted').length === 0) {
         muteBtn.classList.remove('mute-active');
+    }
+}
+
+function checkMutes() {
+    const pads = document.getElementsByClassName('pad');
+
+    if (currentSongId === 'aloosh') {
+        for (let i = 0; i < pads.length; i++) {
+            if (pads[i].classList.contains('pad-muted')) {
+                alooshAudio.sound.mute(true, alooshPads[i]);
+            } else {
+                alooshAudio.sound.mute(false, alooshPads[i]);
+            }
+        }
+    } else if (currentSongId === 'escape') {
+        for (let i = 0; i < pads.length; i++) {
+            if (pads[i].classList.contains('pad-muted')) {
+                escapeAudio.sound.mute(true, escapePads[i]);
+            } else {
+                escapeAudio.sound.mute(false, escapePads[i]);
+            }
+        }
     }
 }
 
@@ -627,6 +651,7 @@ $(document).ready(function () {
     //Play button click
     $('.transport').delegate('#playBtn', 'click', function () {
         playAudio();
+        checkMutes();
         $('#bandLogoFooter').addClass('playing');
     });
     $('.transport').delegate('#pauseBtn', 'click', function () {
@@ -642,16 +667,11 @@ $(document).ready(function () {
     $('#pads-container').delegate('.pad', 'click', function () {
         const padID = this.id;
         padMute(padID);
-        checkMutes();
+        removeMutes();
     });
     //Clear mutes button
-    $('#clearMutes').click(function (e) {
-        // if (e.shiftKey) {
-        //     muteAll();
-        //     console.log("shif");
-        // } else {
+    $('#clearMutes').click(function () {
         clearMutes();
-        // };
     });
     // mute all double click
     $('#clearMutes').dblclick(function () {
