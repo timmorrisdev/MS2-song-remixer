@@ -53,21 +53,27 @@ ___
 ## Features
 ### Landing page / instructions
 This page is designed to clearly guide the user through the basic instructions for the game and prompt song selection.
+
 ![landing page screengrab](assets/ux/screengrabs/landing-page.png)
 ### Song selector
 The song selector button allows the user to pick between the two songs 'Aloosh' and 'Escape'. This action delivers the song information to songRemixer.JS, which is used to determine the parameters of most functions across the site. 
+
 ![song selector screengrab](assets/ux/screengrabs/song-selector.png)
 ### Game view
 The main game view is comprised of easy-to-read pads that allow the user to manipulate what instruments are being heard in the song.
+
 ![game-view screengrab](assets/ux/screengrabs/game-view.png)
 ### Transport bar
 This section allows the user to play or pause the song, skip back to the beginning, or manipular the pads being heard on a global level to the song. There is also a more detailed version of the instructions available if the user needs further guidance.
+
 ![transport bar screengrab](assets/ux/screengrabs/transport-bar.png)
 ### Expanded instructions
 Linked from the 'transport bar' this offers the user more detailed game instructions if required.
+
 ![expanded instruction screengrab](assets/ux/screengrabs/expanded-instructions.png)
 ### Contact Page
 I included a contact page on the site so that I can gather any feedback from the users to inspire future development goals.
+
 ![contact page screengrab](assets/ux/screengrabs/contact-page.png)
 
 ### Other features
@@ -194,9 +200,13 @@ Contact page.
 
 - The site should be visually appealing and well laid out, with different colour themes for each song.
     - The game area is clearly modified for each song with defined themes that suit the bands image. There are also 'light' and 'dark' mode toggles so that the user can further customise their experience. 
+
     ![aloosh light mode](assets/ux/screengrabs/aloosh-light.png)
+
     ![aloosh dark mode](assets/ux/screengrabs/aloosh-dark.png)
+    
     ![escape light mode](assets/ux/screengrabs/escape-light.png)
+
     ![escape dark mode](assets/ux/screengrabs/escape-dark.png)
 
 - I want to be able to connect with the band featured on their social media and own website.
@@ -259,5 +269,4 @@ ___
 
 ### Media
 - All music written by, and copyright of the band Volleyball.
-
 
