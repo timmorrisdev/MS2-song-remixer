@@ -1,6 +1,7 @@
 # Volleyball Song Remixer
 ___
-![Responsive image of site]()
+![Responsive Mockup of site](assets/ux/screengrabs/responsiveMockup.png)
+
 
 ## Project Synopsis
 
@@ -51,6 +52,25 @@ ___
     - [How to play]()
     - [Contact Us]()
    
+## Features
+### Landing page / instructions
+This page is designed to clearly guide the user through the basic instructions for the game and prompt song selection.
+![landing page screengrab](assets/ux/screengrabs/landing-page.png)
+### Song selector
+![song selector screengrab](assets/ux/screengrabs/song-selector.png)
+### Game view
+![game-view screengrab](assets/ux/screengrabs/game-view.png)
+### Transport bar
+![transport bar screengrab](assets/ux/screengrabs/transport-bar.png)
+### Expanded instructions
+![expanded instruction screengrab](assets/ux/screengrabs/expanded-instructions.png)
+### Contact Page
+![contact page screengrab](assets/ux/screengrabs/contact-page.png)
+
+### Other features
+- Responsive across all devices and screen sizes.
+- Adaptive to modify content shown to be appropriate for user device or screen size.
+
 
 ### Design Decisions Made During Development
 
@@ -63,10 +83,6 @@ ___
 - Additional processing options
 
     I would like to include the ability to further manipulate the different parts of each song. Perhaps adding individual volume / EQ / reverb settings. This could be a 'paid' feature to allow the band to generate revenue with the app.
-___
-## Features
-- Responsive across all devices and screen sizes.
-- Adaptive to modify content shown to be appropriate for user device or screen size.
 
 ___
 ## Technologies Used
