@@ -270,3 +270,5 @@ ___
 ### Media
 - All music written by, and copyright of the band Volleyball.
 
+### Acknowledgements
+- Thanks to my mentor, Can Sucullu for all your guidance and support.
