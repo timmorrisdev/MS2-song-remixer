@@ -1,3 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/*---------------------------------Import google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Tourney:wght@300;400;500;600;700&family=Roboto&display&display=swap');
 
 /*---------------------------------Body and song theme changes */
@@ -6,17 +15,24 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 body.landing-theme {
     background: rgb(130, 192, 204);
+    background: -o-radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
     background: radial-gradient(circle, rgba(130, 192, 204, 1) 18%, rgba(72, 159, 181, 1) 48%, rgba(255, 166, 43, 1) 88%);
 }
 
 body.contact-theme {
     background: rgb(237, 229, 166);
+    background: -o-radial-gradient(circle, rgba(237, 229, 166, 1) 2%, rgba(82, 183, 136, 1) 23%, rgba(89, 41, 65, 1) 55%, rgba(178, 211, 168, 1) 78%, rgba(73, 132, 103, 1) 100%);
     background: radial-gradient(circle, rgba(237, 229, 166, 1) 2%, rgba(82, 183, 136, 1) 23%, rgba(89, 41, 65, 1) 55%, rgba(178, 211, 168, 1) 78%, rgba(73, 132, 103, 1) 100%);
 }
 
@@ -42,6 +58,8 @@ h3,
 .navbar .navbar-brand:hover {
     color: #000;
     text-shadow: 2px 2px 4px #ffacfc;
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -57,6 +75,7 @@ h3,
     color: rgba(0, 0, 0, .8);
     border-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 14px #000;
     box-shadow: 0px 0px 14px #000;
 }
 
@@ -71,6 +90,8 @@ h3,
 #navbarNav .nav-link:hover {
     color: #000;
     text-shadow: 2px 2px 4px #ffacfc;
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -102,13 +123,17 @@ h3,
     margin-left: auto;
     margin-right: auto;
     /* width: 400px; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     padding-top: 20px;
     margin-bottom: 16px;
+    -webkit-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000;
 }
 
@@ -167,8 +192,14 @@ h3,
 /*--------------------------------- Loading warning */
 
 .loading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     margin-top: 15vh;
@@ -177,8 +208,14 @@ h3,
 /*--------------------------------- song nav section */
 
 .song-nav-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -204,6 +241,7 @@ h3,
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 
     color: #000;
@@ -211,11 +249,12 @@ h3,
     font-weight: 600;
     margin-top: -6px;
     margin-bottom: -3px;
+    -webkit-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000;
 }
 
 .dropdown button:hover {
-    /* transition: ease-in-out .5s; */
+    background: -o-radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
     background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
 }
 
@@ -223,6 +262,7 @@ h3,
     border: 2px solid black;
     border-radius: 20px;
     background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 }
 
@@ -236,6 +276,7 @@ h3,
 
 .dropdown-item:focus,
 .dropdown-item:hover {
+    background: -o-radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
     background: radial-gradient(circle, rgba(72, 159, 181, 1) 0%, rgba(255, 166, 43, 1) 86%);
     border-radius: 10px;
 }
@@ -243,7 +284,6 @@ h3,
 .dropdown-menu {
     left: -16px !important;
 }
-
 
 /*---------------------------------Pads section with different song themes */
 
@@ -264,14 +304,17 @@ h3,
 
 .pad {
     position: relative;
+    -ms-flex-preferred-size: calc(33.333% - 4px);
     flex-basis: calc(33.333% - 4px);
     max-height: 33%;
     max-width: 33%;
     margin: 2px;
     border: 2px solid black;
     border-radius: 20px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
 }
 
@@ -288,8 +331,14 @@ h3,
     height: 100%;
     width: 100%;
     pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-weight: 700;
     text-align: center;
@@ -306,14 +355,21 @@ h3,
     margin-right: auto;
     background: none;
     border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 
     border: solid black 2px;
     background: #888888;
     padding: 5px;
     border-radius: 31px;
+    -webkit-box-shadow: 0 0 8px #000;
     box-shadow: 0 0 8px #000;
 }
 
@@ -329,14 +385,19 @@ h3,
 
     position: absolute;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 60px;
+    -webkit-filter: drop-shadow(0px 0px 6px black);
     filter: drop-shadow(0px 0px 6px black);
 }
 
 .transport span {
     position: absolute;
     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 16px;
     font-weight: 600;
@@ -368,11 +429,14 @@ button.clear-mutes {
     border-radius: 15px;
     background: #dcdcdc;
     margin-right: 20px;
+    -webkit-filter: drop-shadow(0px 0px 6px black);
     filter: drop-shadow(0px 0px 6px black);
 }
 
 button.clear-mutes.mute-active {
+    -webkit-animation: mute-pad-blink .8s infinite;
     animation: mute-pad-blink .8s infinite;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
 
@@ -384,10 +448,13 @@ button:focus {
     outline: none;
 }
 
+/*---------------------------------Reset pads alt function tooltip */
+
 .tooltip-inner {
     border: 2px solid #000;
     border-radius: 20px;
     background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
     color: #000;
 }
@@ -404,6 +471,8 @@ button:focus {
 /*---------------------------------Footer */
 
 .footer-spacer {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1
 }
 
@@ -417,15 +486,20 @@ button:focus {
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    /* border-top: solid 3px rgba(12, 28, 49, 1); */
     height: 85px;
     margin-top: auto;
 }
 
 .footer-links {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -438,22 +512,27 @@ button:focus {
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    /* box-shadow: 0px 0px 14px #000000a6;
-    background-color: rgba(0, 0, 0, 0.3); */
 }
 
 #bandLogoFooter img {
+    -webkit-filter: drop-shadow(0px 0px 14px #000);
     filter: drop-shadow(0px 0px 14px #000);
+    -webkit-animation: spin 3s linear infinite;
     animation: spin 3s linear infinite;
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
 #bandLogoFooter.playing img {
+    -webkit-animation-play-state: running;
     animation-play-state: running;
 }
 
 #bandLogoFooter img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px #ffacfc);
     filter: drop-shadow(0px 0px 14px #ffacfc);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -470,6 +549,8 @@ button:focus {
 .landing-theme.footer-links i:hover {
     color: #000;
     text-shadow: 0px 0px 14px #ffacfc;
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -498,9 +579,30 @@ button:focus {
 .form-control:focus {
     margin-bottom: 10px;
     background-color: #EDE7E3;
+    -webkit-box-shadow: 0px 0px 7px rgb(255, 166, 43);
     box-shadow: 0px 0px 7px rgb(255, 166, 43);
     color: black;
     border: 1px solid #000
+}
+
+.form-control::-webkit-input-placeholder {
+    /* color: rgba(237, 229, 166, 0.7); */
+    opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+    /* color: rgba(237, 229, 166, 0.7); */
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    /* color: rgba(237, 229, 166, 0.7); */
+    opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+    /* color: rgba(237, 229, 166, 0.7); */
+    opacity: 1;
 }
 
 .form-control::placeholder {
@@ -511,6 +613,7 @@ button:focus {
 .contact-form button {
     background-color: #ffacfc;
     color: #000;
+    -webkit-box-shadow: 0px 0px 8px #000;
     box-shadow: 0px 0px 8px #000;
 }
 
@@ -522,7 +625,7 @@ button:focus {
 /*---------------------------------Aloosh theme */
 
 body.aloosh-theme {
-    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 0%, rgba(184, 190, 221, 1) 14%, rgba(195, 162, 183, 1) 78%);
+    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
     background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
 }
 
@@ -545,8 +648,11 @@ body.aloosh-theme {
 }
 
 .aloosh-theme .loading h1 {
+    -webkit-animation: loading-aloosh .6s infinite;
     animation: loading-aloosh .6s infinite;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 
@@ -558,6 +664,7 @@ body.aloosh-theme {
 
 .aloosh-theme .dark-mode.active,
 .aloosh-theme .light-mode.active {
+    -webkit-text-decoration: underline #e89886;
     text-decoration: underline #e89886;
 }
 
@@ -569,10 +676,12 @@ body.aloosh-theme {
 .aloosh-theme .dropdown button {
     background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    -webkit-box-shadow: 0 0 10px #e89886;
     box-shadow: 0 0 10px #e89886;
 }
 
 .aloosh-theme .dropdown button:hover {
+    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
     background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
 }
 
@@ -583,12 +692,14 @@ body.aloosh-theme {
 
 .aloosh-theme .dropdown-item:hover {
     border-radius: 10px;
+    background: -o-radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
     background: radial-gradient(circle, rgba(240, 230, 239, 1) 18%, rgba(184, 190, 221, 1) 48%, rgba(195, 162, 183, 1) 88%);
 }
 
 .aloosh-theme .pad {
     background: -o-radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
     background: radial-gradient(circle, rgba(232, 152, 134, 1) 30%, rgba(208, 86, 58, 1) 91%);
+    -webkit-box-shadow: 0px 0px 10px #e89886;
     box-shadow: 0px 0px 10px #e89886;
 }
 
@@ -601,7 +712,10 @@ body.aloosh-theme {
 }
 
 .aloosh-theme #bandLogoFooter img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px rgba(232, 152, 134, 1));
     filter: drop-shadow(0px 0px 14px rgba(232, 152, 134, 1));
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -612,13 +726,15 @@ body.aloosh-theme {
 .aloosh-theme .footer-links i:hover {
     color: #000;
     text-shadow: 0px 0px 14px rgba(232, 152, 134, 1);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
 /*---------------------------------Escape theme */
 
 body.escape-theme {
-    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 21%, rgba(95, 191, 249, 1) 41%, rgba(154, 193, 39, 1) 96%);
+    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
     background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
 }
 
@@ -641,8 +757,11 @@ body.escape-theme {
 }
 
 .escape-theme .loading h1 {
+    -webkit-animation: loading-escape .6s infinite;
     animation: loading-escape .6s infinite;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
 }
 
@@ -654,16 +773,19 @@ body.escape-theme {
 
 .escape-theme .dark-mode.active,
 .escape-theme .light-mode.active {
+    -webkit-text-decoration: underline #FEB022;
     text-decoration: underline #FEB022;
 }
 
 .escape-theme .dropdown button {
     background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    -webkit-box-shadow: 0 0 10px #FEB022;
     box-shadow: 0 0 10px #FEB022;
 }
 
 .escape-theme .dropdown button:hover {
+    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
     background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
 }
 
@@ -679,12 +801,14 @@ body.escape-theme {
 
 .escape-theme .dropdown-item:hover {
     border-radius: 10px;
+    background: -o-radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
     background: radial-gradient(circle, rgba(22, 186, 197, 1) 18%, rgba(95, 191, 249, 1) 48%, rgba(154, 193, 39, 1) 88%);
 }
 
 .escape-theme .pad {
     background: -o-radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
     background: radial-gradient(circle, rgba(226, 220, 5, 1) 0%, rgba(254, 176, 34, 1) 56%);
+    -webkit-box-shadow: 0px 0px 10px #FEB022;
     box-shadow: 0px 0px 10px #FEB022;
 }
 
@@ -697,7 +821,10 @@ body.escape-theme {
 }
 
 .escape-theme #bandLogoFooter img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px rgba(254, 176, 34, 1));
     filter: drop-shadow(0px 0px 14px rgba(254, 176, 34, 1));
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -708,6 +835,8 @@ body.escape-theme {
 .escape-theme .footer-links i:hover {
     color: #000;
     text-shadow: 0px 0px 14px rgba(254, 176, 34, 1);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -715,6 +844,7 @@ body.escape-theme {
 
 body.aloosh-theme.dark {
     background: rgb(51, 15, 10);
+    background: -o-radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 48%, rgba(244, 253, 175, 1) 88%);
     background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 48%, rgba(244, 253, 175, 1) 88%);
 }
 
@@ -743,11 +873,13 @@ body.aloosh-theme.dark {
 
 .aloosh-theme.dark .dark-mode.active,
 .aloosh-theme.dark .light-mode.active {
+    -webkit-text-decoration: underline #efdd8d;
     text-decoration: underline #efdd8d;
 }
 
 .aloosh-theme.dark .dropdown button {
     background: rgb(101, 116, 58);
+    background: -o-radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     border-color: #fff;
     color: #fff;
@@ -755,6 +887,7 @@ body.aloosh-theme.dark {
 
 .aloosh-theme.dark .dropdown button:hover {
     background: rgb(101, 116, 58);
+    background: -o-radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 88%);
     background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 88%);
     border-color: #fff;
     color: #fff;
@@ -762,6 +895,7 @@ body.aloosh-theme.dark {
 
 .aloosh-theme.dark .dropdown-menu.show {
     background: rgb(101, 116, 58);
+    background: -o-radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     border-color: #fff;
     color: #fff;
@@ -773,12 +907,14 @@ body.aloosh-theme.dark {
 }
 
 .aloosh-theme.dark .dropdown-item:hover {
+    background: -o-radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 88%);
     background: radial-gradient(circle, rgba(51, 15, 10, 1) 18%, rgba(57, 79, 73, 1) 88%);
     border-radius: 10px;
 }
 
 .aloosh-theme.dark .pad {
     background: rgb(101, 116, 58);
+    background: -o-radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     background: radial-gradient(circle, rgba(101, 116, 58, 1) 18%, rgba(239, 221, 141, 1) 88%);
     border-color: #fff;
     color: #fff;
@@ -794,7 +930,10 @@ body.aloosh-theme.dark {
 }
 
 .aloosh-theme.dark #bandLogoFooter img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px rgba(239, 221, 141, 1));
     filter: drop-shadow(0px 0px 14px rgba(239, 221, 141, 1));
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -806,6 +945,8 @@ body.aloosh-theme.dark {
 .aloosh-theme.dark .footer-links i:hover {
     color: #000;
     text-shadow: 0px 0px 14px rgba(239, 221, 141, 1);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -813,6 +954,7 @@ body.aloosh-theme.dark {
 
 body.escape-theme.dark {
     background: #0A0908;
+    background: -o-radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
     background: radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
 }
 
@@ -841,11 +983,13 @@ body.escape-theme.dark {
 
 .escape-theme.dark .dark-mode.active,
 .escape-theme.dark .light-mode.active {
+    -webkit-text-decoration: underline #fff;
     text-decoration: underline #fff;
 }
 
 .escape-theme.dark .dropdown button {
     background: #C6AC8F;
+    background: -o-radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     background: radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     border-color: #fff;
     color: #000;
@@ -853,6 +997,7 @@ body.escape-theme.dark {
 
 .escape-theme.dark .dropdown button:hover {
     background: #0A0908;
+    background: -o-radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
     background: radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
     border-color: #fff;
     color: #fff;
@@ -860,6 +1005,7 @@ body.escape-theme.dark {
 
 .escape-theme.dark .dropdown-menu.show {
     background: #C6AC8F;
+    background: -o-radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     background: radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     border-color: #fff;
     color: #000;
@@ -871,6 +1017,7 @@ body.escape-theme.dark {
 }
 
 .escape-theme.dark .dropdown-item:hover {
+    background: -o-radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
     background: radial-gradient(circle, #0A0908 18%, #22333B 48%, #5E503F 88%);
     border-radius: 10px;
     color: #fff;
@@ -878,6 +1025,7 @@ body.escape-theme.dark {
 
 .escape-theme.dark .pad {
     background: #C6AC8F;
+    background: -o-radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     background: radial-gradient(circle, #EAE0D5 18%, #C6AC8F 88%);
     border-color: #fff;
     color: #000;
@@ -892,7 +1040,10 @@ body.escape-theme.dark {
 }
 
 .escape-theme.dark #bandLogoFooter img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px #EAE0D5);
     filter: drop-shadow(0px 0px 14px #EAE0D5);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
 
@@ -904,9 +1055,10 @@ body.escape-theme.dark {
 .escape-theme.dark .footer-links i:hover {
     color: #5E503F;
     text-shadow: 0px 0px 14px #EAE0D5;
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
     transition: ease-in-out .3s;
 }
-
 
 /*---------------------------------Utility classes */
 
@@ -915,6 +1067,19 @@ body.escape-theme.dark {
 }
 
 /*---------------------------------Animations */
+
+@-webkit-keyframes mute-pad-blink {
+
+    0% {
+        background: #ff4141;
+
+    }
+
+    100% {
+        background: #dcdcdc;
+
+    }
+}
 
 @keyframes mute-pad-blink {
 
@@ -929,9 +1094,33 @@ body.escape-theme.dark {
     }
 }
 
+@-webkit-keyframes loading-aloosh {
+    0% {
+        color: #e89886;
+
+    }
+
+    100% {
+        color: #000;
+
+    }
+}
+
 @keyframes loading-aloosh {
     0% {
         color: #e89886;
+
+    }
+
+    100% {
+        color: #000;
+
+    }
+}
+
+@-webkit-keyframes loading-escape {
+    0% {
+        color: #FEB022;
 
     }
 
@@ -955,19 +1144,31 @@ body.escape-theme.dark {
 
 /* Animation inspired by Traversy Media youTube video listed in readme */
 
-@keyframes spin {
+@-webkit-keyframes spin {
     from {
+        -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
 
     to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
 
 /*---------------------------------Media queries */
-
-@media only screen and (min-width: 600px) {}
 
 @media only screen and (min-width: 768px) {
     .navbar .navbar-brand {
@@ -1004,7 +1205,3 @@ body.escape-theme.dark {
         margin-top: 85px;
     }
 }
-
-@media only screen and (min-width: 992px) {}
-
-@media only screen and (min-width: 1200px) {}
