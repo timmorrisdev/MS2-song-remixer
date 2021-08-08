@@ -35,11 +35,11 @@ ___
     I also chose to find two contrasting palettes for each song to offer the user a 'light' or 'dark' theme option for each song.
 
     The palettes I chose were: 
-    [Landing / How to Play / Contact](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2%20-%20main.pdf), 
-    [Aloosh 'Light'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2%20-%20aloosh%20light.pdf), 
-    [Aloosh 'Dark'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2%20-%20aloosh%20dark.pdf), 
-    [Escape 'Light'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2%20-%20escape%20light.pdf), 
-    [Escape 'Dark'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2%20-%20escape%20dark.pdf).
+    [Landing / Contact](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2-main.pdf), 
+    [Aloosh 'Light'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2-aloosh-light.pdf), 
+    [Aloosh 'Dark'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2-aloosh-dark.pdf), 
+    [Escape 'Light'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2-escape-light.pdf), 
+    [Escape 'Dark'](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/colour-schemes/MS2-escape-dark.pdf).
 
 - Fonts
     - Tourney / Montserrat.
