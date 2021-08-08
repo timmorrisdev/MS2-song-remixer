@@ -57,14 +57,19 @@ ___
 This page is designed to clearly guide the user through the basic instructions for the game and prompt song selection.
 ![landing page screengrab](assets/ux/screengrabs/landing-page.png)
 ### Song selector
+The song selector button allows the user to pick between the two songs 'Aloosh' and 'Escape'. This action delivers the song information to songRemixer.JS, which is used to determine the parameters of most functions across the site. 
 ![song selector screengrab](assets/ux/screengrabs/song-selector.png)
 ### Game view
+The main game view is comprised of easy-to-read pads that allow the user to manipulate what instruments are being heard in the song.
 ![game-view screengrab](assets/ux/screengrabs/game-view.png)
 ### Transport bar
+This section allows the user to play or pause the song, skip back to the beginning, or manipular the pads being heard on a global level to the song. There is also a more detailed version of the instructions available if the user needs further guidance.
 ![transport bar screengrab](assets/ux/screengrabs/transport-bar.png)
 ### Expanded instructions
+Linked from the 'transport bar' this offers the user more detailed game instructions if required.
 ![expanded instruction screengrab](assets/ux/screengrabs/expanded-instructions.png)
 ### Contact Page
+I included a contact page on the site so that I can gather any feedback from the users to inspire future development goals.
 ![contact page screengrab](assets/ux/screengrabs/contact-page.png)
 
 ### Other features
@@ -127,13 +132,15 @@ ___
     - Used to source colour palettes used throughout the site.
 - [CSS Gradient](https://cssgradient.io/)
     - Used to generate background radial gradient effects.
+- [Am I Responsive?](http://ami.responsivedesign.is/#)
+    - Used to check responsiveness acorss differenct device sizes. 
 
 ___
 ## Testing
 ### Responsiveness Testing
 I used google dev tools throughout the development process to check responsiveness across different screen sizes. 
 
-I was also sure to deploy the site to GitHub pages early in development to allow for review of the live site on various devicesthroughout the process.
+I was also sure to deploy the site to GitHub pages early in development to allow for review of the live site on various devices throughout the process.
 
 ### W3C Markup, CSS Validation & JSHint Validation
 I used the W3C Markup, CSS Validator and JSHint Validator Services to check and validate each page throughout the site to check for errors. 
