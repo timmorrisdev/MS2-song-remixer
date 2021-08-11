@@ -231,6 +231,9 @@ I tested the site across multiple devices using different browsers.
 ### Known Bugs
 - 'The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page (howler.core.min.js:2)'
     - This issue is being shown as a warning in the google dev tools console. After researching the issue, I found that even though I am not implimenting any auto-play of audio on the site, the library HowlerJS is initialising audio contexts as part of its code. This is recognised as a play event by google dev tools even though it is not actually beginning playback of any audio. I found several posts on Stack Overflow where people had experienced the same warnings and it appears to be an error on google's side. 
+    I found [this Stack Overflow article](https://stackoverflow.com/questions/66801354/web-audio-api-the-audiocontext-was-not-allowed-to-start-it-must-be-resumed-o) where people were experiencing the same issue.
+
+    ![Article screengrab](assets/ux/screengrabs/bug-answer-screengrab.png)
 ___
 ## Deployment
 ### GitHub Pages
