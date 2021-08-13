@@ -3,7 +3,7 @@ ___
 ![Responsive Mockup of site](assets/ux/screengrabs/responsiveMockup.png)
 
 
-## Project Synopsis
+# Project Synopsis
 
 Song remixer game using music by the band Volleyball. The user can choose from several songs and mute or hear a variety of instruments to create unique arrangements of the tracks.
 
@@ -11,21 +11,30 @@ Song remixer game using music by the band Volleyball. The user can choose from s
 [See the live site here!](https://timmorrisdev.github.io/MS2-song-remixer/)
 
 ___
-## User Experience (UX)
+# User Experience (UX)
 
-### User Stories
+## User Stories
 
+### Users familiar with the band
 - I want to easily understand the game and how to play.
 - I want to remix different songs by bringing elements of the track in and out.
 - The site should be visually appealing and well laid out, with different colour themes for each song.
-- I want to be able to connect with the band featured on their social media and own website.
 
-### Business Goals
+
+### Users unfamiliar with the band
+
+- I want to discover the music of the band Volleyball.
+- I want to be able to connect with the band featured on their social media, and find out more about them on their own website.
+
+## Business Goals
 
 - To allow fans the opportunity to create their own versions of the bands songs.
 - To drive traffic to the band's social media and website to increase fan engagement.
+- To promote a new song release by offereing fan engagement.
+- To gather any feedback from the users about the music or the game.
+- For the users to have fun and enjoy the music!
 
-### Design
+## Design
 
 - Colour Scheme
 
@@ -49,6 +58,23 @@ ___
     - [Landing / Game Page](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/wireframes/Home.pdf)
 
     - [Contact Us](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/wireframes/contact.pdf)
+
+## Design decisions different to wireframes
+- Landing page / instructions
+
+    I initially build the site to laod the game area right away. Although as a regular user of music software it wasclear what I was looking at, I decided that I could make the object of the game clearer by including a simple set of instructions to the user to prompt an action to build the game area. 
+
+- Landing page / band info section
+
+    Although I am familiar with the band featured, I decided to add a small feature to the landing page introducting the user to the band's logo by way of offering instruction to 'hit the logo to learn about the band'.
+
+- Light / Dark mode
+    I added the option for the user to change the colour theme of the game area to add more interactivity and enjoyment when playing the game.
+
+- Additional buttons in transport bar
+    In development I wanted to be able to offer the user 'global' control over muting or un-muting the pads. I chose to do this with a reset button, and used a tool tip to display its alternative function when the game area is built.
+
+    I also decided to offer the user a more detailed guide to all of the features of the game if they wanted to clarify anything they did not understand during gameplay.
    
 ## Features
 ### Landing page / instructions
@@ -58,7 +84,14 @@ This page is designed to clearly guide the user through the basic instructions f
 ### Song selector
 The song selector button allows the user to pick between the two songs 'Aloosh' and 'Escape'. This action delivers the song information to songRemixer.JS, which is used to determine the parameters of most functions across the site. 
 
+
 ![song selector screengrab](assets/ux/screengrabs/song-selector.png)
+
+### Band info
+
+This display provides the user with the information that 'Volleyball' is the band whose music is the content of the game. Also that the star image is the bands logo and a link to their website if further information is desired.
+
+![band-info screengrab](assets/ux/screengrabs/band-info.png)
 ### Game view
 The main game view is comprised of easy-to-read pads that allow the user to manipulate what instruments are being heard in the song.
 
@@ -80,8 +113,6 @@ I included a contact page on the site so that I can gather any feedback from the
 - Responsive across all devices and screen sizes.
 - Adaptive to modify content shown to be appropriate for user device or screen size.
 
-### Design Decisions Made During Development
-
 ### Future Development Opportunities
 - Recording of arrangements
 
@@ -92,13 +123,13 @@ I included a contact page on the site so that I can gather any feedback from the
     I would like to include the ability to further manipulate the different parts of each song. Perhaps adding individual volume / EQ / reverb settings. This could be a 'paid' feature to allow the band to generate revenue with the app.
 
 ___
-## Technologies Used
-### Languages Used
+# Technologies Used
+## Languages Used
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/CSS)
 - [JavaScript](https://www.javascript.com/)
 
-### Frameworks, Libraries & Programs Used
+## Frameworks, Libraries & Programs Used
 - [HowlerJS](https://howlerjs.com/)
     - HowlerJS was used to intergrate audio on the site. It utilises mostly the web audio API with fall back to HMTL5 audio where compatibility is an issue. I chose to use audiosprites for each song as I kept my file management neater and helped assure simultainious playback for each element of the song arrangements.
 
@@ -138,23 +169,23 @@ ___
     - Used to check responsiveness acorss differenct device sizes. 
 
 ___
-## Testing
-### Responsiveness Testing
+# Testing
+## Responsiveness Testing
 I used google dev tools throughout the development process to check responsiveness across different screen sizes. 
 
 I was also sure to deploy the site to GitHub pages early in development to allow for review of the live site on various devices throughout the process.
 
-### W3C Markup, CSS Validation & JSHint Validation
+## W3C Markup, CSS Validation & JSHint Validation
 I used the W3C Markup, CSS Validator and JSHint Validator Services to check and validate each page throughout the site to check for errors. 
-#### [Markup Validation Service](https://validator.w3.org/)
+### [Markup Validation Service](https://validator.w3.org/)
 The validator found the following issues for me to address.
 - Element hr not allowed as child of element ol in this context.
     - This was due to my nesting of hr elements within my game-instruction modal unordered list. I modified my code to include 'border-bottom' styling for each list item to rectify the issue.
 
-#### [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+### [CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 My CSS file style.css passed through the w3 validator with no errors.
 
-#### [JSHint Validation Service](https://jshint.com/)
+### [JSHint Validation Service](https://jshint.com/)
 The validator found the folowing warnings for me to address. 
 - 'Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.'
     - This was caused by my addition of a setTimeout function to the buildPads function to allow for the 'cascading' effect while the pads are populating the game area. I had not removed the original function from within the setTimeout, which was now not needed. 
@@ -168,7 +199,7 @@ The validator found the folowing warnings for me to address.
 - One unused variable - stopBtn.
     - At the top of my code, I have declared variables for various DOM elements I was likely to need to reference throughout the project. I had not needed to reference stopBtn and therefore it needed to be removed to pass validation.
 
-### Lighthouse Testing
+## Lighthouse Testing
 Lighthouse testing on the main website game page found the following issues.
 - 'Links do not have a discernible name'.
     - I am using icons in my footer links and therefore had no text to acy as description. This was solved by adding the 'aria-label' attribute to each anchor tag with a short description. 
@@ -186,7 +217,7 @@ Contact page.
 
 ![contact page lighthouse](assets/ux/screengrabs/contact-lighthouse.png)
 
-### Testing UX user stories
+## Testing UX user stories
 
 - I want to easily understand the game and how to play.
     - There are clear and simple instructions presented on the landing page. 
@@ -209,13 +240,30 @@ Contact page.
 
     ![escape dark mode](assets/ux/screengrabs/escape-dark.png)
 
-- I want to be able to connect with the band featured on their social media and own website.
-    - Link to the bands social media pages, as well as their website were clear and easy to find in the footer of the page.
+- I want to discover the music of the band Volleyball.
+    - The game offers two different songs for the user to explore and play with. The starting state is for all pads to heard and therefore giving the user the full experience of the song before exploring.
+
+    ![songs screengrab](assets/ux/screengrabs/songs.png)
+
+- I want to be able to connect with the band featured on their social media, and find out more about them on their own website.
+    - Link to the bands social media pages, as well as their website were clear and easy to find in the footer of the page. The section on the home page clearly explained that Volleyball is the band featured and their logo links to their website.
+
+    ![band info screengrab](assets/ux/screengrabs/band-info.png)
     ![footer links](assets/ux/screengrabs/page-footer.png)
 
-### Peer Code Review
+## Testing Business Goals
 
-### Cross-Browser/Device Testing
+More data would need to be collected on an ongoing basis to establish the success of the business goals relating to driving traffic to social media pages or increasing exposure of new song releases. 
+
+My user feedback and peer-review so far at least tells me that I have created a game that is fun and engaging to play, which allows the user to experience the bands music in a new and exciting way.
+
+## Peer Code Review
+
+I submitted this project to the 'peer-code-review' Slack channel on Monday 11th August to collect user feedback. 
+
+I receieved several positive reactions to the site but did not get any comments to highlight any issues or negative user experience. I will leave the site active on this channel and collect any data for possible future development.
+
+## Cross-Browser/Device Testing
 I tested the site across multiple devices using different browsers.
 - Browsers tested
     - Chrome
@@ -228,28 +276,28 @@ I tested the site across multiple devices using different browsers.
     - iPhone 12
     - iPad air 2
 
-### Known Bugs
+## Known Bugs / Issues
 - 'The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page (howler.core.min.js:2)'
     - This issue is being shown as a warning in the google dev tools console. After researching the issue, I found that even though I am not implimenting any auto-play of audio on the site, the library HowlerJS is initialising audio contexts as part of its code. This is recognised as a play event by google dev tools even though it is not actually beginning playback of any audio. I found several posts on Stack Overflow where people had experienced the same warnings and it appears to be an error on google's side. 
     I found [this Stack Overflow article](https://stackoverflow.com/questions/66801354/web-audio-api-the-audiocontext-was-not-allowed-to-start-it-must-be-resumed-o) where people were experiencing the same issue.
 
     ![Article screengrab](assets/ux/screengrabs/bug-answer-screengrab.png)
 ___
-## Deployment
-### GitHub Pages
+# Deployment
+## GitHub Pages
 The project was deployed to GitHub pages using the following method. 
 1. Log in to [GitHub.com](https://github.com/) and locate the [MS2-song-remixer repository](https://github.com/TimMorrisDev/MS2-song-remixer) in my account.
 2. Select the repo 'settings' menu and navigate to the 'pages' tab on the left hand side.
 3. In the 'source' section, select the master branch as the source for the site deployment. 
 4. Hit 'save' and wait a few minutes for GitHub to process. The 'pages' settings tab will now show a message to confirm the repository is being published to the address https://timmorrisdev.github.io/MS2-song-remixer/.
 
-### Forking the repository in GitHub
+## Forking the repository in GitHub
 Forking the repository creates a copy of the original repository in your own account to allow changes to be made without affecting the original repository.
 1. Log in to GitHub and navigate to the GitHub repository page [here](https://github.com/TimMorrisDev/MS2-song-remixer).
 2. In the top-right of the page, below the user avatar, locate the "fork" button.
 3. Click the "fork" button and you should now have a copy of the repository in your own account. 
 
-### Making a Local Clone
+## Making a Local Clone
 Details of how to make a local copy of the GutHub repository can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). To clone using HTTPS follow these steps.
 1. Navigate to the GitHub repository [here](https://github.com/TimMorrisDev/MS2-song-remixer).
 2. Click the "Code" drop-down menu above the list of files.
@@ -260,8 +308,8 @@ Details of how to make a local copy of the GutHub repository can be found [here]
 7. Press enter and your local clone will be created. 
 
 ___
-## Credits
-### Code
+# Credits
+## Code
 - Inspiration for player features and layout from [Traversy Media](https://www.youtube.com/watch?v=QTHRWGn_sJw) and [Junior Developer Central](https://www.youtube.com/watch?v=jZL9gVwxO-U) YouTube videos.
 - Responsive grid for pads taken from [Stack Overflow article](https://stackoverflow.com/questions/46548987/a-grid-layout-with-responsive-squares) and modified to suit the site needs.
 - General information about class constructors and class inheritance from [The Net Ninja 'object oriented JavaScript'](https://www.youtube.com/watch?v=4l3bTDlT6ZI&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7) YouTube series.
@@ -270,12 +318,12 @@ ___
 - [Stack Overflow](https://stackoverflow.com/), [w3 Schools](https://www.w3schools.com/) & [CSS tricks](https://css-tricks.com/) were used throughout the project to research solutions to site requirements.
 
 
-### Content
+## Content
 - All content written by the developer.
 
 
-### Media
+## Media
 - All music written by, and copyright of the band Volleyball.
 
-### Acknowledgements
+## Acknowledgements
 - Thanks to my mentor, Can Sucullu for all your guidance and support.

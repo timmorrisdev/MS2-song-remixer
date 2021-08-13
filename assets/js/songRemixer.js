@@ -603,7 +603,7 @@ function buildPadsArea(song) {
             setTimeout(function () {
                 $('#clearMutes').tooltip('hide');
                 $('#clearMutes').tooltip('disable');
-            }, 7000);
+            }, 8000);
 
         } else {
             // display 'loading' text if audio not loaded.

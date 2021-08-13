@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 /*---------------------------------Import google fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Tourney:wght@300;400;500;600;700&family=Roboto&display&display=swap');
@@ -303,6 +310,8 @@ h3,
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     border: 2px solid black;
     border-radius: 20px;
@@ -321,6 +330,7 @@ h3,
 .band-info img {
     height: 2rem;
     width: 2rem;
+    -webkit-filter: drop-shadow(0px 0px 1px #000);
     filter: drop-shadow(0px 0px 1px #000);
 }
 
