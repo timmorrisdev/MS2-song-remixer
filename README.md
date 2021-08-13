@@ -116,7 +116,7 @@ I included a contact page on the site so that I can gather any feedback from the
 ### Future Development Opportunities
 - Recording of arrangements
 
-    In the furture I would like to develop a 'back-end' aspect to the site that might allow users to capture and subsequently share their unique mixes of the song via social media. This would have the goal of increasing game enjoyment for the user and also increase the effectiveness of the game as a promotional tool for the band.
+    In the future I would like to develop a 'back-end' aspect to the site that might allow users to capture and subsequently share their unique mixes of the song via social media. This would have the goal of increasing game enjoyment for the user and also increase the effectiveness of the game as a promotional tool for the band.
 
 - Additional processing options
 
@@ -131,14 +131,14 @@ ___
 
 ## Frameworks, Libraries & Programs Used
 - [HowlerJS](https://howlerjs.com/)
-    - HowlerJS was used to intergrate audio on the site. It utilises mostly the web audio API with fall back to HMTL5 audio where compatibility is an issue. I chose to use audiosprites for each song as I kept my file management neater and helped assure simultainious playback for each element of the song arrangements.
+    - HowlerJS was used to integrate audio on the site. It utilises mostly the web audio API with fall back to HMTL5 audio where compatibility is an issue. I chose to use audiosprites for each song as I kept my file management neater and helped assure simultaineous playback for each element of the song arrangements.
 
 - [Audioprite Generator](https://github.com/tonistiigi/audiosprite)
 
-    - I installed audiosprite using the npm package in my mac terminal. I then used the terminal to generate a stereo audiosprite for each songn in both mp3 and webm formats so HowlerJS can select the best for any particular device / browser. I chose to use audiosprites for the composit parts of the songs rather than individuual files to help ensure the intended playback when certain browsers or devices force falling back to HTML5 audio for playback.
+    - I installed audiosprite using the npm package in my mac terminal. I then used the terminal to generate a stereo audiosprite for each song in both mp3 and webm formats so HowlerJS can select the best for any particular device / browser. I chose to use audiosprites for the composite parts of the songs rather than individual files to help ensure the intended playback when certain browsers or devices force falling back to HTML5 audio for playback.
 
 - [jQuery](https://jquery.com/)
-    - I used jQuery in my Javascript code for the song remixer game. I mostly made use of event handlers to intergrate user interaction with the site with my Javascript functions controlling the features ofered to the user.
+    - I used jQuery in my Javascript code for the song remixer game. I mostly made use of event handlers to integrate user interaction with the site with my Javascript functions controlling the features offered to the user.
     - jQuery was also used as part of Bootstrap and is used for Javascript plugins such as the responsive nav bar and modals.
 
 - [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
@@ -146,7 +146,7 @@ ___
 - [EmailJS](https://www.emailjs.com/)
     - 
 - [Google Fonts](https://fonts.google.com/)
-    - Google Fonts was used to import the 'Montserrat', 'Lato' and 'Quicksand' fonts, which were used throughout the site.
+    - Google Fonts was used to import the 'Montserrat', and 'Tourney' fonts, which were used throughout the site.
 - [Font Awesome](https://fontawesome.com/)
     - Used to source images for the transport section of the remixer.
 
@@ -166,7 +166,7 @@ ___
 - [CSS Gradient](https://cssgradient.io/)
     - Used to generate background radial gradient effects.
 - [Am I Responsive?](http://ami.responsivedesign.is/#)
-    - Used to check responsiveness acorss differenct device sizes. 
+    - Used to check responsiveness across different device sizes. 
 
 ___
 # Testing
@@ -186,7 +186,7 @@ The validator found the following issues for me to address.
 My CSS file style.css passed through the w3 validator with no errors.
 
 ### [JSHint Validation Service](https://jshint.com/)
-The validator found the folowing warnings for me to address. 
+The validator found the following warnings for me to address. 
 - 'Function declarations should not be placed in blocks. Use a function expression or move the statement to the top of the outer function.'
     - This was caused by my addition of a setTimeout function to the buildPads function to allow for the 'cascading' effect while the pads are populating the game area. I had not removed the original function from within the setTimeout, which was now not needed. 
     - Whilst this issue was fixed there is still a warning stating: 
@@ -195,17 +195,17 @@ The validator found the folowing warnings for me to address.
 
         As I am using the reference outer scoped variables to apply styles and parameters based on the song selected, it is my understanding that this warning can be ignored for the purpose of this site.
 - One undefined variable - Howl.
-    - This is in fact not a variable but a reference to the 'Howl' class constructor used by HowlerJS. It is my understanding that the validator does not recognise the external, HowlerJS library being used and therefore I can ingore this warning for the purpose of this site.
+    - This is in fact not a variable but a reference to the 'Howl' class constructor used by HowlerJS. It is my understanding that the validator does not recognise the external, HowlerJS library being used and therefore I can ignore this warning for the purpose of this site.
 - One unused variable - stopBtn.
     - At the top of my code, I have declared variables for various DOM elements I was likely to need to reference throughout the project. I had not needed to reference stopBtn and therefore it needed to be removed to pass validation.
 
 ## Lighthouse Testing
 Lighthouse testing on the main website game page found the following issues.
 - 'Links do not have a discernible name'.
-    - I am using icons in my footer links and therefore had no text to acy as description. This was solved by adding the 'aria-label' attribute to each anchor tag with a short description. 
+    - I am using icons in my footer links and therefore had no text to act as description. This was solved by adding the 'aria-label' attribute to each anchor tag with a short description. 
 
 - Heading elements are not in a sequentially-descending order (contact.html).
-    - This is a minor issue that I chose to ingore for the purpose of the site.
+    - This is a minor issue that I chose to ignore for the purpose of the site.
 
 Once this issue was resolved, lighthouse testing returned the following results:
 
@@ -261,7 +261,7 @@ My user feedback and peer-review so far at least tells me that I have created a 
 
 I submitted this project to the 'peer-code-review' Slack channel on Monday 11th August to collect user feedback. 
 
-I receieved several positive reactions to the site but did not get any comments to highlight any issues or negative user experience. I will leave the site active on this channel and collect any data for possible future development.
+I received several positive reactions to the site but did not get any comments to highlight any issues or negative user experience. I will leave the site active on this channel and collect any data for possible future development.
 
 ## Cross-Browser/Device Testing
 I tested the site across multiple devices using different browsers.
@@ -278,7 +278,7 @@ I tested the site across multiple devices using different browsers.
 
 ## Known Bugs / Issues
 - 'The AudioContext was not allowed to start. It must be resumed (or created) after a user gesture on the page (howler.core.min.js:2)'
-    - This issue is being shown as a warning in the google dev tools console. After researching the issue, I found that even though I am not implimenting any auto-play of audio on the site, the library HowlerJS is initialising audio contexts as part of its code. This is recognised as a play event by google dev tools even though it is not actually beginning playback of any audio. I found several posts on Stack Overflow where people had experienced the same warnings and it appears to be an error on google's side. 
+    - This issue is being shown as a warning in the google dev tools console. After researching the issue, I found that even though I am not implementing any auto-play of audio on the site, the library HowlerJS is initialising audio contexts as part of its code. This is recognised as a play event by google dev tools even though it is not actually beginning playback of any audio. I found several posts on Stack Overflow where people had experienced the same warnings and it appears to be an error on google's side. 
     I found [this Stack Overflow article](https://stackoverflow.com/questions/66801354/web-audio-api-the-audiocontext-was-not-allowed-to-start-it-must-be-resumed-o) where people were experiencing the same issue.
 
     ![Article screengrab](assets/ux/screengrabs/bug-answer-screengrab.png)
@@ -314,7 +314,7 @@ ___
 - Responsive grid for pads taken from [Stack Overflow article](https://stackoverflow.com/questions/46548987/a-grid-layout-with-responsive-squares) and modified to suit the site needs.
 - General information about class constructors and class inheritance from [The Net Ninja 'object oriented JavaScript'](https://www.youtube.com/watch?v=4l3bTDlT6ZI&list=PL4cUxeGkcC9i5yvDkJgt60vNVWffpblB7) YouTube series.
 - Information relating to [HowlerJS](https://howlerjs.com/) gathered from [Techlahoma YouTube video](https://www.youtube.com/watch?v=isCQptdu1Kg).
-- Code for audio 'Howls' copied from [HowlerJS](https://howlerjs.com/) documentaion ['AudioSprite' demo](https://github.com/goldfire/howler.js#documentation) and then edited to fit the needs of the site. 
+- Code for audio 'Howls' copied from [HowlerJS](https://howlerjs.com/) documentation ['AudioSprite' demo](https://github.com/goldfire/howler.js#documentation) and then edited to fit the needs of the site. 
 - [Stack Overflow](https://stackoverflow.com/), [w3 Schools](https://www.w3schools.com/) & [CSS tricks](https://css-tricks.com/) were used throughout the project to research solutions to site requirements.
 
 
