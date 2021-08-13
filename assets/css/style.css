@@ -122,7 +122,6 @@ h3,
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    /* width: 400px; */
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -294,6 +293,52 @@ h3,
 .dropdown-menu {
     left: -16px !important;
 }
+
+
+.band-info {
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: fit-content;
+    border: 2px solid black;
+    border-radius: 20px;
+    background: rgb(237, 231, 227);
+    background: -o-radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+    background: radial-gradient(circle, rgba(237, 231, 227, 1) 0%, rgba(25, 153, 122, 1) 86%);
+    padding: 20px;
+    margin-bottom: 16px;
+    -webkit-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+    color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
+    font-size: 1.25rem;
+}
+
+.band-info img {
+    height: 2rem;
+    width: 2rem;
+    filter: drop-shadow(0px 0px 1px #000);
+}
+
+.band-info img:hover {
+    -webkit-filter: drop-shadow(0px 0px 14px #ffacfc);
+    filter: drop-shadow(0px 0px 14px #ffacfc);
+    -webkit-transition: ease-in-out .3s;
+    -o-transition: ease-in-out .3s;
+    transition: ease-in-out .3s;
+}
+
+.band-info span strong {
+    font-family: Tourney;
+    color: #000;
+    text-shadow: 2px 2px 4px #ffacfc;
+    font-weight: 400;
+}
+
 
 /*---------------------------------Pads section with different song themes */
 
@@ -1222,5 +1267,9 @@ body.escape-theme.dark {
 
     .modal li {
         padding-bottom: 10px;
+    }
+
+    .band-info {
+        margin-top: 50px;
     }
 }

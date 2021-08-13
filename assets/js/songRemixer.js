@@ -603,7 +603,7 @@ function buildPadsArea(song) {
             setTimeout(function () {
                 $('#clearMutes').tooltip('hide');
                 $('#clearMutes').tooltip('disable');
-            }, 7000);
+            }, 8000);
 
         } else {
             // display 'loading' text if audio not loaded.
@@ -624,6 +624,7 @@ $(document).ready(function () {
         $('.instructions-container, #spacer').remove();
         $('#darkMode').removeClass('hidden');
         $('#lightMode').removeClass('hidden');
+        $('.band-info').addClass('hidden');
 
         stopAudio();
         currentSongId = "aloosh";
@@ -646,6 +647,7 @@ $(document).ready(function () {
         $('.instructions-container, #spacer').remove();
         $('#darkMode').removeClass('hidden');
         $('#lightMode').removeClass('hidden');
+        $('.band-info').addClass('hidden');
 
         //move seek from zero to store Sprite ID's and allow mutes to function
         playAudio();
