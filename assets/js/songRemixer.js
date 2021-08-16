@@ -353,16 +353,31 @@ function stopAudio() {
         playClass[0].id = 'playBtn';
     }
 
+
+
     playIcon.classList.remove('fa-pause');
     playIcon.classList.add('fa-play');
-    stopIcon.classList.remove('fa-stop');
-    stopIcon.classList.add('fa-step-backward');
 
     //if statement to stop audio based on current song selected
 
     if (currentSongId === 'aloosh') {
+
+        if (alooshAudio.sound.pause()) {
+            //reset stopBtn icon if returning to start of song from pause
+            stopIcon.classList.remove('fa-step-backward');
+            stopIcon.classList.add('fa-stop');
+        }
+
         alooshAudio.sound.stop();
+
     } else if (currentSongId === 'escape') {
+
+        if (escapeAudio.sound.pause()) {
+            //reset stopBtn icon if returning to start of song from pause
+            stopIcon.classList.remove('fa-step-backward');
+            stopIcon.classList.add('fa-stop');
+        }
+
         escapeAudio.sound.stop();
     }
 }

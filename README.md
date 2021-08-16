@@ -15,13 +15,13 @@ ___
 
 ## User Stories
 
-### Users familiar with the band
+### Users Familiar With the Band
 - I want to easily understand the game and how to play.
 - I want to remix different songs by bringing elements of the track in and out.
 - The site should be visually appealing and well laid out, with different colour themes for each song.
 
 
-### Users unfamiliar with the band
+### Users Unfamiliar With the Band
 
 - I want to discover the music of the band Volleyball.
 - I want to be able to connect with the band featured on their social media, and find out more about them on their own website.
@@ -59,7 +59,7 @@ ___
 
     - [Contact Us](https://github.com/TimMorrisDev/MS2-song-remixer/blob/main/assets/ux/wireframes/contact.pdf)
 
-## Design decisions different to wireframes
+## Design Decisions Different to Wireframes
 - Landing page / instructions
 
     I initially build the site to laod the game area right away. Although as a regular user of music software it wasclear what I was looking at, I decided that I could make the object of the game clearer by including a simple set of instructions to the user to prompt an action to build the game area. 
@@ -77,30 +77,30 @@ ___
     I also decided to offer the user a more detailed guide to all of the features of the game if they wanted to clarify anything they did not understand during gameplay.
    
 ## Features
-### Landing page / instructions
+### Landing Page / Instructions
 This page is designed to clearly guide the user through the basic instructions for the game and prompt song selection.
 
 ![landing page screengrab](assets/ux/screengrabs/landing-page.png)
-### Song selector
+### Song Selector
 The song selector button allows the user to pick between the two songs 'Aloosh' and 'Escape'. This action delivers the song information to songRemixer.JS, which is used to determine the parameters of most functions across the site. 
 
 
 ![song selector screengrab](assets/ux/screengrabs/song-selector.png)
 
-### Band info
+### Band Info
 
 This display provides the user with the information that 'Volleyball' is the band whose music is the content of the game. Also that the star image is the bands logo and a link to their website if further information is desired.
 
 ![band-info screengrab](assets/ux/screengrabs/band-info.png)
-### Game view
+### Game View
 The main game view is comprised of easy-to-read pads that allow the user to manipulate what instruments are being heard in the song.
 
 ![game-view screengrab](assets/ux/screengrabs/game-view.png)
-### Transport bar
+### Transport Bar
 This section allows the user to play or pause the song, skip back to the beginning, or manipular the pads being heard on a global level to the song. There is also a more detailed version of the instructions available if the user needs further guidance.
 
 ![transport bar screengrab](assets/ux/screengrabs/transport-bar.png)
-### Expanded instructions
+### Expanded Instructions
 Linked from the 'transport bar' this offers the user more detailed game instructions if required.
 
 ![expanded instruction screengrab](assets/ux/screengrabs/expanded-instructions.png)
@@ -109,7 +109,7 @@ I included a contact page on the site so that I can gather any feedback from the
 
 ![contact page screengrab](assets/ux/screengrabs/contact-page.png)
 
-### Other features
+### Other Features
 - Responsive across all devices and screen sizes.
 - Adaptive to modify content shown to be appropriate for user device or screen size.
 
@@ -217,7 +217,7 @@ Contact page.
 
 ![contact page lighthouse](assets/ux/screengrabs/contact-lighthouse.png)
 
-## Testing UX user stories
+## Testing UX User Stories
 
 - I want to easily understand the game and how to play.
     - There are clear and simple instructions presented on the landing page. 
@@ -321,9 +321,9 @@ ___
 ## Content
 - All content written by the developer.
 
-
 ## Media
 - All music written by, and copyright of the band Volleyball.
 
 ## Acknowledgements
-- Thanks to my mentor, Can Sucullu for all your guidance and support.
+- Thank ypu to my mentor, Can Sucullu for all your guidance and support.
+- Thank you to Volleyball for agreeing to share their music for the purpose of this project.
